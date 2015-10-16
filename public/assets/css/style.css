@@ -1,0 +1,231 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,600);
+@import url(http://fonts.googleapis.com/css?family=Rosarivo);
+
+body {
+	font-family: 'Source Sans Pro', sans-serif;
+	background: url('../imgs/bg.jpg') center top;
+	background-attachment: fixed;
+	font-size: 15px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	line-height: 1.55em;
+}
+
+.container {
+	max-width: 970px;
+}
+
+#main {
+	background: #fff;
+	padding-bottom: 20px;
+	padding-top: 20px;
+}
+
+header,
+footer {
+	color: #fff;
+	background: #4C2C10;
+}
+
+header {
+	border-radius: 0 0 0 0;
+	padding: 20px;
+	text-align: center;
+}
+
+header > h1 {
+	font-family: 'Rosarivo';
+	font-weight: 200;
+	font-size: 35px;
+	padding-top: 20px;
+}
+
+header > h2 {
+	margin-top: 15px;
+	font-family: 'Rosarivo';
+	font-size: 16px;
+	color: #D7CCC8;
+}
+
+footer {
+	border-radius: 0 0 0 0;
+	padding: 15px;
+}
+
+header > h1 {
+	margin: 0;
+}
+
+header,
+nav,
+footer {
+	margin: 0 auto 0 auto;
+	width: 100%;
+}
+
+.navbar {
+	margin-bottom: 0;
+	border-radius: 0;
+	background: #8d4f1c;
+	border: 0;
+}
+
+.navbar-default .navbar-brand {
+	color: #fff;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+	background-color: #fff;
+}
+
+.navbar-default .navbar-nav > li > a {
+	color: #fff;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+	color: #BCAAA4;
+}
+
+img.pull-left {
+	margin: 0 10px 10px 0;
+}
+
+img.pull-right {
+	margin: 10px 0 0 10px;
+}
+
+section > h2 {
+	margin-bottom: 20px;
+	margin-top: 0;
+	background: #F5F5F5;
+	padding: 15px;
+	color: #3E2723;
+}
+
+.treatment {
+	background-color: #EFEBE9;
+}
+
+.treatment-remark {
+	background-color: #D7CCC8;
+}
+
+h4.treatment-name {
+	margin: 0 0 10px 0;
+	padding-bottom: 5px;
+	border-bottom: 1px solid #8D6E63;
+	color: #3E2723;
+}
+
+p.treatment-desc {
+	font-size: 14px;
+	line-height: 1.5em;
+}
+
+.price-list {
+	margin-top: 20px;
+	font-size: 17px;
+	color: #fff;
+	margin-bottom: 5px;
+}
+
+.price-a {
+	padding: 10px;
+	text-align: center;
+	background: #5D4037;
+	border-radius: 3px 0 0 3px;
+}
+
+.price-b {
+	padding: 10px;
+	text-align: center;
+	background: #8D6E63;
+	border-radius: 0 3px 3px 0;
+}
+
+hr {
+	border-top: 1px solid #D7CCC8;
+}
+
+#coupon {
+	background: #322921;
+	padding-top: 25px;
+	padding-bottom: 25px;
+}
+
+img.get_coupon {
+	margin-bottom: 30px;
+	max-width: 90%;
+}
+
+input.get_coupon {
+	width: 60%;
+	height: 40px;
+	text-align: center;
+	border: 2px solid #f3a82b;
+	background: #322921;
+	color: #fff;
+	margin-bottom: 15px;
+}
+
+button.get_coupon {
+	background: #f3a82b;
+	border: none;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+button.get_coupon:hover {
+	background: #f4b958;
+}
+
+@media (max-width: 768px) {
+	body {
+		margin-top: 0;
+	}
+	header {
+		border-radius: 0;
+		padding: 20px;
+	}
+
+	footer {
+		height: 50px;
+		border-radius: 0;
+		padding: 10px;
+	}
+
+	header > h1 {
+		font-size: 21px;
+	}
+
+	header > h2 {
+		font-size: 13px;
+	}
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+	header,
+	nav,
+	footer {
+		width: 750px;
+	}
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+	header,
+	nav,
+	footer {
+		width: 970px;
+	}
+
+	p.treatment-desc {
+		min-height: 190px;
+	}
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+	
+}
