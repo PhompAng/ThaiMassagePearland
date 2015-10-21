@@ -1,0 +1,44 @@
+body {
+	font-family: 'Helvatica Neue', Helvetica, Arial;
+}
+
+.fa, .glyphicon {
+	margin-right: 7px;
+}
+
+.no-margin {
+	margin: 0;
+}
+
+.field {
+	width: 100%;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	margin-bottom: 10px;
+}
+
+table.result {
+	width: 100%;
+	font-size: 20px;
+}
+
+table.result > td {
+	height: 8px;
+}
+
+.search {
+	padding-top: 25px;
+}
+
+.time {
+	padding-top: 20px;
+	font-size: 50px;
+}
+
+
+section.content-header {
+	background: #fff !important;
+	padding-bottom: 15px;
+	border-bottom: 2px solid #e0e0e0;
+}
+
