@@ -23,6 +23,8 @@ class CouponController extends Controller {
 	public function index()
 	{
 		$data = [
+			'page_title'    => 'Coupon Management',
+			'page_subtitle' => 'All Coupon',
 			'coupons' => Coupon::all()
 		];
 		

@@ -51,7 +51,7 @@ class AuthController extends Controller {
 			'password' => Request::input('password')
 		];
 		if (Auth::attempt($credentials, Request::input('remember')))
-			return redirect()->intended('/backend/coupon');
+			return redirect()->intended('/backend/dashboard');
 		else
 			return redirect()->to('/backend/auth/login')->withErrors('Check your credentials!');
 	}

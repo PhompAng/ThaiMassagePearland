@@ -7,6 +7,10 @@ use Illuminate\Http\Request;
 
 class DashboardController extends Controller {
 
+	function __construct() {
+		$this->middleware('auth', ['except' => ['store']]);
+	}
+
 	/**
 	 * Display a listing of the resource.
 	 *
@@ -14,7 +18,11 @@ class DashboardController extends Controller {
 	 */
 	public function index()
 	{
-		return view('backend.dashboard');
+		$data = [
+			'page_title'    => 'Dashboard',
+			'page_subtitle' => 'thaimassagepearland.com'
+		];
+		return view('backend.dashboard', $data);
 	}
 
 	/**
