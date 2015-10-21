@@ -1,8 +1,13 @@
-@extends('backend.layout.normal')
+@extends('backend.layout.main')
 
 @section('content')
-	<div class="col-xs-12">
-		<h1 class="page-header">Coupon Management <small>({{ $coupons->count() }} coupons)</small></h1>
+	<div class="container">
+		<div class="box box-primary">
+			<div class="box-header with-border">
+			<i class="fa fa-money"></i>
+                <h3 class="box-title">Coupon Management ({{ $coupons->count() }} coupons)</h3>
+            </div>
+			<div class="box-body">
 		<div class="action-buttons">
 			<button type="button" id="showNewCouponModalBtn" class="btn btn-success btn-sm" data-toggle="modal" data-target="#createCouponModal"><i class="glyphicon glyphicon-plus"></i> Issue New Coupon</button>
 		</div>
@@ -39,8 +44,9 @@
 					@endforeach
 				</tbody>
 			</table>
-			<hr>
-		
+			</div>
+			<div class="box-footer"></div><!--box-footer-->
+		</div>
 	</div>
 
 	<div class="modal fade" id="resultModal" tabindex="-1" role="dialog">
@@ -86,7 +92,6 @@
 	      </div>
 	    </div>
 	  </div>
-	</div>
 
 @endsection
 
@@ -149,4 +154,5 @@
 
 		$('#btnNewCoupon').click(newCoupon);
 	</script>
+
 @endsection

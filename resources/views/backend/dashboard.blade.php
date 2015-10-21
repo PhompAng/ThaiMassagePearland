@@ -1,4 +1,4 @@
-@extends('backend.layout.head')
+@extends('backend.layout.main')
 
 @section('content')
 <script type="text/javascript">
@@ -361,3 +361,4 @@
 		        </div>
 	       </div>
 @endsection
+
