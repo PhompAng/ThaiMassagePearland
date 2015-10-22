@@ -15,6 +15,9 @@ Route::get('/', 'HomeController@index');
 
 Route::resource('backend/dashboard', 'DashboardController');
 Route::resource('backend/coupon', 'CouponController');
+Route::resource('backend/booking', 'BookingController');
+Route::resource('backend/setting', 'SettingController');
+
 Route::patch('backend/coupon/{coupon}/redeem', ['uses' => 'CouponController@redeem', 'as' => 'coupon.redeem']);
 Route::post('coupon', 'CouponController@store');
 
