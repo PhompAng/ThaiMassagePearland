@@ -20,6 +20,9 @@ class HomeController extends Controller {
 	 */
 	public function index()
 	{
-		return view('home');
+		$data = [
+			'treatments' => \THM\Treatment::all()
+		];
+		return view('home', $data);
 	}
 }
