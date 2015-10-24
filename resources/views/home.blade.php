@@ -154,8 +154,111 @@
 						<div class="col-md-6">
 							<section id="reservation">
 								<h2>Reservation</h2>
-								<p><em class="text-danger">Instant Booking is currently under maintenance.</em></p>
-								<p>For an appointment, Please contact us at <a href="callto:8327818415">(832) 781-8415</a>.</p>
+								@if($errors->count())
+									<div class="alert alert-danger">
+										<ul>
+											@foreach($errors->all() as $error)
+											<li>{{ $error }}</li>
+											@endforeach
+										</ul>
+									</div>
+								@endif
+								<div style="width: 96%; height: 390px; z-index: 1000; position: absolute; background: #fff; opacity: 0.9; text-align: center; padding-top: 150px; display: none;" id="bookingPreloader">Processing...</div>
+								<form class="form-horizontal" method="POST" action="{{ route('booking.process') }}">
+									<input type="hidden" name="_token" value="{{ csrf_token() }}">
+									<div class="form-group">
+									<label class="col-xs-3 control-label">Date</label>
+									<div class="col-xs-4">
+									  <select name="booking[date]" class="form-control">
+									  	<option value="0">-- Select Date --</option>
+									  	<?php $date = \Carbon\Carbon::today()->addDay(); ?>
+									  	@for($i = 0; $i < 30; $i++)
+										<option value="{{ $date->toDateString() }}">{{ $date->format('D, M d, Y') }}</option>
+										<?php $date->addDay(); ?>
+									  	@endfor
+									  </select>
+									</div>
+
+									<label class="col-xs-1 control-label">Time</label>
+									<div class="col-xs-4">
+									  <select name="booking[time]" class="form-control" disabled="disabled">
+									  	<option value="0">-- Select Time --</option>
+									  	<option value="10">10:00 AM</option>
+								  		<option value="11">11:00 AM</option>
+								  		<option value="12">12:00 PM</option>
+								  		<option value="13">01:00 PM</option>
+								  		<option value="14">02:00 PM</option>
+								  		<option value="15">03:00 PM</option>
+								  		<option value="16">04:00 PM</option>
+								  		<option value="17">05:00 PM</option>
+								  		<option value="18">06:00 PM</option>
+									  </select>
+									</div>
+									</div>
+
+									<div class="form-group">
+										<label class="col-xs-3 control-label">Treatment</label>
+										<div class="col-xs-6">
+										  <select name="booking[treatment]" class="form-control">
+										  	@foreach($treatments as $treatment)
+											<option value="{{ $treatment->id }}">{{ $treatment->title }}</option>
+										  	@endforeach
+										  </select>
+										</div>
+										<div class="col-xs-3">
+										  <select name="booking[duration]" class="form-control">
+											<option value="60">60 minutes</option>
+											<option value="90">90 minutes</option>
+										  </select>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="col-xs-3 control-label">Guest</label>
+										<div class="col-xs-9">
+											<label class="radio-inline">
+												<input type="radio" name="booking[guests]" value="1" checked> Single Guest
+											</label>
+											<label class="radio-inline">
+												<input type="radio" name="booking[guests]" value="2"> Couple Guest
+											</label>
+										</div>
+									</div>
+
+									<hr>
+
+									<div class="form-group">
+										<label class="col-xs-3 control-label">First Name</label>
+										<div class="col-xs-9">
+											<input type="text" name="client[firstname]" class="form-control">
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="col-xs-3 control-label">Last Name</label>
+										<div class="col-xs-9">
+											<input type="text" name="client[lastname]" class="form-control">
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="col-xs-3 control-label">Phone</label>
+										<div class="col-xs-9">
+											<input type="text" name="client[phone]" class="form-control">
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="col-xs-3 control-label">Email</label>
+										<div class="col-xs-9">
+											<input type="text" name="client[email]" class="form-control">
+										</div>
+									</div>
+
+									<div class="form-group text-center">
+										<button type="submit" class="btn btn-primary" id="bookingButton">Book & Pay Now for $90</button>
+									</div>
+								</form>
 							</section>
 						</div>
 						<div class="col-md-6">
@@ -205,22 +308,24 @@
 
 	<script>
 	$('.owl-carousel').owlCarousel({
-	  margin:10,
-    loop:true,
-    items: 3,
-    responsive:false,
-    autoplay: true,
-    autoplayTimeout:2000,
-    autoplayHoverPause:false,
-	nav:true
-	});
+		margin:10,
+	    loop:true,
+	    items: 3,
+	    responsive:false,
+	    autoplay: true,
+	    autoplayTimeout:2000,
+	    autoplayHoverPause:false,
+		nav:true
+		});
 
-	$(window).keydown(function(event){
-    if(event.keyCode == 13) {
-      event.preventDefault();
-      return false;
-    }
-  });
+		// $(window).keydown(function(event){
+	 //    if(event.keyCode == 13) {
+	 //      event.preventDefault();
+	 //      return false;
+	 //    }
+	 //  });
+
+	var booking_preload = $('#bookingPreloader');
 
   function newCoupon() {
 		owner = $('input[name=newCouponOwner]').val();
@@ -240,6 +345,61 @@
 	}
 
 	$('button[class=get_coupon]').click(newCoupon);
+
+	$('select[name="booking[date]"]').change(function() {
+		if ($(this).val() != 0) {
+			var booking_date = $(this).val();
+			// booking_preload.toggle(100);
+			$.get("{{ route('booking.ajax.timeslot') }}", {date: booking_date}).success(function(result) {
+				console.log(result);
+				$('select[name="booking[time]"]').val(0);
+				$.each(result, function(hour, value) {
+					if (hour > 11) {
+						option_text = hour + " PM";
+					} else {
+						option_text = hour + " AM";
+					};
+
+					if (value >= 2) {
+						console.log($('select[name="booking[time]"]').find('option[value='+ hour +']'));
+						$('select[name="booking[time]"]').find('option[value='+ hour +']').attr('disabled', 'disabled').text(option_text + " (FULL)");
+					} else {
+						$('select[name="booking[time]"]').find('option[value='+ hour +']').removeAttr('disabled').text(option_text);
+					};
+				});
+				$('select[name="booking[time]"]').removeAttr('disabled');
+				// console.log(result);
+			}).fail(function() {
+				alert("An error occurred, please try again later.");
+			});
+			// booking_preload.toggle(100);
+		} else {
+			$('select[name="booking[time]"]').attr('disabled', 'disabled');
+			$('select[name="booking[time]"]').val(0);
+		};
+	});
+
+	$('select[name="booking[treatment]"]').change(getTreatmentPrice);
+	$('select[name="booking[duration]"]').change(getTreatmentPrice);
+	$('input[name="booking[guests]"]').change(getTreatmentPrice);
+
+	function getTreatmentPrice() {
+		// booking_preload.toggle();
+		if ($('input[name="booking[guests]"]:checked').val() == 2) {
+			if ($('select[name="booking[duration]"]').val() == 60) {
+				$('#bookingButton').html("Book & Pay Now for $140");
+			} else {
+				$('#bookingButton').html("Book & Pay Now for $190");
+			};
+		} else {
+			$.get("{{ route('booking.ajax.getTreatmentPrice') }}", {id: $('select[name="booking[treatment]"]').val(), duration: $('select[name="booking[duration]"]').val()}).success(function(data) {
+					$('#bookingButton').html("Book & Pay Now for $" + data);
+			}).fail(function() {
+				alert("An error occurred, please try again later.");
+			});
+		};
+		// booking_preload.toggle();
+	}
 	</script>
 	</body>
 </html>

@@ -23,17 +23,18 @@ class Booking extends Model {
                 $date = Carbon::tomorrow();
             }
         }
+        $date->setTime(0, 0, 0);
         $end_date = clone $date;
-        $booked_time = self::between($date, $end_date->addDay())->get(['booked_time', 'timeslots']);
+        $booked_time = self::between($date, $end_date->addDay())->get(['booked_time', 'timeslots', 'guests']);
         $timeslots = [];
         for ($i=10; $i < 19; $i++) {
             $timeslots[$i] = 0;
         }
         foreach ($booked_time as $time) {
             $time->booked_time = \Carbon\Carbon::createFromFormat('Y-m-d h:i:s', $time->booked_time);
-            $timeslots[$time->booked_time->hour] += 1;
+            $timeslots[$time->booked_time->hour] += 1 * $time->guests;
             if ($time->timeslots == 2 && $time->booked_time->hour+1 <= 18) {
-                $timeslots[$time->booked_time->hour+1] += 1;
+                $timeslots[$time->booked_time->hour+1] += 1 * $time->guests;
             }
         }
 
