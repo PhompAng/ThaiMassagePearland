@@ -9,23 +9,11 @@
                 <h3 class="box-title">Filter</h3>
               </div>
               <div class="box-body">
-                The great content goes here
+                <h4>Narrow by Name</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis laborum reprehenderit facilis consequuntur aspernatur optio, ipsa neque, vel, eligendi placeateveniet asperiores dolorem doloribus nulla enim fugit veniam. Cum, vero.</p>
+                <h4>Narrow by Type</h4>
               </div><!-- /.box-body -->
-            </div>
-            <div class="box">
-              <div class="box-header with-border">
-              	<i class="fa fa-search"></i>
-                <h3 class="box-title">Search</h3>
-              </div>
-              <div class="box-body">
-                <div class="input-group input-group-sm">
-                  <input type="text" class="form-control" placeholder="Search for.">
-                  <span class="input-group-btn">
-                    <button class="btn btn-primary btn-flat" type="button">Search</button>
-                  </span>
-                </div>
-              </div><!-- /.box-body -->
-            </div>
+            </div> 
 		</div>
 		<div class="col-md-9">
 			<div class="box box-primary">

@@ -96,131 +96,16 @@
                   <h3 class="box-title">Today Booking</h3>
                 </div><!-- /.box-header -->
                 <div class="box-body no-padding">
-                  <table class="table table-condensed">
-                    <tbody><tr>
-                      <th class="text-center" width="10%">Booking No.</th>
+                  <table class="table table-bordered table-hover table-striped">
+                    <thead class="thead-text-center">
+                      <th width="10%">Booking #</th>
                       <th>Name</th>
-                      <th class="text-center" width="15%">Time</th>
-                      <th class="text-center" width="20%">Action</th>
-                    </tr>
-                    <tr>
-                      <td class="text-center">1.</td>
-                      <td>Update software</td>
-                      <td>
-                        <div class="progress progress-xs">
-                          <div class="progress-bar progress-bar-danger" style="width: 55%"></div>
-                        </div>
-                      </td>
-                      <td class="text-center">
-                        <a class="btn btn-xs btn-success" href=""><i class="fa fa-check"></i>Use</a>
-                        <a class="btn btn-xs btn-default" href=""><i class="fa fa-pencil"></i>Edit</a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="text-center">2.</td>
-                      <td>Clean database</td>
-                      <td>
-                        <div class="progress progress-xs">
-                          <div class="progress-bar progress-bar-yellow" style="width: 70%"></div>
-                        </div>
-                      </td>
-                      <td class="text-center">
-                        <a class="btn btn-xs btn-success" href=""><i class="fa fa-check"></i>Use</a>
-                        <a class="btn btn-xs btn-default" href=""><i class="fa fa-pencil"></i>Edit</a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="text-center">3.</td>
-                      <td>Cron job running</td>
-                      <td>
-                        <div class="progress progress-xs progress-striped active">
-                          <div class="progress-bar progress-bar-primary" style="width: 30%"></div>
-                        </div>
-                      </td>
-                      <td class="text-center">
-                        <a class="btn btn-xs btn-success" href=""><i class="fa fa-check"></i>Use</a>
-                        <a class="btn btn-xs btn-default" href=""><i class="fa fa-pencil"></i>Edit</a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="text-center">4.</td>
-                      <td>Fix and squish bugs</td>
-                      <td>
-                        <div class="progress progress-xs progress-striped active">
-                          <div class="progress-bar progress-bar-success" style="width: 90%"></div>
-                        </div>
-                      </td>
-                      <td class="text-center">
-                        <a class="btn btn-xs btn-success" href=""><i class="fa fa-check"></i>Use</a>
-                        <a class="btn btn-xs btn-default" href=""><i class="fa fa-pencil"></i>Edit</a>
-                      </td>
-                    </tr>
-                                        <tr>
-                      <td class="text-center">5.</td>
-                      <td>Fix and squish bugs</td>
-                      <td>
-                        <div class="progress progress-xs progress-striped active">
-                          <div class="progress-bar progress-bar-success" style="width: 90%"></div>
-                        </div>
-                      </td>
-                      <td class="text-center">
-                        <a class="btn btn-xs btn-success" href=""><i class="fa fa-check"></i>Use</a>
-                        <a class="btn btn-xs btn-default" href=""><i class="fa fa-pencil"></i>Edit</a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="text-center">6.</td>
-                      <td>Fix and squish bugs</td>
-                      <td>
-                        <div class="progress progress-xs progress-striped active">
-                          <div class="progress-bar progress-bar-success" style="width: 90%"></div>
-                        </div>
-                      </td>
-                      <td class="text-center">
-                        <a class="btn btn-xs btn-success" href=""><i class="fa fa-check"></i>Use</a>
-                        <a class="btn btn-xs btn-default" href=""><i class="fa fa-pencil"></i>Edit</a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="text-center">7.</td>
-                      <td>Fix and squish bugs</td>
-                      <td>
-                        <div class="progress progress-xs progress-striped active">
-                          <div class="progress-bar progress-bar-success" style="width: 90%"></div>
-                        </div>
-                      </td>
-                      <td class="text-center">
-                        <a class="btn btn-xs btn-success" href=""><i class="fa fa-check"></i>Use</a>
-                        <a class="btn btn-xs btn-default" href=""><i class="fa fa-pencil"></i>Edit</a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="text-center">8.</td>
-                      <td>Fix and squish bugs</td>
-                      <td>
-                        <div class="progress progress-xs progress-striped active">
-                          <div class="progress-bar progress-bar-success" style="width: 90%"></div>
-                        </div>
-                      </td>
-                      <td class="text-center">
-                        <a class="btn btn-xs btn-success" href=""><i class="fa fa-check"></i>Use</a>
-                        <a class="btn btn-xs btn-default" href=""><i class="fa fa-pencil"></i>Edit</a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="text-center">9.</td>
-                      <td>Fix and squish bugs</td>
-                      <td>
-                        <div class="progress progress-xs progress-striped active">
-                          <div class="progress-bar progress-bar-success" style="width: 90%"></div>
-                        </div>
-                      </td>
-                      <td class="text-center">
-                        <a class="btn btn-xs btn-success" href=""><i class="fa fa-check"></i>Use</a>
-                        <a class="btn btn-xs btn-default" href=""><i class="fa fa-pencil"></i>Edit</a>
-                      </td>
-                    </tr>
-                  </tbody></table>
+                      <th width="15%">Time</th>
+                      <th width="20%">Action</th>
+                      </thead>
+                    <tbody>
+                    </tbody>
+                  </table>
                 </div><!-- /.box-body -->
               </div>
 		</div>
@@ -231,130 +116,14 @@
                   <h3 class="box-title">Tomorrow Booking</h3>
                 </div><!-- /.box-header -->
                 <div class="box-body no-padding">
-                  <table class="table table-condensed">
-                    <tbody><tr>
-                      <th class="text-center" width="10%">Booking No.</th>
+                  <table class="table table-bordered table-hover table-striped">
+                    <thead class="thead-text-center">
+                      <th width="10%">Booking #</th>
                       <th>Name</th>
-                      <th class="text-center" width="15%">Time</th>
-                      <th class="text-center" width="20%">Action</th>
-                    </tr>
-                    <tr>
-                      <td class="text-center">1.</td>
-                      <td>Update software</td>
-                      <td>
-                        <div class="progress progress-xs">
-                          <div class="progress-bar progress-bar-danger" style="width: 55%"></div>
-                        </div>
-                      </td>
-                      <td class="text-center">
-                        <a class="btn btn-xs btn-success" href=""><i class="fa fa-check"></i>Use</a>
-                        <a class="btn btn-xs btn-default" href=""><i class="fa fa-pencil"></i>Edit</a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="text-center">2.</td>
-                      <td>Clean database</td>
-                      <td>
-                        <div class="progress progress-xs">
-                          <div class="progress-bar progress-bar-yellow" style="width: 70%"></div>
-                        </div>
-                      </td>
-                      <td class="text-center">
-                        <a class="btn btn-xs btn-success" href=""><i class="fa fa-check"></i>Use</a>
-                        <a class="btn btn-xs btn-default" href=""><i class="fa fa-pencil"></i>Edit</a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="text-center">3.</td>
-                      <td>Cron job running</td>
-                      <td>
-                        <div class="progress progress-xs progress-striped active">
-                          <div class="progress-bar progress-bar-primary" style="width: 30%"></div>
-                        </div>
-                      </td>
-                      <td class="text-center">
-                        <a class="btn btn-xs btn-success" href=""><i class="fa fa-check"></i>Use</a>
-                        <a class="btn btn-xs btn-default" href=""><i class="fa fa-pencil"></i>Edit</a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="text-center">4.</td>
-                      <td>Fix and squish bugs</td>
-                      <td>
-                        <div class="progress progress-xs progress-striped active">
-                          <div class="progress-bar progress-bar-success" style="width: 90%"></div>
-                        </div>
-                      </td>
-                      <td class="text-center">
-                        <a class="btn btn-xs btn-success" href=""><i class="fa fa-check"></i>Use</a>
-                        <a class="btn btn-xs btn-default" href=""><i class="fa fa-pencil"></i>Edit</a>
-                      </td>
-                    </tr>
-                                        <tr>
-                      <td class="text-center">5.</td>
-                      <td>Fix and squish bugs</td>
-                      <td>
-                        <div class="progress progress-xs progress-striped active">
-                          <div class="progress-bar progress-bar-success" style="width: 90%"></div>
-                        </div>
-                      </td>
-                      <td class="text-center">
-                        <a class="btn btn-xs btn-success" href=""><i class="fa fa-check"></i>Use</a>
-                        <a class="btn btn-xs btn-default" href=""><i class="fa fa-pencil"></i>Edit</a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="text-center">6.</td>
-                      <td>Fix and squish bugs</td>
-                      <td>
-                        <div class="progress progress-xs progress-striped active">
-                          <div class="progress-bar progress-bar-success" style="width: 90%"></div>
-                        </div>
-                      </td>
-                      <td class="text-center">
-                        <a class="btn btn-xs btn-success" href=""><i class="fa fa-check"></i>Use</a>
-                        <a class="btn btn-xs btn-default" href=""><i class="fa fa-pencil"></i>Edit</a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="text-center">7.</td>
-                      <td>Fix and squish bugs</td>
-                      <td>
-                        <div class="progress progress-xs progress-striped active">
-                          <div class="progress-bar progress-bar-success" style="width: 90%"></div>
-                        </div>
-                      </td>
-                      <td class="text-center">
-                        <a class="btn btn-xs btn-success" href=""><i class="fa fa-check"></i>Use</a>
-                        <a class="btn btn-xs btn-default" href=""><i class="fa fa-pencil"></i>Edit</a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="text-center">8.</td>
-                      <td>Fix and squish bugs</td>
-                      <td>
-                        <div class="progress progress-xs progress-striped active">
-                          <div class="progress-bar progress-bar-success" style="width: 90%"></div>
-                        </div>
-                      </td>
-                      <td class="text-center">
-                        <a class="btn btn-xs btn-success" href=""><i class="fa fa-check"></i>Use</a>
-                        <a class="btn btn-xs btn-default" href=""><i class="fa fa-pencil"></i>Edit</a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="text-center">9.</td>
-                      <td>Fix and squish bugs</td>
-                      <td>
-                        <div class="progress progress-xs progress-striped active">
-                          <div class="progress-bar progress-bar-success" style="width: 90%"></div>
-                        </div>
-                      </td>
-                      <td class="text-center">
-                        <a class="btn btn-xs btn-success" href=""><i class="fa fa-check"></i>Use</a>
-                        <a class="btn btn-xs btn-default" href=""><i class="fa fa-pencil"></i>Edit</a>
-                      </td>
-                    </tr>
+                      <th width="15%">Time</th>
+                      <th width="20%">Action</th>
+                    </thead>
+                  <tbody>
                   </tbody></table>
                 </div><!-- /.box-body -->
               </div>

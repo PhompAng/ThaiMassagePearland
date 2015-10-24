@@ -13,7 +13,7 @@
 					<li @if(Request::is('backend/dashboard')) class="active bg-blue-active" @endif><a href="{{ URL::to('/backend/dashboard') }}"><i class="fa fa-dashboard"></i>Dashboard</a></li>
 					<li @if(Request::is('backend/coupon')) class="active bg-blue-active" @endif><a href="{{ URL::to('/backend/coupon') }}"><i class="fa fa-money"></i>Coupon Management</a></li>
 					<li @if(Request::is('backend/booking')) class="active bg-blue-active" @endif><a href="{{ URL::to('/backend/booking') }}"><i class="fa fa-cubes"></i>Booking Management</a></li>
-					<li @if(Request::is('backend/setting')) class="active bg-blue-active" @endif><a href="{{ URL::to('/backend/setting') }}"><i class="fa fa-wrench"></i>System Setting</a></li>
+					<li @if(Request::is('backend/setting')) class="active bg-blue-active" @endif><a href="{{ URL::to('/backend/setting') }}"><i class="fa fa-cog"></i>System Setting</a></li>
 				</ul>
 
 				<ul class="nav navbar-nav navbar-right">

@@ -9,7 +9,7 @@
             </div>
 			<div class="box-body">
 		<div class="action-buttons">
-			<button type="button" id="showNewCouponModalBtn" class="btn btn-success btn-sm" data-toggle="modal" data-target="#createCouponModal"><i class="glyphicon glyphicon-plus"></i> Issue New Coupon</button>
+			<button type="button" id="showNewCouponModalBtn" class="btn btn-success btn-sm btn-flat" data-toggle="modal" data-target="#createCouponModal"><i class="glyphicon glyphicon-plus"></i> Issue New Coupon</button>
 		</div>
 		<hr>
 		
@@ -34,11 +34,11 @@
 						<td class="text-center">{{ $coupon->created_at }}</td>
 						<td class="text-center">
 								@if($coupon->redeemed)
-									<button class="btn btn-xs btn-success" disabled>Redeemed</button>
+									<button class="btn btn-xs btn-success btn-flat" disabled>Redeemed</button>
 								@else
-									<button class="btn btn-xs btn-success btn-redeem" data-cid="{{ $coupon->id }}" type="button"><i class="glyphicon glyphicon-ok"></i> Redeem</button>
+									<button class="btn btn-xs btn-success btn-redeem btn-flat" data-cid="{{ $coupon->id }}" type="button"><i class="glyphicon glyphicon-ok"></i> Redeem</button>
 								@endif
-								<button class="btn btn-xs btn-danger btn-delete" data-cid="{{ $coupon->id }}"><i class="glyphicon glyphicon-trash"></i> Delete</button>
+								<button class="btn btn-xs btn-danger btn-delete btn-flat" data-cid="{{ $coupon->id }}"><i class="glyphicon glyphicon-trash"></i> Delete</button>
 						</td>
 					</tr>
 					@endforeach
@@ -87,8 +87,8 @@
 	      	{!! Form::close() !!}
 	      </div>
 	      <div class="modal-footer">
-	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-	        <button type="submit" id="btnNewCoupon" class="btn btn-success">Issue</button>
+	        <button type="button" class="btn btn-default btn-flat" data-dismiss="modal">Close</button>
+	        <button type="submit" id="btnNewCoupon" class="btn btn-success btn-flat">Issue</button>
 	      </div>
 	    </div>
 	  </div>

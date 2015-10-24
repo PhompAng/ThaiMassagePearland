@@ -19,8 +19,8 @@ class SettingController extends Controller {
 	public function index()
 	{
 		$data =	[
-			'page_title'    => 'Setting',
-			'page_subtitle' => 'Systems Setting'
+			'page_title'    => 'Systems Setting',
+			'page_subtitle' => 'Setting Your Systems'
 		];
 		return view('backend.setting', $data);
 	}
