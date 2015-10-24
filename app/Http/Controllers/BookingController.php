@@ -128,7 +128,6 @@ class BookingController extends Controller {
 	public function getTreatmentPrice(Request $requests)
 	{
 		return response()->json(Treatment::findOrFail($requests->id)->time[$requests->duration]);
->>>>>>> Stashed changes
 	}
 
 }
