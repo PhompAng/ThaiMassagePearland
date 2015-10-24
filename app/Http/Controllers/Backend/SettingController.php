@@ -1,4 +1,4 @@
-<?php namespace THM\Http\Controllers;
+<?php namespace THM\Http\Controllers\Backend;
 
 use THM\Http\Requests;
 use THM\Http\Controllers\Controller;
@@ -6,10 +6,6 @@ use THM\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 class SettingController extends Controller {
-
-	function __construct() {
-		$this->middleware('auth', ['except' => ['store']]);
-	}
 
 	/**
 	 * Display a listing of the resource.

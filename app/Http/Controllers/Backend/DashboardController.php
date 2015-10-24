@@ -1,4 +1,4 @@
-<?php namespace THM\Http\Controllers;
+<?php namespace THM\Http\Controllers\Backend;
 
 use THM\Http\Requests;
 use THM\Http\Controllers\Controller;

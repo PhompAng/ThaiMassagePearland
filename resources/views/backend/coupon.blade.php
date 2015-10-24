@@ -134,7 +134,7 @@
 			cid = $(this).data('cid');
 			confirm_delete = confirm("Are you sure to delete this coupon?");
 			if (confirm_delete) {
-				$.post('{!! URL::to("/backend/coupon/' + cid + '") !!}', {'cid': cid, '_method': 'delete', '_token': '{{ csrf_token() }}'}).success(function() {
+				$.post('{!! URL::to("/coupon/' + cid + '") !!}', {'cid': cid, '_method': 'delete', '_token': '{{ csrf_token() }}'}).success(function() {
 					$('tr[data-cid=' + cid + ']').remove();
 				});
 			};
@@ -142,7 +142,7 @@
 
 		function newCoupon() {
 			owner = $('input[name=newCouponOwner]').val();
-			$.post('{!! URL::to("/backend/coupon/") !!}', {'owner': owner, 'code': "XXXXXX", '_token': '{{ csrf_token() }}'}).success(function(result){
+			$.post('{!! URL::to("/coupon/") !!}', {'owner': owner, 'code': "XXXXXX", '_token': '{{ csrf_token() }}'}).success(function(result){
 				location.reload();
 			}).fail(function(data){
 				data = data['responseJSON'];

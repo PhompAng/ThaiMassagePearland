@@ -13,14 +13,6 @@
 
 Route::get('/', 'HomeController@index');
 
-Route::resource('backend/dashboard', 'DashboardController');
-Route::resource('backend/coupon', 'CouponController');
-Route::resource('backend/booking', 'BookingController');
-Route::resource('backend/setting', 'SettingController');
-
-Route::patch('backend/coupon/{coupon}/redeem', ['uses' => 'CouponController@redeem', 'as' => 'coupon.redeem']);
-Route::post('coupon', 'CouponController@store');
-
 Route::post('booking/process', ['uses' => 'BookingController@process', 'as' => 'booking.process']);
 Route::get('booking/complete', ['uses' => 'BookingController@complete', 'as' => 'booking.complete']);
 Route::get('booking/cancel', ['uses' => 'BookingController@cancel', 'as' => 'booking.cancel']);
@@ -31,3 +23,13 @@ Route::controllers([
 	'backend/auth' => 'Auth\AuthController',
 	//'password' => 'Auth\PasswordController',
 ]);
+
+Route::group(['middleware' => 'auth'], function() {
+    Route::resource('backend', 'Backend\DashboardController');
+    Route::resource('backend.coupon', 'Backend\CouponController');
+    Route::patch('backend/coupon/{coupon}/redeem', ['uses' => 'Backend\CouponController@redeem', 'as' => 'coupon.redeem']);
+    Route::resource('backend.booking', 'Backend\BookingController');
+    Route::resource('backend.setting', 'Backend\SettingController');
+});
+
+Route::post('/coupon', 'CouponController@store');
