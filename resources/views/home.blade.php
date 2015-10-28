@@ -164,7 +164,7 @@
 									</div>
 								@endif
 								<div style="width: 96%; height: 390px; z-index: 1000; position: absolute; background: #fff; opacity: 0.9; text-align: center; padding-top: 150px; display: none;" id="bookingPreloader">Processing...</div>
-								<form class="form-horizontal" method="POST" action="{{ route('booking.process') }}">
+								<form class="form-horizontal" method="POST" action="{{ route('booking.process') }}#reservation">
 									<input type="hidden" name="_token" value="{{ csrf_token() }}">
 									<div class="form-group">
 									<label class="col-xs-3 control-label">Date</label>
