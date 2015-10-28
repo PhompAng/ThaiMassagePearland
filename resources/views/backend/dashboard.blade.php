@@ -42,7 +42,7 @@
 				</div>
 				<div class="box-body search">
           <div class="form-group">
-            <input type="text" class="form-control input-lg" placeholder="Booking Number."> 
+            <input type="text" class="form-control input-lg text-center" placeholder="Booking No."> 
           </div>  
           <div class="form-group">
             <button class="btn btn-primary btn-flat col-md-12" type="button"><i class="fa fa-search"></i>Search</button>
@@ -91,43 +91,75 @@
 	<div class="row">
 		<div class="col-md-6">
 			<div class="box">
-                <div class="box-header">
-                  <i class="fa fa-arrow-circle-down"></i>
-                  <h3 class="box-title">Today Booking</h3>
-                </div><!-- /.box-header -->
-                <div class="box-body no-padding">
-                  <table class="table table-bordered table-hover table-striped">
-                    <thead class="thead-text-center">
-                      <th width="10%">Booking #</th>
-                      <th>Name</th>
-                      <th width="15%">Time</th>
-                      <th width="20%">Action</th>
-                      </thead>
-                    <tbody>
-                    </tbody>
-                  </table>
-                </div><!-- /.box-body -->
-              </div>
+        <div class="box-header">
+          <i class="fa fa-arrow-circle-down"></i>
+          <h3 class="box-title">Today Booking</h3>
+        </div><!-- /.box-header -->
+        <div class="box-body no-padding">
+          <table class="table table-hover table-striped">
+            <thead>
+              <th class="text-center">Booking No.</th>
+              <th>Name</th>
+              <th class="text-center">Time</th>
+              <th class="text-center">Action</th>
+            </thead>
+            <tbody>
+              @forelse($today_bookings as $booking)
+              <tr>
+                <td class="text-center">#{{ $booking->id }}</td>
+                <td class="">{{ $booking->customer_firstname }} {{ $booking->customer_lastname }}</td>
+                <td class="text-center">{{ $booking->booked_time }}</td>
+                <td class="text-center">
+                  <a href="{{ route('backend.booking.show', $booking->id) }}" class="btn btn-xs btn-success"><i class="fa fa-check-circle"></i>Use</a>
+                  <a href="{{ route('backend.booking.show', $booking->id) }}" class="btn btn-xs btn-default"><i class="fa fa-eye"></i>View</a>
+                  <a href="{{ route('backend.booking.edit', $booking->id) }}" class="btn btn-xs btn-default"><i class="fa fa-pencil"></i>Edit</a>
+                </td>
+              </tr>
+              @empty
+              <tr>
+                <td colspan="4" class="text-center text-muted">No Today Booking</td>
+              </tr>
+              @endforelse
+            </tbody>
+          </table>
+        </div><!-- /.box-body -->
+      </div>
 		</div>
-				<div class="col-md-6">
-			     <div class="box">
-                <div class="box-header">
-                  <i class="fa fa-arrow-circle-right"></i>
-                  <h3 class="box-title">Tomorrow Booking</h3>
-                </div><!-- /.box-header -->
-                <div class="box-body no-padding">
-                  <table class="table table-bordered table-hover table-striped">
-                    <thead class="thead-text-center">
-                      <th width="10%">Booking #</th>
-                      <th>Name</th>
-                      <th width="15%">Time</th>
-                      <th width="20%">Action</th>
-                    </thead>
-                  <tbody>
-                  </tbody></table>
-                </div><!-- /.box-body -->
-              </div>
-		        </div>
-	       </div>
+		<div class="col-md-6">
+	     <div class="box">
+        <div class="box-header">
+          <i class="fa fa-arrow-circle-right"></i>
+          <h3 class="box-title">Tomorrow Booking</h3>
+        </div><!-- /.box-header -->
+        <div class="box-body no-padding">
+          <table class="table table-hover table-striped">
+            <thead>
+              <th class="text-center">Booking No.</th>
+              <th>Name</th>
+              <th class="text-center">Time</th>
+              <th class="text-center">Action</th>
+            </thead>
+            <tbody>
+              @forelse($tomorrow_bookings as $booking)
+              <tr>
+                <td class="text-center">#{{ $booking->id }}</td>
+                <td class="">{{ $booking->customer_firstname }} {{ $booking->customer_lastname }}</td>
+                <td class="text-center">{{ $booking->booked_time }}</td>
+                <td class="text-center">
+                  <a href="{{ route('backend.booking.show', $booking->id) }}" class="btn btn-xs btn-primary"><i class="fa fa-eye"></i>View</a>
+                  <a href="{{ route('backend.booking.edit', $booking->id) }}" class="btn btn-xs btn-default"><i class="fa fa-pencil"></i>Edit</a>
+                </td>
+              </tr>
+              @empty
+              <tr>
+                <td colspan="4" class="text-center text-muted">No Tomorrow Booking</td>
+              </tr>
+              @endforelse
+            </tbody>
+          </table>
+        </div><!-- /.box-body -->
+      </div>
+    </div>
+  </div>
 @endsection
 

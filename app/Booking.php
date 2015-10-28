@@ -52,4 +52,57 @@ class Booking extends Model {
         return $query->where('booked_time', '>=', $start_date)->where('booked_time', '<=', $end_date);
     }
 
+    public function scopeToday($query, $offset = 0)
+    {
+        return $query->where('booked_time', '>=', Carbon::today()->addDays($offset))->where('booked_time', '<', Carbon::tomorrow()->addDays($offset));
+    }
+
+    public function scopeTomorrow($query)
+    {
+        return $this->today($offset = 1);
+    }
+
+    public function getIdAttribute($value)
+    {
+        return str_pad($value, 5, 0, STR_PAD_LEFT);
+    }
+
+    public function getFormattedStatus($html = 0)
+    {
+        $open_tag = "";
+        $close_tag = "";
+
+        switch ($this->status) {
+            case 0:
+                $status = "Unused";
+                break;
+
+            case 1:
+                $status = "Used";
+                break;
+
+            case 2:
+                $status = "Cancelled";
+                break;
+        }
+
+        if ($html) {
+            $open_tag = "<span class=\"label ";
+            switch ($this->status) {
+                case 0:
+                    $open_tag = $open_tag."label-warning\">";
+                    break;
+
+                case 1:
+                    $open_tag = $open_tag."label-default\">";
+                    break;
+
+                case 2:
+                    $open_tag = $open_tag."label-danger\">";
+                    break;
+            }
+        }
+        return $open_tag.$status.$close_tag;
+    }
+
 }

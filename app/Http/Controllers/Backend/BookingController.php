@@ -4,6 +4,7 @@ use THM\Http\Requests;
 use THM\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
+use THM\Booking;
 
 class BookingController extends Controller {
 
@@ -14,7 +15,12 @@ class BookingController extends Controller {
 	 */
 	public function index()
 	{
-		//
+		$data = [
+			'page_title'    => 'Booking Management',
+			'page_subtitle' => 'All Booking',
+			'bookings'      => Booking::all()
+		];
+		return view('backend.booking', $data);
 	}
 
 	/**
@@ -56,7 +62,12 @@ class BookingController extends Controller {
 	 */
 	public function edit($id)
 	{
-		//
+		$data = [
+			'page_title'    => 'Booking Management',
+			'page_subtitle' => 'Edit a booking',
+			'booking'       => Booking::findOrFail($id)
+		];
+		return view('backend.booking-edit', $data);
 	}
 
 	/**

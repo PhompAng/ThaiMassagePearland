@@ -4,12 +4,9 @@ use THM\Http\Requests;
 use THM\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
+use THM\Booking;
 
 class DashboardController extends Controller {
-
-	function __construct() {
-		$this->middleware('auth', ['except' => ['store']]);
-	}
 
 	/**
 	 * Display a listing of the resource.
@@ -20,7 +17,9 @@ class DashboardController extends Controller {
 	{
 		$data = [
 			'page_title'    => 'Dashboard',
-			'page_subtitle' => 'thaimassagepearland.com'
+			'page_subtitle' => 'thaimassagepearland.com',
+			'today_bookings' => Booking::today()->orderBy('booked_time', 'ASC')->get(),
+			'tomorrow_bookings' => Booking::tomorrow()->orderBy('booked_time', 'ASC')->get()
 		];
 		return view('backend.dashboard', $data);
 	}
