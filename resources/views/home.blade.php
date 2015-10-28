@@ -90,7 +90,7 @@
 									<h4 class="treatment-name">Reflexology</h4>
 									<p class="treatment-desc">Reflexology, although it's often combined with massage, is technically not a form of massage. It's a separate practice that applies pressure to reflex zones on your feet, hands or outer ears to affect your entire body.</p>
 									<div class="text-center price-list">
-										<span class="price-a"><strong>$70</strong><small> / 60 mins</small></span><span class="price-b"><strong>$100</strong><small> / 90 mins</small></span>
+										<span class="price-a"><strong>$75</strong><small> / 60 mins</small></span><span class="price-b"><strong>$100</strong><small> / 90 mins</small></span>
 									</div>
 								</div>
 							</div>
@@ -110,7 +110,7 @@
 									<h4 class="treatment-name">Swedish Massage</h4>
 									<p class="treatment-desc">The term "Swedish Massage" refers to a variety of techniques specifically designed to relax muscles by applying pressure to them against deeper muscles and bones, and rubbing in the same direction as the flow of blood returning to the heart.</p>
 									<div class="text-center price-list">
-										<span class="price-a"><strong>$70</strong><small> / 60 mins</small></span><span class="price-b"><strong>$100</strong><small> / 90 mins</small></span>
+										<span class="price-a"><strong>$75</strong><small> / 60 mins</small></span><span class="price-b"><strong>$100</strong><small> / 90 mins</small></span>
 									</div>
 								</div>
 							</div>
@@ -119,7 +119,7 @@
 									<h4 class="treatment-name">Hot Stone Therapy</h4>
 									<p class="treatment-desc">Hot stone massage therapy session promotes deeper muscle relaxation through the placement of smooth, water-heated stones at key points on the body.</p>
 									<div class="text-center price-list">
-										<span class="price-a"><strong>$70</strong><small> / 60 mins</small></span><span class="price-b"><strong>$100</strong><small> / 90 mins</small></span>
+										<span class="price-a"><strong>$75</strong><small> / 60 mins</small></span><span class="price-b"><strong>$100</strong><small> / 90 mins</small></span>
 									</div>
 								</div>
 							</div>
