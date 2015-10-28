@@ -72,7 +72,7 @@
             <div class="form-group">
             <label class="col-sm-4 control-label">Treatment</label>
               <div class="col-sm-8">
-                <input type="text" name="treatmen" class="form-control" value="{{ Input::old('booked_time', $booking->treatmen) }}">
+                <input type="text" name="treatment" class="form-control" value="{{ Input::old('booked_time', $booking->treatmen) }}">
               </div>
             </div>
           </div>
@@ -80,7 +80,7 @@
             <div class="form-group">
             <label class="col-sm-4 control-label">Duration</label>
               <div class="col-sm-8">
-                <input type="text" name="guests" class="form-control" value="{{ Input::old('guests', $booking->guests) }}">
+                <input type="text" name="duration" class="form-control" value="{{ Input::old('guests', $booking->guests) }}">
               </div>
             </div>
           </div>
@@ -98,7 +98,7 @@
             <div class="form-group">
             <label class="col-sm-4 control-label">Amount</label>
               <div class="col-sm-8">
-                <input type="text" name="guests" class="form-control" value="$90.00"disabled>
+                <input type="text" name="amount" class="form-control" value="$90.00"disabled>
               </div>
             </div>
           </div>
