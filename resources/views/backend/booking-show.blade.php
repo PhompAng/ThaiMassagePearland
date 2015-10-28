@@ -5,14 +5,14 @@
     <div class="box box-primary">
       <div class="box-header with-border">
         <i class="fa fa-user"></i>
-        <h3 class="box-title">Booking No. 00001</h3>
+        <h3 class="box-title">Booking</h3>
+        <div class="pull-right">
+          <p><strong>Booking ID. </strong> 0001</p>
+        </div>
       </div>
       <div class="box-body">
         <div class="row">
-          <div class="col-md-3" align="center">
-          <img src="http://babyinfoforyou.com/wp-content/uploads/2014/10/avatar-300x300.png" alt="User Pic"  class="img-circle img-responsive">
-          </div>
-          <div class="col-md-9">
+          <div class="col-md-offset-2 col-md-8">
             <table class="table table-user-information">
               <tbody>
                 <tr>
@@ -39,12 +39,29 @@
                   <td><strong>Guests</strong></td>
                   <td>-</td>
                 </tr>
+                <tr>
+                  <td><strong>Treatment</strong></td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td><strong>Duration</strong></td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td><strong>Transaction ID#</strong></td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td><strong>Amount</strong></td>
+                  <td>$90.00</td>
+                </tr>
               </tbody>
             </table>
           </div>
         </div>
       </div><!-- /.box-body -->
-      <div class="box-footer text-center">
+      <div class="box-footer text-right">
+          <button type="button" class="btn btn-primary btn flat"><i class="fa fa-print"></i>Print</button>
       </div><!--box-footer-->
     </div>
   </div>
