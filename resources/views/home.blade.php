@@ -6,11 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Thai Hands Massage Therapy - Thai Massage in Pearland</title>
         <meta name="description" content="Thai message is an ancient practice of healing of Thai society. It combines the acupressure, assisted yoga postures, and the Indian Ayurvedic approach to heal." />
-        <meta name="keywords" content="massage pearland, thai massage pearland, thai massage texas, body massage, thai body massage, foot massage pearland, body massage pearland" />
-        <meta name="robots" content="index, nofollow">
-        <meta name="googlebots" content="index, nofollow">
-        <meta name="allow-search" content="yes" />
-        <meta name="revisit-after" content="7 days">
+        <meta name="keywords" content="massage pearland, thai massage pearland" />
 
 	{!! HTML::style('/assets/css/bootstrap.min.css') !!}
 	{!! HTML::style('/assets/css/owl.carousel.css') !!}
