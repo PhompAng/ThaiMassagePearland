@@ -20,9 +20,9 @@
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span>Administrator<span class="caret"></span></a>
 						<ul class="dropdown-menu" role="menu">
-							<li><a href="http://localhost:8000/profile/edit"><span class="fa fa-pencil"></span>Edit Profile</a></li>
+							{{-- <li><a href="http://localhost:8000/profile/edit"><span class="fa fa-pencil"></span>Edit Profile</a></li>
 							<li><a href="http://localhost:8000/profile/password"><span class="fa fa-wrench"></span>Change Password</a></li>
-							<li class="divider"></li>
+							<li class="divider"></li> --}}
 							<li><a href="{{ URL::to('/backend/auth/logout') }}"><span class="glyphicon glyphicon-log-out text-danger"></span><span class="text-danger">Sign Out</span></a></li>
 						</ul>
 					</li>

@@ -28,6 +28,7 @@ Route::group(['middleware' => 'auth'], function() {
     Route::resource('backend/coupon', 'Backend\CouponController');
     Route::patch('backend/coupon/{coupon}/redeem', ['uses' => 'Backend\CouponController@redeem', 'as' => 'coupon.redeem']);
     Route::resource('backend/booking', 'Backend\BookingController');
+    Route::post('backend/booking/{id}/status', ['uses' => 'Backend\BookingController@setStatus', 'as' => 'backend.booking.setStatus']);
     Route::resource('backend/setting', 'Backend\SettingController');
     Route::resource('backend', 'Backend\DashboardController');
 });

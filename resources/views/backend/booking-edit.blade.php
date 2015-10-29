@@ -1,23 +1,22 @@
 @extends('backend.layout.main')
 
 @section('content')
-    <div class="col-md-6 col-md-offset-3">
+    <div class="col-md-8 col-md-offset-2">
     <div class="box box-primary">
       <div class="box-header with-border">
-        <i class="fa fa-user"></i>
-        <h3 class="box-title">Booking</h3>
-        <div class="pull-right">
-          <p><strong> Booking ID. </strong>{{ $booking->id }}</p>
-        </div>
+        <i class="fa fa-pencil"></i>
+        <h3 class="box-title">Edit Booking</h3>
       </div>
-      <form class="form-horizontal">
+      <form class="form-horizontal" method="POST" action="{{ route('backend.booking.update', $booking->id) }}">
+      <input type="hidden" name="_token" value="{{ csrf_token() }}">
+      <input type="hidden" name="_method" value="PUT">
       <div class="box-body">
         <div class="row">
           <div class="col-md-5 col-md-offset-1">
           <div class="form-group">
             <label class="col-sm-4 control-label">Firstname</label>
               <div class="col-sm-8">
-                <input type="text" name="firstname" class="form-control" value="{{ Input::old('firstname', $booking->customer_firstname) }}">
+                <input type="text" name="customer_firstname" class="form-control" value="{{ Input::old('firstname', $booking->customer_firstname) }}">
               </div>
             </div>
           </div>
@@ -25,7 +24,7 @@
           <div class="form-group">
             <label class="col-sm-4 control-label">Lastname</label>
               <div class="col-sm-8">
-                <input type="text" name="lastname" class="form-control" value="{{ Input::old('lastname', $booking->customer_lastname) }}">
+                <input type="text" name="customer_lastname" class="form-control" value="{{ Input::old('lastname', $booking->customer_lastname) }}">
               </div>
             </div>
         </div>
@@ -72,7 +71,11 @@
             <div class="form-group">
             <label class="col-sm-4 control-label">Treatment</label>
               <div class="col-sm-8">
-                <input type="text" name="treatment" class="form-control" value="{{ Input::old('booked_time', $booking->treatmen) }}">
+                <select name="treatment" class="form-control">
+                  @foreach($treatments as $treatment)
+                    <option value="{{ $treatment->id }}" @if(Input::old('booked_time', $booking->treatment->id) == $treatment->id) selected @endif>{{ $treatment->title }}</option>
+                  @endforeach
+                </select>
               </div>
             </div>
           </div>
@@ -80,7 +83,10 @@
             <div class="form-group">
             <label class="col-sm-4 control-label">Duration</label>
               <div class="col-sm-8">
-                <input type="text" name="duration" class="form-control" value="{{ Input::old('guests', $booking->guests) }}">
+                <select name="duration" class="form-control">
+                  <option value="1" @if(Input::old('guests', $booking->timeslots) == 1) selected @endif>60 Minutes</option>
+                  <option value="2" @if(Input::old('guests', $booking->timeslots) == 2) selected @endif>90 Minutes</option>
+                </select>
               </div>
             </div>
           </div>
@@ -105,7 +111,7 @@
         </div><!--row-->
       </div><!-- /.box-body -->
       <div class="box-footer text-center">
-        <button class="btn btn-primary btn-flat"><i class="fa fa-floppy-o"></i>Save</button>
+        <button class="btn btn-sm btn-primary"><i class="fa fa-floppy-o"></i>Save</button>
       </div><!--box-footer-->
       </form>
     </div>

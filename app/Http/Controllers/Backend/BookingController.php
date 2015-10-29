@@ -51,7 +51,13 @@ class BookingController extends Controller {
 	 */
 	public function show($id)
 	{
-		//
+		$booking = Booking::findOrFail($id);
+		$data = [
+			'page_title'    => 'Booking Management',
+			'page_subtitle' => 'Booking Detail',
+			'booking' => $booking
+		];
+		return view('backend.booking-show', $data);
 	}
 
 	/**
@@ -65,7 +71,8 @@ class BookingController extends Controller {
 		$data = [
 			'page_title'    => 'Booking Management',
 			'page_subtitle' => 'Edit a booking',
-			'booking'       => Booking::findOrFail($id)
+			'booking'       => Booking::findOrFail($id),
+			'treatments'    => \THM\Treatment::all()
 		];
 		return view('backend.booking-edit', $data);
 	}
@@ -76,9 +83,27 @@ class BookingController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
+	public function update(Request $request, $id)
 	{
-		//
+		$booking = Booking::findOrFail($id);
+		$booking->customer_firstname = $request->customer_firstname;
+		$booking->customer_lastname = $request->customer_lastname;
+		$booking->phone = $request->phone;
+		$booking->email = $request->email;
+		$booking->booked_time = $request->booked_time;
+		$booking->guests = $request->guests;
+		$booking->treatment_id = $request->treatment;
+		$booking->timeslots = $request->duration;
+		$booking->save();
+		return redirect(route('backend.booking.show', $id));
+	}
+
+	public function setStatus(Request $request, $id)
+	{
+		$booking = Booking::findOrFail($id);
+		$booking->status = $request->status;
+		$booking->save();
+		return redirect(route('backend.booking.show', $id));
 	}
 
 	/**

@@ -25,7 +25,7 @@ class Booking extends Model {
         }
         $date->setTime(0, 0, 0);
         $end_date = clone $date;
-        $booked_time = self::between($date, $end_date->addDay())->get(['booked_time', 'timeslots', 'guests']);
+        $booked_time = self::between($date, $end_date->addDay())->get(['booked_time', 'timeslots', 'guests'])->where('status', '!=', 2);
         $timeslots = [];
         for ($i=10; $i < 19; $i++) {
             $timeslots[$i] = 0;
