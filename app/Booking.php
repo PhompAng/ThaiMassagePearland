@@ -62,6 +62,40 @@ class Booking extends Model {
         return $this->today($offset = 1);
     }
 
+    public function scopeThisMonth($query)
+    {
+        $this_month = Carbon::today();
+        $this_month->day = 1;
+
+        $next_month = clone $this_month;
+        $next_month->addMonth();
+
+        return $query->where('booked_time', '>=', $this_month)->where('booked_time', '<', $next_month);
+    }
+
+    public function scopeThisMonthBeforeNow($query)
+    {
+        $this_month = Carbon::today();
+        $this_month->day = 1;
+
+        return $query->where('booked_time', '>=', $this_month)->where('booked_time', '<', Carbon::now());
+    }
+
+    public function scopeUnused($query)
+    {
+        return $query->where('status', 0);
+    }
+
+    public function scopeUsed($query)
+    {
+        return $query->where('status', 1);
+    }
+
+    public function scopeCancelled($query)
+    {
+        return $query->where('status', 2);
+    }
+
     public function getIdAttribute($value)
     {
         return str_pad($value, 5, 0, STR_PAD_LEFT);

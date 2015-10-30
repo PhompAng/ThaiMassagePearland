@@ -34,55 +34,56 @@
 				</div>
 			</div>
 		</div>
+    <div class="col-md-3">
+      <div class="box box-success" style="height:200px">
+        <div class="box-header with-border">
+          <i class="fa fa-calendar"></i>
+          <h3 class="box-title">Today Summary</h3>
+        </div>
+        <div class="box-body text-center">
+          <div class="time">0 of 15</div>
+          Booking used.
+        </div>
+      </div>
+    </div>
 		<div class="col-md-3">
-			<div class="box box-primary" style="height:200px">
+			<div class="box box-warning" style="height:200px">
 				<div class="box-header with-border">
 					<i class="fa fa-search"></i>
 					<h3 class="box-title">Search Booking</h3>
 				</div>
 				<div class="box-body search">
           <div class="form-group">
-            <input type="text" class="form-control input-lg text-center" placeholder="Booking No."> 
-          </div>  
+            <input type="text" class="form-control input-lg text-center" id="booking-search-input" placeholder="Booking No.">
+          </div>
           <div class="form-group">
-            <button class="btn btn-primary btn-flat col-md-12" type="button"><i class="fa fa-search"></i>Search</button>
+            <a class="btn btn-primary btn-block" id="booking-search-btn" href="#"><i class="fa fa-search"></i>Search</a>
           </div>
 				</div>
 			</div>
 		</div>
 		<div class="col-md-3">
-			<div class="box box-primary" style="height:200px">
+			<div class="box box-default" style="height:200px">
 				<div class="box-header with-border">
 					<i class="fa fa-calendar"></i>
-					<h3 class="box-title">Today</h3>
-				</div>
-				<div class="box-body">
-					ASDlas
-				</div>
-			</div>
-		</div>
-		<div class="col-md-3">
-			<div class="box box-primary" style="height:200px">
-				<div class="box-header with-border">
-					<i class="fa fa-calendar"></i>
-					<h3 class="box-title">Today</h3>
+					<h3 class="box-title">Summary</h3>
 				</div>
 				<div class="box-body">
 					<table class="table result">
             <tbody>
               <tr>
-                <td class="text-left"><strong>Today</strong></td>
-                <td>124</td>
+                <td class="text-left" style="border-top: none;"><strong>Today</strong></td>
+                <td style="border-top: none;">{{ $today_bookings->count() }}</td>
               </tr>
               <tr>
                 <td class="text-left"><strong>This Month</strong></td>
-                <td>1456</td>
+                <td>{{ $this_month_booking->count() }}</td>
               </tr>
               <tr>
-                <td class="text-left"><strong>No show</strong></td>
-                <td>3</td>
+                <td class="text-left"><strong>No Show <small>(this month)</small></strong></td>
+                <td>{{ $this_month_no_show->count() }}</td>
               </tr>
-            </tbody>     
+            </tbody>
           </table>
 				</div>
 			</div>
@@ -161,5 +162,13 @@
       </div>
     </div>
   </div>
+@endsection
+
+@section('js')
+  <script>
+    $('#booking-search-input').change(function() {
+      $('#booking-search-btn').attr('href', '/backend/booking/' + $('#booking-search-input').val());
+    });
+  </script>
 @endsection
 
