@@ -4,6 +4,8 @@ use THM\Http\Requests;
 use THM\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
+use THM\Treatment;
+use THM\Setting;
 
 class SettingController extends Controller {
 
@@ -16,7 +18,8 @@ class SettingController extends Controller {
 	{
 		$data =	[
 			'page_title'    => 'Systems Setting',
-			'page_subtitle' => 'Setting Your Systems'
+			'page_subtitle' => 'Setting Your Systems',
+			'treatments'    => Treatment::all()
 		];
 		return view('backend.setting', $data);
 	}
@@ -36,9 +39,19 @@ class SettingController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function store(Request $request)
 	{
-		//
+		foreach ($request->treatment as $treatment_id => $price) {
+			$treatment = Treatment::findOrFail($treatment_id);
+			$treatment->time = $price;
+			$treatment->save();
+		}
+
+		foreach ($request->settings as $key => $value) {
+			Setting::set($key, $value);
+		}
+
+		return redirect(route('backend.setting.index'));
 	}
 
 	/**
