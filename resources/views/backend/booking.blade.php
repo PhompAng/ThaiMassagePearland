@@ -2,24 +2,19 @@
 
 @section('content')
 	<div class="row">
-		<div class="col-md-3">
-			<div class="box">
-        <div class="box-header with-border">
-        	<i class="fa fa-filter"></i>
-          <h3 class="box-title">Filter</h3>
-        </div>
-        <div class="box-body">
-          <h4>Narrow by Name</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis laborum reprehenderit facilis consequuntur aspernatur optio, ipsa neque, vel, eligendi placeateveniet asperiores dolorem doloribus nulla enim fugit veniam. Cum, vero.</p>
-          <h4>Narrow by Type</h4>
-        </div><!-- /.box-body -->
-      </div>
-		</div>
-		<div class="col-md-9">
+		<div class="col-md-10 col-md-offset-1">
 			<div class="box box-primary">
         <div class="box-header">
           <i class="fa fa-list"></i>
           <h3 class="box-title">Booking</h3>
+          <div class="box-tools">
+            <div class="btn-group">
+                <a href="{{ route('backend.booking.index', ['filter' => 1]) }}" class="btn btn-sm btn-default @if(Input::get('filter') == 1) active @endif">Today</a>
+                <a href="{{ route('backend.booking.index', ['filter' => 2]) }}" class="btn btn-sm btn-default @if(Input::get('filter') == 2) active @endif">Tomorrow</a>
+                <a href="{{ route('backend.booking.index', ['filter' => 3]) }}" class="btn btn-sm btn-default @if(Input::get('filter') == 3) active @endif">This Month</a>
+                <a href="{{ route('backend.booking.index') }}" class="btn btn-sm btn-default @if(Input::get('filter') == 0 || !Input::has('filter')) active @endif">All</a>
+              </div>
+          </div>
         </div><!-- /.box-header -->
         <div class="box-body table-responsive no-padding">
           <table class="table table-hover">

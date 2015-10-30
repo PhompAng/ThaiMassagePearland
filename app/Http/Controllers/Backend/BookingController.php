@@ -13,12 +13,30 @@ class BookingController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function index()
+	public function index(Request $request)
 	{
+		switch ($request->get('filter', 0)) {
+			case 0:
+				$bookings = Booking::all();
+				break;
+
+			case 1:
+				$bookings = Booking::today()->get();
+				break;
+
+			case 2:
+				$bookings = Booking::tomorrow()->get();
+				break;
+
+			case 3:
+				$bookings = Booking::thisMonth()->get();
+				break;
+		}
+
 		$data = [
 			'page_title'    => 'Booking Management',
 			'page_subtitle' => 'All Booking',
-			'bookings'      => Booking::all()
+			'bookings'      => $bookings
 		];
 		return view('backend.booking', $data);
 	}
