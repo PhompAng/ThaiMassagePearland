@@ -134,7 +134,7 @@
 			cid = $(this).data('cid');
 			confirm_delete = confirm("Are you sure to delete this coupon?");
 			if (confirm_delete) {
-				$.post('{!! URL::to("/coupon/' + cid + '") !!}', {'cid': cid, '_method': 'delete', '_token': '{{ csrf_token() }}'}).success(function() {
+				$.post('{!! URL::to("/backend/coupon/' + cid + '") !!}', {'cid': cid, '_method': 'delete', '_token': '{{ csrf_token() }}'}).success(function() {
 					$('tr[data-cid=' + cid + ']').remove();
 				});
 			};

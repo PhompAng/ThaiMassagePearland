@@ -41,7 +41,7 @@
           <h3 class="box-title">Today Summary</h3>
         </div>
         <div class="box-body text-center">
-          <div class="time">0 of 15</div>
+          <div class="time">{{ $today_used }} of {{ $today_unused }}</div>
           Booking used.
         </div>
       </div>
@@ -102,6 +102,7 @@
               <th class="text-center">Booking No.</th>
               <th>Name</th>
               <th class="text-center">Time</th>
+              <th class="text-center">Status</th>
               <th class="text-center">Action</th>
             </thead>
             <tbody>
@@ -109,11 +110,10 @@
               <tr>
                 <td class="text-center">#{{ $booking->id }}</td>
                 <td class="">{{ $booking->customer_firstname }} {{ $booking->customer_lastname }}</td>
-                <td class="text-center">{{ $booking->booked_time }}</td>
+                <td class="text-center">{{ $booking->booked_time->format('h:i A') }}</td>
+                <td class="text-center">{!! $booking->getFormattedStatus(1) !!}</td>
                 <td class="text-center">
-                  <a href="{{ route('backend.booking.show', $booking->id) }}" class="btn btn-xs btn-success"><i class="fa fa-check-circle"></i>Use</a>
                   <a href="{{ route('backend.booking.show', $booking->id) }}" class="btn btn-xs btn-default"><i class="fa fa-eye"></i>View</a>
-                  <a href="{{ route('backend.booking.edit', $booking->id) }}" class="btn btn-xs btn-default"><i class="fa fa-pencil"></i>Edit</a>
                 </td>
               </tr>
               @empty
@@ -145,7 +145,7 @@
               <tr>
                 <td class="text-center">#{{ $booking->id }}</td>
                 <td class="">{{ $booking->customer_firstname }} {{ $booking->customer_lastname }}</td>
-                <td class="text-center">{{ $booking->booked_time }}</td>
+                <td class="text-center">{{ $booking->booked_time->format('h:i A') }}</td>
                 <td class="text-center">
                   <a href="{{ route('backend.booking.show', $booking->id) }}" class="btn btn-xs btn-primary"><i class="fa fa-eye"></i>View</a>
                   <a href="{{ route('backend.booking.edit', $booking->id) }}" class="btn btn-xs btn-default"><i class="fa fa-pencil"></i>Edit</a>

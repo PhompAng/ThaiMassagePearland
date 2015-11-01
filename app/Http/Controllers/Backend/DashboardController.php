@@ -19,9 +19,11 @@ class DashboardController extends Controller {
 			'page_title'    => 'Dashboard',
 			'page_subtitle' => 'thaimassagepearland.com',
 			'today_bookings' => Booking::today()->orderBy('booked_time', 'ASC')->get(),
+			'today_unused' => Booking::today()->unused()->count(),
+			'today_used' => Booking::today()->used()->count(),
 			'tomorrow_bookings' => Booking::tomorrow()->orderBy('booked_time', 'ASC')->get(),
 			'this_month_booking' => Booking::thisMonth()->get(),
-			'this_month_no_show' => Booking::thisMonthBeforeNow()->unused()->get()
+			'this_month_no_show' => Booking::thisMonthBeforeNow()->unused()->get(),
 		];
 		return view('backend.dashboard', $data);
 	}

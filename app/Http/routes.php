@@ -33,4 +33,4 @@ Route::group(['middleware' => 'auth'], function() {
     Route::resource('backend', 'Backend\DashboardController');
 });
 
-// Route::post('/coupon', 'CouponController@store');
+Route::post('/coupon', 'CouponController@store');

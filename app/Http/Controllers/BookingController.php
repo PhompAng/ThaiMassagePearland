@@ -6,6 +6,7 @@ use Validator;
 use Omnipay\Omnipay;
 use THM\Treatment;
 use THM\Booking;
+use Mail;
 
 use Illuminate\Http\Request;
 
@@ -95,6 +96,9 @@ class BookingController extends Controller {
 		$response = $this->gateway->completePurchase(['amount' => $transaction['AMT']])->send();
 
 		if($response->isSuccessful()) {
+			if (Booking::where('transaction_id', $response->getData()['PAYMENTINFO_0_TRANSACTIONID'])->count()) {
+				return redirect('/');
+			}
 			$order = (object) session()->get('order');
 
 			$booked_time = \Carbon\Carbon::createFromFormat('Y-m-d', $order->booking['date']);
@@ -113,7 +117,13 @@ class BookingController extends Controller {
 			$booking->transaction_id = $response->getData()['PAYMENTINFO_0_TRANSACTIONID'];
 			$booking->save();
 
-			dd('Done');
+			Mail::send('emails.booking', ['booking' => $booking], function($message) use ($booking) {
+		        $message->from('no-reply@thaimassagepearland.com', 'Thai Hands Massage Therapy');
+		        $message->to($booking->email);
+		        $message->subject('Booking Confirmation for #'.$booking->id);
+	        });
+
+	        return redirect('/?action=booking_success')->with('booking', $booking);
 		} else {
 			dd($response);
 		}

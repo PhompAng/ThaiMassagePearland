@@ -297,6 +297,30 @@
 		    </div>
 		  </div>
 		</div>
+
+		@if(session('booking'))
+		<div class="modal fade" id="bookingSuccessModal" tabindex="-1" role="dialog">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+		        <h4 class="modal-title result-title">Booking confirmed</h4>
+		      </div>
+		      <div class="modal-body">
+						<p>Your booking with the following details has been confirmed sent to your email.</p>
+						<strong>Booking ID: </strong>#{{ session('booking')->id }}<br>
+						<strong>Customer Name: </strong>{{ session('booking')->customer_firstname }} {{ session('booking')->customer_lastname }}<br>
+						<strong>Treatment: </strong>{{ session('booking')->treatment->title }} ({{ session('booking')->duration }} minutes)<br>
+						<strong>Booked Time: </strong>{{ session('booking')->booked_time }}<br>
+						<strong>Guests: </strong>{{ session('booking')->guests }}
+			    </div>
+			    <div class="modal-footer">
+			    	<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+			    </div>
+		    </div>
+		  </div>
+		</div>
+		@endif
 	
 	{!! HTML::script('https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js') !!}
 	{!! HTML::script('/assets/js/bootstrap.min.js') !!}
@@ -351,9 +375,13 @@
 				$('select[name="booking[time]"]').val(0);
 				$.each(result, function(hour, value) {
 					if (hour > 11) {
-						option_text = hour + " PM";
+						if (hour > 12) {
+							option_text = "0" + hour % 12 + ":00 PM";
+						} else {
+							option_text = hour + ":00 PM";
+						};
 					} else {
-						option_text = hour + " AM";
+						option_text = hour + ":00 AM";
 					};
 
 					if (value >= 2) {
@@ -396,6 +424,10 @@
 		};
 		// booking_preload.toggle();
 	}
+
+	@if(Input::get('action') == 'booking_success' && session('booking'))
+		$('#bookingSuccessModal').modal();
+	@endif
 	</script>
 	</body>
 </html>
