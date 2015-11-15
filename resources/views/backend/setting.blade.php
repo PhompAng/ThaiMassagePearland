@@ -3,11 +3,11 @@
 @section('content')
 <div class="col-md-8 col-md-offset-2">
 		<div class="box box-primary">
+    <form class="form-horizontal" method="POST" action="{{ route('backend.setting.store') }}">
               <div class="box-header with-border">
               	<i class="fa fa-cog"></i>
                 <h3 class="box-title">Setting</h3>
               </div>
-              <form class="form-horizontal" method="POST" action="{{ route('backend.setting.store') }}">
               <input type="hidden" name="_token" value="{{ csrf_token() }}">
               <div class="box-body">
                 <div class="row">
@@ -33,30 +33,30 @@
                     <h3>Package</h3><hr>
                   </div>
                   <div class="row">
-                  <div class="col-md-8 col-md-offset-2">
-                    @foreach($treatments as $treatment)
-                    <table class="table table-striped table-bordered">
-                      <tr>
-                        <th>Treatment</th>
-                        <td colspan="3">{{ $treatment->title }}</td>
-                      </tr>
-                      @foreach(array_keys($treatment->time) as $time)
-                      <tr>
-                        <th style="vertical-align: middle;">Duration</th>
-                        <td style="vertical-align: middle;">{{ $time }} Minutes</td>
-                        <th style="vertical-align: middle;">Price</th>
-                        <td width="120px">
-                          <div class="input-group">
-                            <div class="input-group-addon">$</div>
-                            <input type="text" name="treatment[{{ $treatment->id }}][{{ $time }}]" class="form-control input-sm" value="{{ $treatment->time[$time] }}">
-                          </div>
-                        </td>
-                      </tr>
+                    <div class="col-md-8 col-md-offset-2">
+                      @foreach($treatments as $treatment)
+                      <table class="table table-striped table-bordered">
+                        <tr>
+                          <th>Treatment</th>
+                          <td colspan="3">{{ $treatment->title }}</td>
+                        </tr>
+                        @foreach(array_keys($treatment->time) as $time)
+                        <tr>
+                          <th style="vertical-align: middle;">Duration</th>
+                          <td style="vertical-align: middle;">{{ $time }} Minutes</td>
+                          <th style="vertical-align: middle;">Price</th>
+                          <td width="120px">
+                            <div class="input-group">
+                              <div class="input-group-addon">$</div>
+                              <input type="text" name="treatment[{{ $treatment->id }}][{{ $time }}]" class="form-control input-sm" value="{{ $treatment->time[$time] }}">
+                            </div>
+                          </td>
+                        </tr>
+                        @endforeach
+                      </table>
                       @endforeach
-                    </table>
-                    @endforeach
+                    </div>
                   </div>
-                </div>
                 </div>
               </div><!-- /.box-body -->
               <div class="box-footer text-right">
@@ -65,4 +65,5 @@
               </form>
         </div>
 	</div>
+  <div class="clearfix"></div>
 @endsection

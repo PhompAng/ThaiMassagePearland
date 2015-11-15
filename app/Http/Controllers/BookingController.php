@@ -7,6 +7,7 @@ use Omnipay\Omnipay;
 use THM\Treatment;
 use THM\Booking;
 use Mail;
+use THM\Setting;
 
 use Illuminate\Http\Request;
 
@@ -16,10 +17,10 @@ class BookingController extends Controller {
 
 	public function __construct() {
 		$gateway = Omnipay::create('PayPal_Express');
-		$gateway->setUsername('ton1996.s-facilitator_api1.gmail.com');
-		$gateway->setPassword('8888X6BF3C2UFLEA');
-		$gateway->setSignature('A.YUqKtpZKKu8dHb7qfrv7-thqHkA0XdDLcPbToSSPETdZypI2qbVgIC');
-		$gateway->setTestMode(true);
+		$gateway->setUsername('peenarng_api1.hotmail.com');
+		$gateway->setPassword('CV9GLPVV6JD5R8JM');
+		$gateway->setSignature('AjKqy7Q0WCFQBMbAqg2v-m6N7XcOADsZYDtHtA9tH5qvQk2DPcQ532Is');
+		$gateway->setTestMode(false);
 
 		$this->gateway = $gateway;
 	}
@@ -55,6 +56,11 @@ class BookingController extends Controller {
 			return redirect('/')->withErrors($validator)->withInput();
 		}
 
+		$timeslots = Booking::generateTimeslot(\Carbon\Carbon::createFromFormat('Y-m-d', $requests->booking['date']));
+		if ($timeslots[$requests->booking['time']] >= Setting::get('booking_capacity')) {
+			return redirect('/');
+		}
+
 		$treatment = Treatment::findOrfail($requests->booking['treatment']);
 		$order_price = $treatment->time[$requests->booking['duration']];
 		if ($requests->booking['guests'] == 2) {
@@ -67,7 +73,7 @@ class BookingController extends Controller {
 
 		$order_description = $treatment->title." (".$requests->booking['duration']." mins)";
 		$order = [
-			'amount'      => (float) $order_price,
+			'amount'      => (float) 0.01,
 			'currency'    => 'USD',
 			'description' => $order_description,
 			'returnUrl'   => route('booking.complete'),
@@ -75,7 +81,8 @@ class BookingController extends Controller {
 			'noShipping'  => 1,
 			'allowNote'   => 0,
 			'client'      => $requests->client,
-			'booking'     => $requests->booking
+			'booking'     => $requests->booking,
+			'LOCALECODE'  => 'us'
 		];
 
 		session()->put('order', $order);
@@ -125,9 +132,14 @@ class BookingController extends Controller {
 
 	        return redirect('/?action=booking_success')->with('booking', $booking);
 		} else {
-			dd($response);
+			return $this->cancel();
 		}
 
+	}
+
+	public function cancel()
+	{
+		return redirect('/?action=booking_cancel');
 	}
 
 	public function generateTimeslot(Request $requests)

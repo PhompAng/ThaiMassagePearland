@@ -321,6 +321,27 @@
 		  </div>
 		</div>
 		@endif
+
+		<div class="modal fade" id="bookingFailModal" tabindex="-1" role="dialog">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+		        <h4 class="modal-title result-title">Booking Failed</h4>
+		      </div>
+		      <div class="modal-body">
+						<div class="alert alert-danger">
+							<p><strong>Your booking is incomplete and not confirmed.</strong></p><br>
+							<p>If your credit card has been charged, please contact us at (832) 781-8415 to issue a refund.</p><br>
+							<p>We're sorry for your inconvenient.</p>
+						</div>
+			    </div>
+			    <div class="modal-footer">
+			    	<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+			    </div>
+		    </div>
+		  </div>
+		</div>
 	
 	{!! HTML::script('https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js') !!}
 	{!! HTML::script('/assets/js/bootstrap.min.js') !!}
@@ -384,7 +405,7 @@
 						option_text = hour + ":00 AM";
 					};
 
-					if (value >= 2) {
+					if (value >= {{ \THM\Setting::get('booking_capacity') }}) {
 						console.log($('select[name="booking[time]"]').find('option[value='+ hour +']'));
 						$('select[name="booking[time]"]').find('option[value='+ hour +']').attr('disabled', 'disabled').text(option_text + " (FULL)");
 					} else {
@@ -427,6 +448,10 @@
 
 	@if(Input::get('action') == 'booking_success' && session('booking'))
 		$('#bookingSuccessModal').modal();
+	@endif
+
+	@if(Input::get('action') == 'booking_cancel')
+		$('#bookingFailModal').modal();
 	@endif
 	</script>
 	</body>

@@ -2,7 +2,7 @@
 	<nav class="navbar navbar-static-top">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a class="navbar-brand">Feenix <sup><small>alpha</small></sup></a>
+				<a class="navbar-brand">ThaiMassagePearland <sup><small>Admin</small></sup></a>
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
 					<i class="fa fa-bars"></i>
 				</button>

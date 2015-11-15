@@ -18,7 +18,7 @@ class SettingController extends Controller {
 	{
 		$data =	[
 			'page_title'    => 'Systems Setting',
-			'page_subtitle' => 'Setting Your Systems',
+			'page_subtitle' => 'All Settings',
 			'treatments'    => Treatment::all()
 		];
 		return view('backend.setting', $data);

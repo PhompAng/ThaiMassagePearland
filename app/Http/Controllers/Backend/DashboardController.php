@@ -17,7 +17,7 @@ class DashboardController extends Controller {
 	{
 		$data = [
 			'page_title'    => 'Dashboard',
-			'page_subtitle' => 'thaimassagepearland.com',
+			'page_subtitle' => 'Overview',
 			'today_bookings' => Booking::today()->orderBy('booked_time', 'ASC')->get(),
 			'today_unused' => Booking::today()->unused()->count(),
 			'today_used' => Booking::today()->used()->count(),
