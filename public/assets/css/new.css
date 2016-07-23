@@ -1,0 +1,106 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,600);
+@import url(http://fonts.googleapis.com/css?family=Rosarivo);
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    background: url('../imgs/bg1.jpg') center top;
+    background-attachment: fixed;
+    font-size: 15px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    line-height: 1.55em;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.navbar-default {
+    background: transparent;
+    border: none;
+    margin: 25px auto;
+}
+.navbar-default .navbar-brand {
+    color: #fff;
+}
+.navbar-default .navbar-nav > li > a {
+    color: #fff;
+}
+header {
+    /*background-color: #4C2C10;*/
+    min-height: 90vh;
+}
+.header-logo {
+    margin: 50px auto;
+    width: 200px;
+    height: 200px;
+    /*width:291px;*/
+    /*height:169px;*/
+}
+.hero {
+    max-width: 880px;
+    margin: 0 auto;
+    color: #fff;
+}
+.hero-heading {
+    font-size: 48px;
+    font-weight: 200;
+    text-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    margin: 15px auto;
+}
+.hero-subheading {
+    font-size: 36px;
+    font-weight: 200;
+}
+.hero-label {
+    font-size: 24px;
+    line-height: 1.35417;
+    font-weight: 200;
+    text-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+.jumbobuttons {
+    margin:0 auto;
+    width: 150px;
+}
+.header-reserve {
+    background: none;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 15px;
+    border-radius: 30px;
+}
+
+/*================================================================*/
+
+.intro {
+    background-color: #f2f2f2;
+}
+.intro > .intro-container {
+    padding: 0;
+    overflow: hidden;
+}
+p.text-intro {
+    width: 70%;
+    font-size: 20px;
+    line-height: 1.5;
+    font-weight: 200;
+    margin:0 auto;
+    color: rgb(51, 51, 51);
+}
+
+.benefit {
+    background-color: #fff;
+    padding-bottom: 100px;
+}
+h2.head-benefit {
+    margin: 100px auto 0;
+}
+p.text-benefit {
+    width: 70%;
+    font-size: 20px;
+    line-height: 1.5;
+    font-weight: 200;
+    margin: 20px auto 100px;
+    color: rgb(51, 51, 51);
+}

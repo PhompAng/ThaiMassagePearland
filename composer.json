@@ -42,11 +42,5 @@
 	},
 	"config": {
 		"preferred-install": "dist"
-	},
-	"repositories": [
-        {
-            "type": "composer",
-            "url": "http://git.iton.in.th:8008"
-        }
-    ]
+	}
 }
