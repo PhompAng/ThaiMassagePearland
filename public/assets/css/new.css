@@ -12,6 +12,7 @@ body {
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    direction: ltr;
 }
 
 .navbar-default {
@@ -76,16 +77,42 @@ header {
 .intro {
     background-color: #f2f2f2;
 }
-.intro > .intro-container {
+.intro-container {
     padding: 0;
     overflow: hidden;
 }
-p.text-intro {
+.intro-container > .flex-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+.intro-container > .flex-row > [class*='col-'] {
+    display: flex;
+    flex-direction: column;
+    min-height: 350px;
+}
+.intro-img {
+    background: url('../gallery/new/intro.jpg') center top;
+    background-size: cover;
+    padding: 0;
+}
+.intro-img > img {
+}
+.intro-text {
+    /*padding: 50px 0 50px;*/
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.intro-head {
+    margin-top: 0;
+}
+.intro-p {
     width: 70%;
     font-size: 20px;
     line-height: 1.5;
     font-weight: 200;
-    margin:0 auto;
+    margin:20px auto 0;
     color: rgb(51, 51, 51);
 }
 
@@ -93,14 +120,63 @@ p.text-intro {
     background-color: #fff;
     padding-bottom: 100px;
 }
-h2.head-benefit {
+.benefit-head {
     margin: 100px auto 0;
 }
-p.text-benefit {
+.benefit-p {
     width: 70%;
     font-size: 20px;
     line-height: 1.5;
     font-weight: 200;
     margin: 20px auto 100px;
     color: rgb(51, 51, 51);
+}
+.treatment-choice {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+.treatment-choice > [class*='col-'] {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+.treatment {
+    background-color: #f2f2f2;
+    padding-bottom: 100px;
+}
+.treatment-head {
+    margin: 100px auto 0;
+}
+.treatment-choice > div {
+    margin-top: 50px;
+    padding-bottom: 50px;
+}
+.treatment-choice-head {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #000;
+}
+.treatment-price {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    font-size: 20px;
+    margin-left: -15px;
+}
+.treatment-price-60 {
+    padding-right: 30px;
+    border-right: 1px solid #000;
+}
+.treatment-price-90 {
+    padding-left: 30px;
 }
