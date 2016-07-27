@@ -131,6 +131,7 @@ header {
     margin: 20px auto 100px;
     color: rgb(51, 51, 51);
 }
+
 .treatment-choice {
     display: -webkit-box;
     display: -webkit-flex;
@@ -179,4 +180,26 @@ header {
 }
 .treatment-price-90 {
     padding-left: 30px;
+}
+
+.gallery {
+    background-color: #fff;
+    padding-bottom: 100px;
+}
+.gallery-head {
+    margin: 100px auto 50px;
+}
+
+.contact {
+    background-color: #f2f2f2;
+    padding-bottom: 100px;
+}
+.contact-head {
+    margin: 100px auto 50px;
+}
+.contact-info {
+    margin-bottom: 50px;
+}
+.contact-info-head {
+    padding-bottom: 10px;
 }

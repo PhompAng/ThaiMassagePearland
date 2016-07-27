@@ -173,6 +173,67 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <h2 class="text-center gallery-head">Gallery</h2>
+                        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+
+                            <!-- Wrapper for slides -->
+                            <div class="carousel-inner" role="listbox">
+                                <div class="item active">
+                                    <img src="{{URL::asset('assets/gallery/new/IMG_0321.jpg')}}">
+                                </div>
+                                <div class="item">
+                                    <img src="{{URL::asset('assets/gallery/new/IMG_0323.jpg')}}">
+                                </div>
+                                <div class="item">
+                                    <img src="{{URL::asset('assets/gallery/new/IMG_0326_1.jpg')}}">
+                                </div>
+                                <div class="item">
+                                    <img src="{{URL::asset('assets/gallery/new/IMG_0327.jpg')}}">
+                                </div>
+                            </div>
+
+                            <!-- Controls -->
+                            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h2 class="text-center contact-head">
+                            Contact Us
+                        </h2>
+                        <div class="row contact-info">
+                            <div class="col-xs-6 col-md-3">
+                                <h3 class="text-center contact-info-head">Open hours</h3>
+                                <p class="text-center"> Mon-Sat 10:00am - 8:00pm</p>
+                                <p class="text-center">Sun 10:00am - 7:00pm</p>
+                            </div>
+                            <div class="col-xs-6 col-md-3">
+                                <h3 class="text-center contact-info-head">Address</h3>
+                                <p class="text-center"> 3246 E Broadway Pearland, TX 77581</p>
+                            </div>
+                            <div class="col-xs-6 col-md-3">
+                                <h3 class="text-center contact-info-head">Phone</h3>
+                                <p class="text-center"> <a href="callto:8327818415">(832) 781-8415</a></p>
+                            </div>
+                            <div class="col-xs-6 col-md-3">
+                                <h3 class="text-center contact-info-head">E-mail</h3>
+                                <p class="text-center"> <a href="mailto:thaihandsmt@att.net">thaihandsmt@att.net</a></p>
+                            </div>
+                        </div>
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1735.2589248247132!2d-95.27296860481543!3d29.559532473675247!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjnCsDMzJzMzLjQiTiA5NcKwMTYnMjQuNiJX!5e0!3m2!1sen!2sth!4v1423637280519" width="100%" height="400" frameborder="0" style="border:0"></iframe>
+                        </div>
                     </div>
                 </div>
             </div>
