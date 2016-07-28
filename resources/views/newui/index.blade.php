@@ -238,6 +238,11 @@
                 </div>
             </div>
         </section>
+        <footer class="text-right">
+            <div class="container">
+                © 2015 Thai Hands Massage Therapy. All rights reserved.
+            </div>
+        </footer>
 
 
 
