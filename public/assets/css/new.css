@@ -14,7 +14,39 @@ body {
     -moz-osx-font-smoothing: grayscale;
     direction: ltr;
 }
-
+@media (min-width: 320px) {
+    p {
+        font-size: 18px;
+    }
+    section {
+        padding: 50px 0;
+    }
+    section h2 {
+        margin: 0 auto 25px;
+    }
+}
+@media (min-width: 768px) {
+    p {
+        font-size: 20px;
+    }
+    section {
+        padding: 75px 0;
+    }
+    section h2 {
+        margin: 0 auto 50px;
+    }
+}
+@media (min-width: 992px) {
+    p {
+        font-size: 20px;
+    }
+    section {
+        padding: 75px 0;
+    }
+    section h2 {
+        margin: 0 auto 50px;
+    }
+}
 .navbar-default {
     background: transparent;
     border: none;
@@ -31,7 +63,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 90vh;
+    min-height: 95vh;
+    padding: 0;
 }
 header {
     width: 100%;
@@ -60,7 +93,6 @@ header {
     margin-bottom: 70px;
 }
 .hero-label {
-    font-size: 24px;
     line-height: 1.35417;
     font-weight: 200;
     text-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
@@ -82,9 +114,6 @@ header {
     .hero-subheading {
         font-size: 23px;
         margin-bottom: 50px;
-    }
-    .hero-label {
-        font-size: 18px;
     }
 }
 @media (min-width: 768px) {
@@ -125,6 +154,7 @@ header {
 
 .intro {
     background-color: #f2f2f2;
+    padding: 0;
 }
 .intro-container {
     padding: 0;
@@ -154,11 +184,10 @@ header {
     align-items: center;
 }
 .intro-head {
-    margin-top: 0;
+    margin: 0 auto;
 }
 .intro-p {
     width: 70%;
-    font-size: 20px;
     line-height: 1.5;
     font-weight: 200;
     margin:20px auto 0;
@@ -169,7 +198,7 @@ header {
         padding: 15px;
     }
     .intro-p {
-        font-size: 16px;
+        width: 100%;
     }
 }
 @media (min-width: 768px) {
@@ -177,24 +206,33 @@ header {
         padding: 0px;
     }
     .intro-p {
-        font-size: 20px;
+        width: 70%;
     }
 }
 
 .benefit {
     background-color: #fff;
-    padding-bottom: 100px;
 }
 .benefit-head {
-    margin: 100px auto 0;
 }
 .benefit-p {
     width: 70%;
-    font-size: 20px;
     line-height: 1.5;
     font-weight: 200;
     margin: 20px auto 100px;
     color: rgb(51, 51, 51);
+}
+@media (min-width: 320px) {
+    .benefit-p {
+        width: 100%;
+        margin: 20px auto 50px;
+    }
+}
+@media (min-width: 768px) {
+    .benefit-p {
+        width: 70%;
+        margin: 20px auto 75px;
+    }
 }
 
 .treatment-choice {
@@ -219,10 +257,9 @@ header {
 }
 .treatment {
     background-color: #f2f2f2;
-    padding-bottom: 100px;
 }
 .treatment-head {
-    margin: 100px auto 0;
+    margin: 0 auto;
 }
 .treatment-choice > div {
     margin-top: 50px;
@@ -231,6 +268,9 @@ header {
 .treatment-choice-head {
     padding-bottom: 10px;
     border-bottom: 1px solid #000;
+}
+.treatment-choice-desc {
+    font-size: 18px;
 }
 .treatment-price {
     position: absolute;
@@ -246,27 +286,68 @@ header {
 .treatment-price-90 {
     padding-left: 30px;
 }
+@media (min-width: 320px) {
+    .treatment-choice > div {
+        margin-top: 25px;
+        padding-bottom: 50px;
+    }
+    .treatment-price-60 {
+        padding-right: 15px;
+    }
+    .treatment-price-90 {
+        padding-left: 15px;
+    }
+}
+@media (min-width: 768px) {
+    .treatment-choice > div {
+        margin-top: 50px;
+        padding-bottom: 50px;
+    }
+    .treatment-price-60 {
+        padding-right: 30px;
+    }
+    .treatment-price-90 {
+        padding-left: 30px;
+    }
+}
 
 .gallery {
     background-color: #fff;
-    padding-bottom: 100px;
 }
 .gallery-head {
-    margin: 100px auto 50px;
 }
 
 .contact {
     background-color: #f2f2f2;
-    padding-bottom: 100px;
 }
 .contact-head {
-    margin: 100px auto 50px;
 }
 .contact-info {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
     margin-bottom: 50px;
+}
+.contact-info > [class*='col-'] {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
 }
 .contact-info-head {
     padding-bottom: 10px;
+}
+.contact-info-p {
+    font-size: 18px;
 }
 
 footer {

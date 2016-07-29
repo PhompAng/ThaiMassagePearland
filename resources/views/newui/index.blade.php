@@ -102,7 +102,7 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <h2 class="text-center treatment-head">Treatments</h2>
-                        <div class=" treatment-choice">
+                        <div class="treatment-choice">
                             <div class="col-xs-12 col-md-6 col-lg-4">
                                 <h3 class="text-center treatment-choice-head">Deep Tissue Massage</h3>
                                 <p class="treatment-choice-desc">
@@ -212,23 +212,23 @@
                         <h2 class="text-center contact-head">
                             Contact Us
                         </h2>
-                        <div class="row contact-info">
+                        <div class="contact-info">
                             <div class="col-xs-6 col-md-3">
                                 <h3 class="text-center contact-info-head">Open hours</h3>
-                                <p class="text-center"> Mon-Sat 10:00am - 8:00pm</p>
-                                <p class="text-center">Sun 10:00am - 7:00pm</p>
+                                <p class="text-center contact-info-p"> Mon-Sat 10:00am - 8:00pm</p>
+                                <p class="text-center contact-info-p">Sun 10:00am - 7:00pm</p>
                             </div>
                             <div class="col-xs-6 col-md-3">
                                 <h3 class="text-center contact-info-head">Address</h3>
-                                <p class="text-center"> 3246 E Broadway Pearland, TX 77581</p>
+                                <p class="text-center contact-info-p"> 3246 E Broadway Pearland, TX 77581</p>
                             </div>
                             <div class="col-xs-6 col-md-3">
                                 <h3 class="text-center contact-info-head">Phone</h3>
-                                <p class="text-center"> <a href="callto:8327818415">(832) 781-8415</a></p>
+                                <p class="text-center contact-info-p"> <a href="callto:8327818415">(832) 781-8415</a></p>
                             </div>
                             <div class="col-xs-6 col-md-3">
                                 <h3 class="text-center contact-info-head">E-mail</h3>
-                                <p class="text-center"> <a href="mailto:thaihandsmt@att.net">thaihandsmt@att.net</a></p>
+                                <p class="text-center contact-info-p"> <a href="mailto:thaihandsmt@att.net">thaihandsmt@att.net</a></p>
                             </div>
                         </div>
                         <div class="embed-responsive embed-responsive-16by9">
