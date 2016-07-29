@@ -26,9 +26,15 @@ body {
 .navbar-default .navbar-nav > li > a {
     color: #fff;
 }
-header {
+.header {
     /*background-color: #4C2C10;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
     min-height: 90vh;
+}
+header {
+    width: 100%;
 }
 .header-logo {
     margin: 50px auto;
@@ -51,14 +57,56 @@ header {
 .hero-subheading {
     font-size: 36px;
     font-weight: 200;
+    margin-bottom: 70px;
 }
 .hero-label {
     font-size: 24px;
     line-height: 1.35417;
     font-weight: 200;
     text-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
-    margin-top: 70px;
-    margin-bottom: 70px;
+    margin-bottom: 50px;
+}
+@media (min-width: 320px) {
+    .header-logo {
+        width: 150px;
+        height: 150px;
+        margin: 25px auto;
+    }
+    .header-logo > img {
+        width: 150px;
+        height: 150px;
+    }
+    .hero-heading {
+        font-size: 36px;
+    }
+    .hero-subheading {
+        font-size: 23px;
+        margin-bottom: 50px;
+    }
+    .hero-label {
+        font-size: 18px;
+    }
+}
+@media (min-width: 768px) {
+    .header-logo {
+        width: 200px;
+        height: 200px;
+        margin: 25px auto;
+    }
+    .header-logo > img {
+        width: 200px;
+        height: 200px;
+    }
+    .hero-heading {
+        font-size: 36px;
+    }
+    .hero-subheading {
+        font-size: 30px;
+        margin-bottom: 70px;
+    }
+    .hero-label {
+        font-size: 24px;
+    }
 }
 .jumbobuttons {
     margin:0 auto;
@@ -70,6 +118,7 @@ header {
     color: #fff;
     padding: 15px;
     border-radius: 30px;
+    margin-bottom: 50px;
 }
 
 /*================================================================*/
