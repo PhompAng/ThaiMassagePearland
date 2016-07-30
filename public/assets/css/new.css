@@ -168,13 +168,19 @@ header {
     margin:0 auto;
     width: 150px;
 }
-.header-reserve {
+.header-reserve, .header-reserve:visited {
     background: none;
     border: 1px solid #fff;
     color: #fff;
     padding: 15px;
     border-radius: 30px;
     margin-bottom: 50px;
+    transition:all .3s ease-in;
+}
+.header-reserve:hover, .header-reserve:focus {
+    color: #fff;
+    background-color: #7F4A1B;
+    border: 1px solid transparent;
 }
 
 /*================================================================*/
