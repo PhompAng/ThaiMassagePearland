@@ -2,6 +2,7 @@
 @import url(http://fonts.googleapis.com/css?family=Rosarivo);
 
 body {
+    position: relative;
     font-family: 'Source Sans Pro', sans-serif;
     background: url('../imgs/bg1.jpg') center top;
     background-attachment: fixed;
@@ -54,31 +55,42 @@ body {
     background: transparent;
     border: none;
     margin: 25px auto;
+    transition:all .3s ease-in;
+}
+.navbar-sticky {
+    background: rgb(76, 44, 16);
 }
 .navbar-default .navbar-toggle .icon-bar {
     background-color: #fff;
 }
-.navbar-default .navbar-brand {
+.navbar-default .navbar-brand, .navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover {
     color: #fff;
 }
-.navbar-default .navbar-brand:hover {
-    color: #fff;
-}
-.navbar-default .navbar-nav > li > a {
-    color: #fff;
-    border-bottom:1px solid transparent;
+.navbar-default .navbar-nav > li.active {
+    background-color: #7F4A1B;
     transition:all .3s ease-in;
 }
-.navbar-default .navbar-nav > li > a:hover {
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+    background-color: transparent;
+}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
     color: #fff;
-    border-bottom: 1px solid #fff;
+}
+.navbar-default .navbar-nav > li > a, .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:visited {
+    color: #fff;
+    border-bottom:2px solid transparent;
+    transition:all .3s ease-in;
+}
+.navbar-default .navbar-nav>li>a:hover {
+    color: #fff;
+    border-bottom: 2px solid #fff;
 }
 .header {
     /*background-color: #4C2C10;*/
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 95vh;
+    min-height: 100vh;
     padding: 0;
 }
 header {

@@ -21,8 +21,8 @@
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
     </head>
-    <body>
-        <nav class="navbar navbar-default" role="navigation">
+    <body data-spy="scroll" data-target="#navbar-example">
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="navbar-example">
             <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
@@ -32,22 +32,24 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Home</a>
+                    <a class="navbar-brand" href="#header">Home</a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse navbar-ex1-collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a>Treatments</a></li>
-                        <li><a>Gallery</a></li>
+                        <li><a href="#intro">Intro</a></li>
+                        <li><a href="#benefit">Benefit</a></li>
+                        <li><a href="#treatments">Treatments</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
                         {{--<li><a>Reservation</a></li>--}}
                         {{--<li><a>Gift Certificate</a></li>--}}
-                        <li><a>Contact Us</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
             </div>
         </nav>
-        <section class="header">
+        <section class="header" id="header">
             <header>
                 <div class="container">
                     <div class="header-logo">
@@ -72,7 +74,7 @@
             </header>
         </section>
 
-        <section class="intro">
+        <section class="intro" id="intro">
             <div class="container-fluid intro-container">
                 <div class="flex-row">
                     <div class="col-xs-12 col-md-6 intro-text">
@@ -85,7 +87,7 @@
                 </div>
             </div>
         </section>
-        <section class="benefit">
+        <section class="benefit" id="benefit">
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12">
@@ -98,7 +100,7 @@
                 </div>
             </div>
         </section>
-        <section class="treatment">
+        <section class="treatment" id="treatments">
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12">
@@ -180,7 +182,7 @@
                 </div>
             </div>
         </section>
-        <section class="gallery">
+        <section class="gallery" id="gallery">
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12">
@@ -208,7 +210,7 @@
                 </div>
             </div>
         </section>
-        <section class="contact">
+        <section class="contact" id="contact">
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12">
@@ -256,6 +258,30 @@
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         {{--<script src="{{URL::asset('/assets/js/bootstrap.min.js')}}"></script>--}}
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/1.4.3/jquery.scrollTo.min.js"></script>
+
         {{--<script>!function(e){var t="shedul-embed-button-loader",d="https:"===e.location.protocol?"https":"http",n=e.getElementsByTagName("head")[0];if(!e.getElementById(t)){var o=e.createElement("script"),p=e.createElement("style");o.id=t,o.src="https://app.shedul.com/embed_button.js".replace(/^\w+/,d),p.type="text/css",p.innerHTML=".shedul-widget-open { position: fixed; overflow:hidden; }",n.appendChild(o),n.appendChild(p)}}(document);</script>--}}
+
+        <script>
+            $(window).scroll(function() {
+                if  ($(window).scrollTop() > 25) {
+                    $("nav").addClass("navbar-sticky");
+                    $('.navbar-default').css({
+                        margin: '0px auto'
+                    });
+                } else {
+                    $("nav").removeClass("navbar-sticky");
+                    $('.navbar-default').css({
+                        margin: '25px auto'
+                    });
+                }
+            });
+            $(function() {
+                $('nav').bind('click', 'ul li a', function(event) {
+                    event.preventDefault();
+                    $.scrollTo(event.target.hash, 750);
+                });
+            });
+        </script>
     </body>
 </html>
