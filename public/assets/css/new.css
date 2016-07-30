@@ -24,6 +24,9 @@ body {
     section h2 {
         margin: 0 auto 25px;
     }
+    section h3 {
+        font-size: 20px;
+    }
 }
 @media (min-width: 768px) {
     p {
@@ -52,11 +55,23 @@ body {
     border: none;
     margin: 25px auto;
 }
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #fff;
+}
 .navbar-default .navbar-brand {
+    color: #fff;
+}
+.navbar-default .navbar-brand:hover {
     color: #fff;
 }
 .navbar-default .navbar-nav > li > a {
     color: #fff;
+    border-bottom:1px solid transparent;
+    transition:all .3s ease-in;
+}
+.navbar-default .navbar-nav > li > a:hover {
+    color: #fff;
+    border-bottom: 1px solid #fff;
 }
 .header {
     /*background-color: #4C2C10;*/
@@ -259,11 +274,10 @@ header {
     background-color: #f2f2f2;
 }
 .treatment-head {
-    margin: 0 auto;
 }
 .treatment-choice > div {
-    margin-top: 50px;
     padding-bottom: 50px;
+    margin-bottom: 50px;
 }
 .treatment-choice-head {
     padding-bottom: 10px;
@@ -271,6 +285,8 @@ header {
 }
 .treatment-choice-desc {
     font-size: 18px;
+    font-weight: 200;
+    line-height: 1.5;
 }
 .treatment-price {
     position: absolute;
@@ -278,6 +294,9 @@ header {
     bottom: 0;
     font-size: 20px;
     margin-left: -15px;
+}
+.treatment-price-couple {
+    font-size: 20px;
 }
 .treatment-price-60 {
     padding-right: 30px;
@@ -288,7 +307,7 @@ header {
 }
 @media (min-width: 320px) {
     .treatment-choice > div {
-        margin-top: 25px;
+        margin-bottom: 25px;
         padding-bottom: 50px;
     }
     .treatment-price-60 {
@@ -300,7 +319,7 @@ header {
 }
 @media (min-width: 768px) {
     .treatment-choice > div {
-        margin-top: 50px;
+        margin-bottom: 50px;
         padding-bottom: 50px;
     }
     .treatment-price-60 {
@@ -345,9 +364,21 @@ header {
 }
 .contact-info-head {
     padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #000;
 }
 .contact-info-p {
     font-size: 18px;
+}
+@media (min-width: 320px) {
+    .contact-info-p {
+        font-size: 16px;
+    }
+}
+@media (min-width: 768px) {
+    .contact-info-p {
+        font-size: 18px;
+    }
 }
 
 footer {

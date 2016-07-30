@@ -13,6 +13,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
         {{--<link href="{{URL::asset('assets/css/bootstrap.min.css')}}" rel="stylesheet">--}}
         <link href="{{URL::asset('assets/css/new.css')}}" rel="stylesheet">
+        <link rel="stylesheet" href="{{URL::asset('assets/css/font-awesome.min.css')}}">
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -39,8 +40,8 @@
                     <ul class="nav navbar-nav navbar-right">
                         <li><a>Treatments</a></li>
                         <li><a>Gallery</a></li>
-                        <li><a>Reservation</a></li>
-                        <li><a>Gift Certificate</a></li>
+                        {{--<li><a>Reservation</a></li>--}}
+                        {{--<li><a>Gift Certificate</a></li>--}}
                         <li><a>Contact Us</a></li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
@@ -166,6 +167,17 @@
                         </div>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col-xs-12 col-md-4 col-md-offset-4 well">
+                        <div class="treatment-couples text-center">
+                            <p>Couples</p>
+                            <div class="text-center treatment-price-couple">
+                                <span class="treatment-price-60"><strong>$140</strong> / 60 mins</span>
+                                <span class="treatment-price-90"><strong>$190</strong> / 90 mins</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
         <section class="gallery">
@@ -178,16 +190,7 @@
                             <!-- Wrapper for slides -->
                             <div class="carousel-inner" role="listbox">
                                 <div class="item active">
-                                    <img src="{{URL::asset('assets/gallery/new/IMG_0321.jpg')}}">
-                                </div>
-                                <div class="item">
-                                    <img src="{{URL::asset('assets/gallery/new/IMG_0323.jpg')}}">
-                                </div>
-                                <div class="item">
                                     <img src="{{URL::asset('assets/gallery/new/IMG_0326_1.jpg')}}">
-                                </div>
-                                <div class="item">
-                                    <img src="{{URL::asset('assets/gallery/new/IMG_0327.jpg')}}">
                                 </div>
                             </div>
 
@@ -214,20 +217,22 @@
                         </h2>
                         <div class="contact-info">
                             <div class="col-xs-6 col-md-3">
-                                <h3 class="text-center contact-info-head">Open hours</h3>
+                                <h3 class="text-center contact-info-head"><i class="fa fa-clock-o" aria-hidden="true"></i> Open hours</h3>
                                 <p class="text-center contact-info-p"> Mon-Sat 10:00am - 8:00pm</p>
                                 <p class="text-center contact-info-p">Sun 10:00am - 7:00pm</p>
                             </div>
                             <div class="col-xs-6 col-md-3">
-                                <h3 class="text-center contact-info-head">Address</h3>
+                                <h3 class="text-center contact-info-head"><i class="fa fa-location-arrow" aria-hidden="true"></i>
+                                     Address</h3>
                                 <p class="text-center contact-info-p"> 3246 E Broadway Pearland, TX 77581</p>
                             </div>
                             <div class="col-xs-6 col-md-3">
-                                <h3 class="text-center contact-info-head">Phone</h3>
+                                <h3 class="text-center contact-info-head"><i class="fa fa-phone" aria-hidden="true"></i> Phone</h3>
                                 <p class="text-center contact-info-p"> <a href="callto:8327818415">(832) 781-8415</a></p>
                             </div>
                             <div class="col-xs-6 col-md-3">
-                                <h3 class="text-center contact-info-head">E-mail</h3>
+                                <h3 class="text-center contact-info-head"><i class="fa fa-envelope" aria-hidden="true"></i>
+                                     E-mail</h3>
                                 <p class="text-center contact-info-p"> <a href="mailto:thaihandsmt@att.net">thaihandsmt@att.net</a></p>
                             </div>
                         </div>
@@ -240,7 +245,7 @@
         </section>
         <footer class="text-right">
             <div class="container">
-                © 2015 Thai Hands Massage Therapy. All rights reserved.
+                © 2016 Thai Hands Massage Therapy. All rights reserved.
             </div>
         </footer>
 
