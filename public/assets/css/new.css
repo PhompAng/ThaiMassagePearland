@@ -340,7 +340,7 @@ header {
 }
 .treatment-choice-head {
     padding-bottom: 10px;
-    border-bottom: 1px solid #000;
+    /*border-bottom: 1px solid #000;*/
 }
 .treatment-choice-desc {
     font-size: 18px;
@@ -440,7 +440,7 @@ header {
 .contact-info-head {
     padding-bottom: 10px;
     margin-bottom: 10px;
-    border-bottom: 1px solid #fff;
+    /*border-bottom: 1px solid #fff;*/
 }
 .contact-info-p {
     font-size: 18px;
