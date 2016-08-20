@@ -227,13 +227,14 @@
             </div>
         </section>
         <section class="contact" id="contact">
-            <div class="container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3471.6611521037007!2d-95.07695598992467!3d29.526234500000005!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86409d43c5585229%3A0x1069545d1a3fdc06!2sSunshine+Thai+Massage+Therapy!5e0!3m2!1sth!2sth!4v1471667945117" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <div class="contact-container">
                 <div class="row">
                     <div class="col-xs-12">
                         <h2 class="text-center contact-head">
                             Contact Us
                             <br>
-                            <span class="dot-hr"></span>
+                            <span class="dot-hr _white"></span>
                         </h2>
                         <div class="contact-info">
                             <div class="col-xs-6 col-md-3">
@@ -244,7 +245,7 @@
                             <div class="col-xs-6 col-md-3">
                                 <h3 class="text-center contact-info-head"><i class="fa fa-location-arrow" aria-hidden="true"></i>
                                      Address</h3>
-                                <p class="text-center contact-info-p"> 3246 E Broadway Pearland, TX 77581</p>
+                                <p class="text-center contact-info-p">2402 Marina Bay Dr, League City, TX 77573</p>
                             </div>
                             <div class="col-xs-6 col-md-3">
                                 <h3 class="text-center contact-info-head"><i class="fa fa-phone" aria-hidden="true"></i> Phone</h3>
@@ -255,9 +256,6 @@
                                      E-mail</h3>
                                 <p class="text-center contact-info-p"> <a href="mailto:thaihandsmt@att.net">thaihandsmt@att.net</a></p>
                             </div>
-                        </div>
-                        <div class="embed-responsive embed-responsive-16by9">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1735.2589248247132!2d-95.27296860481543!3d29.559532473675247!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjnCsDMzJzMzLjQiTiA5NcKwMTYnMjQuNiJX!5e0!3m2!1sen!2sth!4v1423637280519" width="100%" height="400" frameborder="0" style="border:0"></iframe>
                         </div>
                     </div>
                 </div>
