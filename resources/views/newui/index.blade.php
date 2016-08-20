@@ -99,10 +99,10 @@
                             <span class="dot-hr"></span>
                         </h2>
                         <p class="text-center benefit-p">
-                        Thai Traditional Massage is a very holistic therapy where the human being is seen and treated as an ever-changing network of physical, mental, emotional and spiritual aspects that all influence each other.
+                            The Thai traditional massage is a holistic approach to treat your health by combining physical, spiritual, and emotional perspectives treatment altogether, as traditionally believes that all of them are interwoven together.
                         </p>
-                        <p class="text-center benefit-p">The practitioner uses his or her thumbs, palms, elbows, knees and feet to apply a combination of acupressure, gentle rocking and twisting, joint and spine mobilizations and assisted yoga stretches. With the therapist using bodyweight instead of strength and a steady and meditative rhythm.</p>
-                        <p class="text-center benefit-p">The benefits of Thai Traditional Massage are countless. By freeing the flow of vital energy in the body, Thai Massage can improve posture, breathing, flexibility, digestion and circulation. Muscles are stretched, inner organs toned and emotional and nervous tension is reduced. Often a deep sense of peace can be experienced during and after a treatment.</p>
+                        <p class="text-center benefit-p">Practitioner must utilising each parts of his/her body, particularly hands, elbows, knees and feet together for applying series of treatments, such as acupressure or assisted-yoga postures, throughout of the body of treatment recipient. </p>
+                        <p class="text-center benefit-p">There are countless benefits to the Thai traditional massage treatment, such as improving your posture and blood circulation. It also relaxing stressful muscles throughout your body. With a combination of mental perspective, it offers revitalizing mind and ease of tension. As the treatment process is focus and quiet, you can get a sense of sanctuary and peacefulness during and after the treatment.</p>
                     </div>
                     {{--<div class="col-xs-12">--}}
                         {{--<img src="{{ URL::to('/assets/gallery/new/IMG_0326_1.jpg') }}" class="pull-left" style="width: 100%;">--}}
