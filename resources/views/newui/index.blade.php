@@ -91,7 +91,11 @@
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12">
-                        <h2 class="text-center benefit-head">Benefit</h2>
+                        <h2 class="text-center benefit-head">
+                            Benefit
+                            <br>
+                            <span class="dot-hr"></span>
+                        </h2>
                         <p class="text-center benefit-p">The benefits of Thai Traditional Massage are countless. By freeing the flow of vital energy in the body, Thai Massage can improve posture, breathing, flexibility, digestion and circulation. Muscles are stretched, inner organs toned and emotional and nervous tension is reduced. Often a deep sense of peace can be experienced during and after a treatment.</p>
                     </div>
                     <div class="col-xs-12">
@@ -104,7 +108,11 @@
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12">
-                        <h2 class="text-center treatment-head">Treatments</h2>
+                        <h2 class="text-center treatment-head">
+                            Treatments
+                            <br>
+                            <span class="dot-hr"></span>
+                        </h2>
                         <div class="treatment-choice">
                             <div class="col-xs-12 col-md-6 col-lg-4">
                                 <h3 class="text-center treatment-choice-head">Deep Tissue Massage</h3>
@@ -186,7 +194,11 @@
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12">
-                        <h2 class="text-center gallery-head">Gallery</h2>
+                        <h2 class="text-center gallery-head">
+                            Gallery
+                            <br>
+                            <span class="dot-hr"></span>
+                        </h2>
                         <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 
                             <!-- Wrapper for slides -->
@@ -216,6 +228,8 @@
                     <div class="col-xs-12">
                         <h2 class="text-center contact-head">
                             Contact Us
+                            <br>
+                            <span class="dot-hr"></span>
                         </h2>
                         <div class="contact-info">
                             <div class="col-xs-6 col-md-3">
