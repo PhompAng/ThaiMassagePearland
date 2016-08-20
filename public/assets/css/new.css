@@ -83,6 +83,9 @@ body {
     top: 50%;
     margin-top: -1px;
 }
+.well {
+    background-color: #fff;
+}
 
 .navbar-default {
     background: transparent;
@@ -342,6 +345,7 @@ header {
     margin-left: -15px;
 }
 .treatment-price-couple {
+    margin: 15px auto 0;
     font-size: 20px;
 }
 .treatment-price-60 {

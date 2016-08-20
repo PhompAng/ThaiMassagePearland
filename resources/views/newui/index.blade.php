@@ -177,10 +177,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-xs-12 col-md-4 col-md-offset-4 well">
+                <div class="row well">
+                    <div class="col-xs-12 col-md-4 col-md-offset-4">
                         <div class="treatment-couples text-center">
-                            <p>Couples</p>
+                            <p>For couples massage</p>
                             <div class="text-center treatment-price-couple">
                                 <span class="treatment-price-60"><strong>$140</strong> / 60 mins</span>
                                 <span class="treatment-price-90"><strong>$190</strong> / 90 mins</span>
