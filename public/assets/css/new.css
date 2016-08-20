@@ -99,13 +99,12 @@ header {
 .header-logo {
     margin: 50px auto;
     width: 200px;
-    height: 200px;
     /*width:291px;*/
     /*height:169px;*/
 }
 .hero {
     max-width: 880px;
-    margin: 0 auto;
+    margin: 0 auto 50px;
     color: #fff;
 }
 .hero-heading {
@@ -128,15 +127,13 @@ header {
 @media (min-width: 320px) {
     .header-logo {
         width: 150px;
-        height: 150px;
         margin: 25px auto;
     }
     .header-logo > img {
         width: 150px;
-        height: 150px;
     }
     .hero-heading {
-        font-size: 36px;
+        font-size: 28px;
     }
     .hero-subheading {
         font-size: 23px;
@@ -146,12 +143,10 @@ header {
 @media (min-width: 768px) {
     .header-logo {
         width: 200px;
-        height: 200px;
         margin: 25px auto;
     }
     .header-logo > img {
         width: 200px;
-        height: 200px;
     }
     .hero-heading {
         font-size: 36px;

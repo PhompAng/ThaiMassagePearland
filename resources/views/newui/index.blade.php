@@ -53,18 +53,18 @@
             <header>
                 <div class="container">
                     <div class="header-logo">
-                        <img src="{{ URL::to('/assets/imgs/logo1.png') }}" />
+                        <img src="{{ URL::to('/assets/imgs/mekkara.png') }}" />
                     </div>
                     <div class="hero">
                         <h3 class="text-center hero-heading">
-                            Thai Hands Massage Therapy
+                            Sunshine Thai Massage Therapy
                         </h3>
-                        <h4 class="text-center hero-subheading">
-                            www.thaimassagepearland.com
-                        </h4>
-                        <p class="text-center hero-label">
-                            Thai Traditional Massage is a very holistic therapy where the human being is seen and treated as an ever-changing network of physical, mental, emotional and spiritual aspects that all influence each other.
-                        </p>
+                        {{--<h4 class="text-center hero-subheading">--}}
+                            {{--www.thaimassagepearland.com--}}
+                        {{--</h4>--}}
+                        {{--<p class="text-center hero-label">--}}
+                            {{--Thai Traditional Massage is a very holistic therapy where the human being is seen and treated as an ever-changing network of physical, mental, emotional and spiritual aspects that all influence each other.--}}
+                        {{--</p>--}}
                     </div>
                     <div class="jumbobuttons">
                         {{--<button class="btn btn-lg btn-block header-reserve">Reserve</button>--}}
