@@ -74,33 +74,37 @@
             </header>
         </section>
 
-        <section class="intro" id="intro">
-            <div class="container-fluid intro-container">
-                <div class="flex-row">
-                    <div class="col-xs-12 col-md-6 intro-text">
-                        <h2 class="text-center intro-head">Hands Massage</h2>
-                        <p class="text-center intro-p">The practitioner uses his or her thumbs, palms, elbows, knees and feet to apply a combination of acupressure, gentle rocking and twisting, joint and spine mobilizations and assisted yoga stretches. With the therapist using bodyweight instead of strength and a steady and meditative rhythm.</p>
-                    </div>
-                    <div class="col-xs-12 col-md-6 intro-img">
+        {{--<section class="intro" id="intro">--}}
+            {{--<div class="container-fluid intro-container">--}}
+                {{--<div class="flex-row">--}}
+                    {{--<div class="col-xs-12 col-md-6 intro-text">--}}
+                        {{--<h2 class="text-center intro-head">Hands Massage</h2>--}}
+                        {{--<p class="text-center intro-p">The practitioner uses his or her thumbs, palms, elbows, knees and feet to apply a combination of acupressure, gentle rocking and twisting, joint and spine mobilizations and assisted yoga stretches. With the therapist using bodyweight instead of strength and a steady and meditative rhythm.</p>--}}
+                    {{--</div>--}}
+                    {{--<div class="col-xs-12 col-md-6 intro-img">--}}
                         {{--<img src="{{ URL::to('/assets/gallery/new/intro.jpg') }}" class="pull-left">--}}
-                    </div>
-                </div>
-            </div>
-        </section>
+                    {{--</div>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+        {{--</section>--}}
         <section class="benefit" id="benefit">
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12">
                         <h2 class="text-center benefit-head">
-                            Benefit
+                            Introduction
                             <br>
                             <span class="dot-hr"></span>
                         </h2>
+                        <p class="text-center benefit-p">
+                        Thai Traditional Massage is a very holistic therapy where the human being is seen and treated as an ever-changing network of physical, mental, emotional and spiritual aspects that all influence each other.
+                        </p>
+                        <p class="text-center benefit-p">The practitioner uses his or her thumbs, palms, elbows, knees and feet to apply a combination of acupressure, gentle rocking and twisting, joint and spine mobilizations and assisted yoga stretches. With the therapist using bodyweight instead of strength and a steady and meditative rhythm.</p>
                         <p class="text-center benefit-p">The benefits of Thai Traditional Massage are countless. By freeing the flow of vital energy in the body, Thai Massage can improve posture, breathing, flexibility, digestion and circulation. Muscles are stretched, inner organs toned and emotional and nervous tension is reduced. Often a deep sense of peace can be experienced during and after a treatment.</p>
                     </div>
-                    <div class="col-xs-12">
-                        <img src="{{ URL::to('/assets/gallery/new/IMG_0326_1.jpg') }}" class="pull-left" style="width: 100%;">
-                    </div>
+                    {{--<div class="col-xs-12">--}}
+                        {{--<img src="{{ URL::to('/assets/gallery/new/IMG_0326_1.jpg') }}" class="pull-left" style="width: 100%;">--}}
+                    {{--</div>--}}
                 </div>
             </div>
         </section>
