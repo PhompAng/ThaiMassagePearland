@@ -12,6 +12,8 @@
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
         {{--<link href="{{URL::asset('assets/css/bootstrap.min.css')}}" rel="stylesheet">--}}
+        <link rel="stylesheet" href="{{URL::asset('assets/css/owl.carousel.css')}}">
+        <link rel="stylesheet" href="{{URL::asset('/assets/css/owl.theme.default.min.css')}}">
         <link href="{{URL::asset('assets/css/new.css')}}" rel="stylesheet">
         <link rel="stylesheet" href="{{URL::asset('assets/css/font-awesome.min.css')}}">
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -203,24 +205,43 @@
                             <br>
                             <span class="dot-hr"></span>
                         </h2>
-                        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                        {{--<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">--}}
 
-                            <!-- Wrapper for slides -->
-                            <div class="carousel-inner" role="listbox">
-                                <div class="item active">
-                                    <img src="{{URL::asset('assets/gallery/new/IMG_0326_1.jpg')}}">
-                                </div>
-                            </div>
+                            {{--<!-- Wrapper for slides -->--}}
+                            {{--<div class="carousel-inner" role="listbox">--}}
+                                {{--<div class="item active">--}}
+                                    {{--<img src="{{URL::asset('assets/gallery/new/IMG_0326_1.jpg')}}">--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
 
-                            <!-- Controls -->
-                            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-                                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                                <span class="sr-only">Previous</span>
-                            </a>
-                            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-                                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                                <span class="sr-only">Next</span>
-                            </a>
+                            {{--<!-- Controls -->--}}
+                            {{--<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">--}}
+                                {{--<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>--}}
+                                {{--<span class="sr-only">Previous</span>--}}
+                            {{--</a>--}}
+                            {{--<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">--}}
+                                {{--<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>--}}
+                                {{--<span class="sr-only">Next</span>--}}
+                            {{--</a>--}}
+                        {{--</div>--}}
+                        <div class="owl-carousel">
+                            <img src="{{ URL::asset('assets/gallery/IMG_7415.JPG')}}" class="gallery item">
+                            <img src="{{ URL::asset('assets/gallery/IMG_7417.JPG')}}" class="gallery item">
+                            <img src="{{ URL::asset('assets/gallery/IMG_7318.JPG')}}" class="gallery item">
+                            <img src="{{ URL::asset('assets/gallery/IMG_6390.JPG')}}" class="gallery item">
+                            <img src="{{ URL::asset('assets/gallery/IMG_7314.JPG')}}" class="gallery item">
+                            <img src="{{ URL::asset('assets/gallery/IMG_6381.JPG')}}" class="gallery item">
+                            <img src="{{ URL::asset('assets/gallery/IMG_8277.JPG')}}" class="gallery item">
+                            <img src="{{ URL::asset('assets/gallery/IMG_8276.JPG')}}" class="gallery item">
+                            <img src="{{ URL::asset('assets/gallery/IMG_7654.JPG')}}" class="gallery item">
+                            <img src="{{ URL::asset('assets/gallery/IMG_7646.JPG')}}" class="gallery item">
+                            <img src="{{ URL::asset('assets/gallery/IMG_7645.JPG')}}" class="gallery item">
+                            <img src="{{ URL::asset('assets/gallery/IMG_7650.JPG')}}" class="gallery item">
+                            <img src="{{ URL::asset('assets/gallery/IMG_8534.JPG')}}" class="gallery item">
+                            <img src="{{ URL::asset('assets/gallery/IMG_7647.JPG')}}" class="gallery item">
+                            <img src="{{ URL::asset('assets/gallery/IMG_8273.JPG')}}" class="gallery item">
+                            <img src="{{ URL::asset('assets/gallery/IMG_8274.JPG')}}" class="gallery item">
+                            <img src="{{ URL::asset('assets/gallery/IMG_8535.JPG')}}" class="gallery item">
                         </div>
                     </div>
                 </div>
@@ -275,6 +296,7 @@
         {{--<script src="{{URL::asset('/assets/js/bootstrap.min.js')}}"></script>--}}
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/1.4.3/jquery.scrollTo.min.js"></script>
+        <script src="{{URL::asset('assets/js/owl.carousel.min.js')}}"></script>
 
         {{--<script>!function(e){var t="shedul-embed-button-loader",d="https:"===e.location.protocol?"https":"http",n=e.getElementsByTagName("head")[0];if(!e.getElementById(t)){var o=e.createElement("script"),p=e.createElement("style");o.id=t,o.src="https://app.shedul.com/embed_button.js".replace(/^\w+/,d),p.type="text/css",p.innerHTML=".shedul-widget-open { position: fixed; overflow:hidden; }",n.appendChild(o),n.appendChild(p)}}(document);</script>--}}
 
@@ -297,6 +319,17 @@
                     event.preventDefault();
                     $.scrollTo(event.target.hash, 750);
                 });
+            });
+
+            $('.owl-carousel').owlCarousel({
+                margin:10,
+                loop:true,
+                items: 4,
+                responsive:false,
+                autoplay: true,
+                autoplayTimeout:2000,
+                autoplayHoverPause:false,
+                nav:true
             });
         </script>
     </body>
