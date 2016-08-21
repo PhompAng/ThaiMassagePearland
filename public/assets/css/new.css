@@ -83,6 +83,59 @@ body {
     top: 50%;
     margin-top: -1px;
 }
+@media (min-width: 320px) {
+    .dot-hr:before {
+        right: 15px;
+        position: absolute;
+        content: '';
+        width: 108px;
+        height: 1px;
+        background-color: #000;
+        opacity: 0.33;
+        display: block;
+        top: 50%;
+        margin-top: -1px;
+    }
+    .dot-hr:after {
+        left: 15px;
+        position: absolute;
+        content: '';
+        width: 108px;
+        height: 1px;
+        background-color: #000;
+        opacity: 0.33;
+        display: block;
+        top: 50%;
+        margin-top: -1px;
+    }
+}
+@media (min-width: 768px) {
+    .dot-hr:before {
+        right: 15px;
+        position: absolute;
+        content: '';
+        width: 208px;
+        height: 1px;
+        background-color: #000;
+        opacity: 0.33;
+        display: block;
+        top: 50%;
+        margin-top: -1px;
+    }
+    .dot-hr:after {
+        left: 15px;
+        position: absolute;
+        content: '';
+        width: 208px;
+        height: 1px;
+        background-color: #000;
+        opacity: 0.33;
+        display: block;
+        top: 50%;
+        margin-top: -1px;
+    }
+}
+
 ._white {
     background-color: #fff !important;
 }
@@ -91,6 +144,15 @@ body {
 }
 ._white:after {
     background-color: #fff !important;
+}
+.arrow-down {
+    position: relative;
+    width: 0.6em;
+    height: 0.6em;
+    border-right: 0.15em solid #fff;
+    border-top: 0.15em solid #fff;
+    transform: rotate(135deg);
+    margin: 50px auto;
 }
 
 .well {
