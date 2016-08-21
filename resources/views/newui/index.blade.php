@@ -41,7 +41,6 @@
                 <div class="collapse navbar-collapse navbar-ex1-collapse">
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="#intro">Intro</a></li>
-                        <li><a href="#benefit">Benefit</a></li>
                         <li><a href="#treatments">Treatments</a></li>
                         <li><a href="#gallery">Gallery</a></li>
                         {{--<li><a>Reservation</a></li>--}}
@@ -89,7 +88,7 @@
                 {{--</div>--}}
             {{--</div>--}}
         {{--</section>--}}
-        <section class="benefit" id="benefit">
+        <section class="benefit" id="intro">
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12">
