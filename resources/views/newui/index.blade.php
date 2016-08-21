@@ -71,8 +71,8 @@
                         {{--<button class="btn btn-lg btn-block header-reserve">Reserve</button>--}}
                         <a class="shedul-embed-button-link btn btn-lg btn-block header-reserve" href="https://app.shedul.com/online_bookings/22414/link">Book Now</a>
                     </div>
-                    <div class="arrow-down"><a href="#intro"></a></div>
                 </div>
+                <div class="arrow-down"><a href="#intro"></a></div>
             </header>
         </section>
 
