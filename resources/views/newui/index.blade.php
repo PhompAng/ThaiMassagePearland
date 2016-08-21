@@ -247,14 +247,14 @@
             </div>
         </section>
         <section class="contact" id="contact">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3471.6611521037007!2d-95.07695598992467!3d29.526234500000005!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86409d43c5585229%3A0x1069545d1a3fdc06!2sSunshine+Thai+Massage+Therapy!5e0!3m2!1sth!2sth!4v1471667945117" frameborder="0" style="border:0" allowfullscreen></iframe>
+            {{--<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3471.6611521037007!2d-95.07695598992467!3d29.526234500000005!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86409d43c5585229%3A0x1069545d1a3fdc06!2sSunshine+Thai+Massage+Therapy!5e0!3m2!1sth!2sth!4v1471667945117" frameborder="0" style="border:0" allowfullscreen></iframe>--}}
             <div class="contact-container">
                 <div class="row">
                     <div class="col-xs-12">
                         <h2 class="text-center contact-head">
                             Contact Us
                             <br>
-                            <span class="dot-hr _white"></span>
+                            <span class="dot-hr"></span>
                         </h2>
                         <div class="contact-info">
                             <div class="col-xs-6 col-md-3">
@@ -279,6 +279,9 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="embed-responsive contact-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3471.6611521037007!2d-95.07695598992467!3d29.526234500000005!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86409d43c5585229%3A0x1069545d1a3fdc06!2sSunshine+Thai+Massage+Therapy!5e0!3m2!1sth!2sth!4v1471667945117" frameborder="0" style="border:0" allowfullscreen></iframe>
             </div>
         </section>
         <footer class="text-right">
