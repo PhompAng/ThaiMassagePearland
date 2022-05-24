@@ -1,14 +1,11 @@
 <?php namespace THM;
 
-use Illuminate\Auth\Authenticatable;
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Auth\Passwords\CanResetPassword;
-use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
-use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
+use Illuminate\Notifications\Notifiable;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class User extends Model implements AuthenticatableContract, CanResetPasswordContract {
-
-	use Authenticatable, CanResetPassword;
+class User extends Authenticatable
+{
+    use Notifiable;
 
 	/**
 	 * The database table used by the model.
@@ -22,7 +19,7 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 	 *
 	 * @var array
 	 */
-	protected $fillable = ['name', 'email', 'password'];
+	protected $fillable = ['username', 'password'];
 
 	/**
 	 * The attributes excluded from the model's JSON form.

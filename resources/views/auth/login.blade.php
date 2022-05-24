@@ -21,7 +21,7 @@
 							</ul>
 						</div>
 						@endif
-					<form role="form" method="POST" action="{{ url('/backend/auth/login') }}">
+					<form role="form" method="POST" action="{{ url('/backend/login') }}">
 						<input type="hidden" name="_token" value="{{ csrf_token() }}">
 
 						<div class="form-group has-feedback">

@@ -23,7 +23,10 @@
 							{{-- <li><a href="http://localhost:8000/profile/edit"><span class="fa fa-pencil"></span>Edit Profile</a></li>
 							<li><a href="http://localhost:8000/profile/password"><span class="fa fa-wrench"></span>Change Password</a></li>
 							<li class="divider"></li> --}}
-							<li><a href="{{ URL::to('/backend/auth/logout') }}"><span class="glyphicon glyphicon-log-out text-danger"></span><span class="text-danger">Sign Out</span></a></li>
+							<li><a href="javascript:void" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><span class="glyphicon glyphicon-log-out text-danger"></span><span class="text-danger">Sign Out</span></a></li>
+							<form id="logout-form" action="{{ route('logout') }}" method="POST">
+								{{ csrf_field() }}
+							</form>
 						</ul>
 					</li>
 				</ul>

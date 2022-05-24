@@ -2,6 +2,32 @@
 
 return [
 
+
+    /*
+    |--------------------------------------------------------------------------
+    | Application Name
+    |--------------------------------------------------------------------------
+    |
+    | This value is the name of your application. This value is used when the
+    | framework needs to place the application's name in a notification or
+    | any other location as required by the application or its packages.
+    */
+
+    'name' => 'Laravel',
+	
+    /*
+    |--------------------------------------------------------------------------
+    | Application Environment
+    |--------------------------------------------------------------------------
+    |
+    | This value determines the "environment" your application is currently
+    | running in. This may determine how you prefer to configure various
+    | services your application utilizes. Set this in your ".env" file.
+    |
+    */
+
+    'env' => env('APP_ENV', 'production'),
+
 	/*
 	|--------------------------------------------------------------------------
 	| Application Debug Mode
@@ -15,18 +41,18 @@ return [
 
 	'debug' => env('APP_DEBUG'),
 
-	/*
-	|--------------------------------------------------------------------------
-	| Application URL
-	|--------------------------------------------------------------------------
-	|
-	| This URL is used by the console to properly generate URLs when using
-	| the Artisan command line tool. You should set this to the root of
-	| your application so that it is used when running Artisan tasks.
-	|
-	*/
+    /*
+    |--------------------------------------------------------------------------
+    | Application URL
+    |--------------------------------------------------------------------------
+    |
+    | This URL is used by the console to properly generate URLs when using
+    | the Artisan command line tool. You should set this to the root of
+    | your application so that it is used when running Artisan tasks.
+    |
+    */
 
-	'url' => 'http://localhost',
+    'url' => env('APP_URL', 'http://localhost'),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -82,20 +108,22 @@ return [
 
 	'cipher' => 'AES-256-CBC',
 
-	/*
-	|--------------------------------------------------------------------------
-	| Logging Configuration
-	|--------------------------------------------------------------------------
-	|
-	| Here you may configure the log settings for your application. Out of
-	| the box, Laravel uses the Monolog PHP logging library. This gives
-	| you a variety of powerful log handlers / formatters to utilize.
-	|
-	| Available Settings: "single", "daily", "syslog", "errorlog"
-	|
-	*/
+    /*
+    |--------------------------------------------------------------------------
+    | Logging Configuration
+    |--------------------------------------------------------------------------
+    |
+    | Here you may configure the log settings for your application. Out of
+    | the box, Laravel uses the Monolog PHP logging library. This gives
+    | you a variety of powerful log handlers / formatters to utilize.
+    |
+    | Available Settings: "single", "daily", "syslog", "errorlog"
+    |
+    */
 
-	'log' => 'daily',
+    'log' => env('APP_LOG', 'single'),
+
+    'log_level' => env('APP_LOG_LEVEL', 'debug'),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -114,6 +142,8 @@ return [
 		 * Laravel Framework Service Providers...
 		 */
 		'Illuminate\Auth\AuthServiceProvider',
+		Illuminate\Broadcasting\BroadcastServiceProvider::class,
+        Illuminate\Bus\BusServiceProvider::class,
 		'Illuminate\Cache\CacheServiceProvider',
 		'Illuminate\Foundation\Providers\ConsoleSupportServiceProvider',
 		'Illuminate\Cookie\CookieServiceProvider',
@@ -123,6 +153,7 @@ return [
 		'Illuminate\Foundation\Providers\FoundationServiceProvider',
 		'Illuminate\Hashing\HashServiceProvider',
 		'Illuminate\Mail\MailServiceProvider',
+		'Illuminate\Notifications\NotificationServiceProvider',
 		'Illuminate\Pagination\PaginationServiceProvider',
 		'Illuminate\Pipeline\PipelineServiceProvider',
 		'Illuminate\Queue\QueueServiceProvider',
@@ -133,12 +164,12 @@ return [
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
 		'Collective\Html\HtmlServiceProvider',
-		'Illuminate\Broadcasting\BroadcastServiceProvider',
 
 		/*
 		 * Application Service Providers...
 		 */
 		'THM\Providers\AppServiceProvider',
+		THM\Providers\AuthServiceProvider::class,
 		'THM\Providers\ConfigServiceProvider',
 		'THM\Providers\EventServiceProvider',
 		'THM\Providers\RouteServiceProvider',
@@ -171,12 +202,14 @@ return [
 		'Eloquent'  => 'Illuminate\Database\Eloquent\Model',
 		'Event'     => 'Illuminate\Support\Facades\Event',
 		'File'      => 'Illuminate\Support\Facades\File',
+		'Gate' => Illuminate\Support\Facades\Gate::class,
 		'Hash'      => 'Illuminate\Support\Facades\Hash',
 		'Input'     => 'Illuminate\Support\Facades\Input',
 		'Inspiring' => 'Illuminate\Foundation\Inspiring',
 		'Lang'      => 'Illuminate\Support\Facades\Lang',
 		'Log'       => 'Illuminate\Support\Facades\Log',
 		'Mail'      => 'Illuminate\Support\Facades\Mail',
+        'Notification' => Illuminate\Support\Facades\Notification::class,
 		'Password'  => 'Illuminate\Support\Facades\Password',
 		'Queue'     => 'Illuminate\Support\Facades\Queue',
 		'Redirect'  => 'Illuminate\Support\Facades\Redirect',
@@ -194,11 +227,4 @@ return [
 		'HTML'			=> Collective\Html\HtmlFacade::class
 
 	],
-
-
-	/*
-	env
-	*/
-	'env' => env('APP_ENV', 'production'),
-
 ];
