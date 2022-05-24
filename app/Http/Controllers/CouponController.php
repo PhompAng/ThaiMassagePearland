@@ -7,6 +7,7 @@ use THM\Http\Requests\CouponFormRequest;
 use Mail;
 
 use Illuminate\Http\Request;
+use THM\Mail\DiscountCpupon;
 
 class CouponController extends Controller {
 
@@ -29,12 +30,7 @@ class CouponController extends Controller {
             'code'  => $code
         ];
 
-        Mail::send('emails.coupon', ['coupon' => $code, 'email' => $input->get('owner')], function($message) use ($input)
-        {
-        $message->from('no-reply@thaimassagepearland.com', 'Thai Hands Massage Therapy');
-        $message->to($input->get('owner'));
-        $message->subject('Discount coupon for Thai Massage');
-        });
+        Mail::to($input->get('owner'))->send(new DiscountCpupon($code, $input->get('owner')));
         return Coupon::create($data);
     }
 

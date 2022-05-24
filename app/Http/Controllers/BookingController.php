@@ -10,6 +10,7 @@ use Mail;
 use THM\Setting;
 
 use Illuminate\Http\Request;
+use THM\Mail\BookingConfirm;
 
 class BookingController extends Controller {
 
@@ -124,11 +125,7 @@ class BookingController extends Controller {
 			$booking->transaction_id = $response->getData()['PAYMENTINFO_0_TRANSACTIONID'];
 			$booking->save();
 
-			Mail::send('emails.booking', ['booking' => $booking], function($message) use ($booking) {
-		        $message->from('no-reply@thaimassagepearland.com', 'Thai Hands Massage Therapy');
-		        $message->to($booking->email);
-		        $message->subject('Booking Confirmation for #'.$booking->id);
-	        });
+			Mail::to($booking->email)->send(new BookingConfirm($booking));
 
 	        return redirect('/?action=booking_success')->with('booking', $booking);
 		} else {
