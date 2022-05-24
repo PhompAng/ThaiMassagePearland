@@ -78,9 +78,9 @@ return [
 	|
 	*/
 
-	'key' => env('APP_KEY', 'SomeRandomString'),
+	'key' => env('APP_KEY'),
 
-	'cipher' => MCRYPT_RIJNDAEL_128,
+	'cipher' => 'AES-256-CBC',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -113,12 +113,9 @@ return [
 		/*
 		 * Laravel Framework Service Providers...
 		 */
-		'Illuminate\Foundation\Providers\ArtisanServiceProvider',
 		'Illuminate\Auth\AuthServiceProvider',
-		'Illuminate\Bus\BusServiceProvider',
 		'Illuminate\Cache\CacheServiceProvider',
 		'Illuminate\Foundation\Providers\ConsoleSupportServiceProvider',
-		'Illuminate\Routing\ControllerServiceProvider',
 		'Illuminate\Cookie\CookieServiceProvider',
 		'Illuminate\Database\DatabaseServiceProvider',
 		'Illuminate\Encryption\EncryptionServiceProvider',
@@ -135,13 +132,13 @@ return [
 		'Illuminate\Translation\TranslationServiceProvider',
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
-		'Illuminate\Html\HtmlServiceProvider',
+		'Collective\Html\HtmlServiceProvider',
+		'Illuminate\Broadcasting\BroadcastServiceProvider',
 
 		/*
 		 * Application Service Providers...
 		 */
 		'THM\Providers\AppServiceProvider',
-		'THM\Providers\BusServiceProvider',
 		'THM\Providers\ConfigServiceProvider',
 		'THM\Providers\EventServiceProvider',
 		'THM\Providers\RouteServiceProvider',
@@ -193,9 +190,15 @@ return [
 		'URL'       => 'Illuminate\Support\Facades\URL',
 		'Validator' => 'Illuminate\Support\Facades\Validator',
 		'View'      => 'Illuminate\Support\Facades\View',
-		'Form'			=> 'Illuminate\Html\FormFacade',
-		'HTML'			=> 'Illuminate\Html\HtmlFacade'
+		'Form'			=> Collective\Html\FormFacade::class,
+		'HTML'			=> Collective\Html\HtmlFacade::class
 
 	],
+
+
+	/*
+	env
+	*/
+	'env' => env('APP_ENV', 'production'),
 
 ];
