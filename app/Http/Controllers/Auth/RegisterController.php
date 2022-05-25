@@ -4,6 +4,7 @@ namespace THM\Http\Controllers\Auth;
 
 use THM\User;
 use THM\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
@@ -63,7 +64,7 @@ class RegisterController extends Controller
     {
         return User::create([
             'username' => $data['username'],
-            'password' => bcrypt($data['password']),
+            'password' => Hash::make($data['password']),
         ]);
     }
 }
