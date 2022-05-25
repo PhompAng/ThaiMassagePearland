@@ -3,7 +3,7 @@
 return [
 
 
-    /*
+	/*
     |--------------------------------------------------------------------------
     | Application Name
     |--------------------------------------------------------------------------
@@ -13,9 +13,9 @@ return [
     | any other location as required by the application or its packages.
     */
 
-    'name' => 'Laravel',
-	
-    /*
+	'name' => 'Laravel',
+
+	/*
     |--------------------------------------------------------------------------
     | Application Environment
     |--------------------------------------------------------------------------
@@ -26,7 +26,7 @@ return [
     |
     */
 
-    'env' => env('APP_ENV', 'production'),
+	'env' => env('APP_ENV', 'production'),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -41,7 +41,7 @@ return [
 
 	'debug' => env('APP_DEBUG'),
 
-    /*
+	/*
     |--------------------------------------------------------------------------
     | Application URL
     |--------------------------------------------------------------------------
@@ -52,8 +52,9 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://localhost'),
+	'url' => env('APP_URL', 'http://localhost'),
 
+	'asset_url' => env('ASSET_URL', null),
 	/*
 	|--------------------------------------------------------------------------
 	| Application Timezone
@@ -94,6 +95,19 @@ return [
 	'fallback_locale' => 'en',
 
 	/*
+    |--------------------------------------------------------------------------
+    | Faker Locale
+    |--------------------------------------------------------------------------
+    |
+    | This locale will be used by the Faker PHP library when generating fake
+    | data for your database seeds. For example, this will be used to get
+    | localized telephone numbers, street address information and more.
+    |
+    */
+
+	'faker_locale' => 'en_US',
+
+	/*
 	|--------------------------------------------------------------------------
 	| Encryption Key
 	|--------------------------------------------------------------------------
@@ -126,7 +140,7 @@ return [
 		 */
 		'Illuminate\Auth\AuthServiceProvider',
 		Illuminate\Broadcasting\BroadcastServiceProvider::class,
-        Illuminate\Bus\BusServiceProvider::class,
+		Illuminate\Bus\BusServiceProvider::class,
 		'Illuminate\Cache\CacheServiceProvider',
 		'Illuminate\Foundation\Providers\ConsoleSupportServiceProvider',
 		'Illuminate\Cookie\CookieServiceProvider',
@@ -192,7 +206,7 @@ return [
 		'Lang'      => 'Illuminate\Support\Facades\Lang',
 		'Log'       => 'Illuminate\Support\Facades\Log',
 		'Mail'      => 'Illuminate\Support\Facades\Mail',
-        'Notification' => Illuminate\Support\Facades\Notification::class,
+		'Notification' => Illuminate\Support\Facades\Notification::class,
 		'Password'  => 'Illuminate\Support\Facades\Password',
 		'Queue'     => 'Illuminate\Support\Facades\Queue',
 		'Redirect'  => 'Illuminate\Support\Facades\Redirect',

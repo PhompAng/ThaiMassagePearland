@@ -6,7 +6,7 @@
 
 	<div class="content-wrapper" style="min-height: 880px">
 		<section class="content-header">
-			<h1>{{ $page_title or 'Dashboard'}} <small>{{ $page_subtitle or 'Just a Rather Very Intelligent Systems.' }}</small></h1>
+			<h1>{{ $page_title ?? 'Dashboard'}} <small>{{ $page_subtitle ?? 'Just a Rather Very Intelligent Systems.' }}</small></h1>
 		</section>
 
 		<section class="content">

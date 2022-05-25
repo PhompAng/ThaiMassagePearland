@@ -12,5 +12,5 @@
 	{!! HTML::style('backend_assets/css/font-awesome.min.css')!!}
 	{!! HTML::style('backend_assets/css/style.css')!!}
 	<!--StyleSheet-->
-	<title>{{ $page_title or '' }} | thaimassagepearland.com</title>
+	<title>{{ $page_title ?? '' }} | thaimassagepearland.com</title>
 </head>
