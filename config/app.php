@@ -39,7 +39,7 @@ return [
 	|
 	*/
 
-	'debug' => env('APP_DEBUG'),
+	'debug' => (bool) env('APP_DEBUG'),
 
 	/*
     |--------------------------------------------------------------------------
@@ -202,7 +202,6 @@ return [
 		'File'      => 'Illuminate\Support\Facades\File',
 		'Gate' => Illuminate\Support\Facades\Gate::class,
 		'Hash'      => 'Illuminate\Support\Facades\Hash',
-		'Input'     => 'Illuminate\Support\Facades\Input',
 		'Inspiring' => 'Illuminate\Foundation\Inspiring',
 		'Lang'      => 'Illuminate\Support\Facades\Lang',
 		'Log'       => 'Illuminate\Support\Facades\Log',

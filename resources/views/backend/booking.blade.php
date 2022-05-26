@@ -9,10 +9,10 @@
           <h3 class="box-title">Booking</h3>
           <div class="box-tools">
             <div class="btn-group">
-                <a href="{{ route('backend.booking.index', ['filter' => 1]) }}" class="btn btn-sm btn-default @if(Input::get('filter') == 1) active @endif">Today</a>
-                <a href="{{ route('backend.booking.index', ['filter' => 2]) }}" class="btn btn-sm btn-default @if(Input::get('filter') == 2) active @endif">Tomorrow</a>
-                <a href="{{ route('backend.booking.index', ['filter' => 3]) }}" class="btn btn-sm btn-default @if(Input::get('filter') == 3) active @endif">This Month</a>
-                <a href="{{ route('backend.booking.index') }}" class="btn btn-sm btn-default @if(Input::get('filter') == 0 || !Input::has('filter')) active @endif">All</a>
+                <a href="{{ route('backend.booking.index', ['filter' => 1]) }}" class="btn btn-sm btn-default @if(Request::input('filter') == 1) active @endif">Today</a>
+                <a href="{{ route('backend.booking.index', ['filter' => 2]) }}" class="btn btn-sm btn-default @if(Request::input('filter') == 2) active @endif">Tomorrow</a>
+                <a href="{{ route('backend.booking.index', ['filter' => 3]) }}" class="btn btn-sm btn-default @if(Request::input('filter') == 3) active @endif">This Month</a>
+                <a href="{{ route('backend.booking.index') }}" class="btn btn-sm btn-default @if(Request::input('filter') == 0 || !Request::has('filter')) active @endif">All</a>
               </div>
           </div>
         </div><!-- /.box-header -->

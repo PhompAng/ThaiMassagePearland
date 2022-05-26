@@ -446,11 +446,11 @@
 		// booking_preload.toggle();
 	}
 
-	@if(Input::get('action') == 'booking_success' && session('booking'))
+	@if(Request::input('action') == 'booking_success' && session('booking'))
 		$('#bookingSuccessModal').modal();
 	@endif
 
-	@if(Input::get('action') == 'booking_cancel')
+	@if(Request::input('action') == 'booking_cancel')
 		$('#bookingFailModal').modal();
 	@endif
 	</script>
