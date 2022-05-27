@@ -14,7 +14,7 @@ class CreateCouponsTable extends Migration {
 	{
 		Schema::create('coupons', function(Blueprint $table)
 		{
-			$table->increments('id');
+			$table->id();
 			$table->string('owner', 64);
 			$table->boolean('redeemed')->default(False);
 			$table->timestamps();

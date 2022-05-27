@@ -2,6 +2,7 @@
 
 namespace THM\Http\Controllers\Auth;
 
+use THM\Providers\RouteServiceProvider;
 use THM\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
@@ -25,7 +26,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/backend/dashboard';
+    protected $redirectTo = RouteServiceProvider::HOME;
 
     /**
      * Create a new controller instance.
