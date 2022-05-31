@@ -1,7 +1,10 @@
 <?php
 
+namespace Database\Seeders;
+
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use Carbon\Carbon;
 
 class UserTableSeeder extends Seeder
 {
@@ -14,6 +17,6 @@ class UserTableSeeder extends Seeder
     {
         DB::table('users')->insert([
             ['username' => 'admin', 'password' => '$2y$10$yF4.PTn7jAdC4asWwqS2r.Fb2d72cGSsZsWBT6akxkDjNmmLqvYLe', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]
-        ])
+        ]);
     }
 }
