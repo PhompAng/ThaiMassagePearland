@@ -146,8 +146,8 @@
 				location.reload();
 			}).fail(function(data){
 				data = data['responseJSON'];
+				data = data['errors'];
 				data = data['owner'];
-				console.log(data);
 				$('#createCouponErrorAlert').html(data[0]).show();
 			});
 		}
