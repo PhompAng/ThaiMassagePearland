@@ -15,10 +15,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'HomeController@index');
 
-Route::get('/new', function () {
-    return view('newui.index');
-});
-
 Route::post('booking/process', ['uses' => 'BookingController@process', 'as' => 'booking.process']);
 Route::get('booking/complete', ['uses' => 'BookingController@complete', 'as' => 'booking.complete']);
 Route::get('booking/cancel', ['uses' => 'BookingController@cancel', 'as' => 'booking.cancel']);
