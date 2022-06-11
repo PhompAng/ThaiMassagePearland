@@ -24,12 +24,12 @@
 
 <body>
 	<div class="container-fluid">
-		<div class="row" id="main">
-			<img src="{{ URL::to('/assets/imgs/main_bg_art.png') }}" id="main-bg-art" class="position-absolute bottom-0 end-0 p-0"/>
-			<nav class="navbar navbar-expand-lg fixed-top">
+		<header>
+			<nav class="navbar navbar-expand-lg navbar-floating">
 				<div class="container-fluid">
 					<!-- Brand and toggle get grouped for better mobile display -->
-					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav"
+						aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
 						<span class="navbar-toggler-icon"></span>
 					</button>
 					<div class="collapse navbar-collapse flex-row-reverse" id="main-nav">
@@ -43,12 +43,49 @@
 					</div><!-- /.navbar-collapse -->
 				</div><!-- /.container-fluid -->
 			</nav>
+		</header>
+		<section class="row justify-content-end min-vh-100 align-items-center" id="main">
+			<img src="{{ URL::to('/assets/imgs/main_bg_art.png') }}" id="main-bg-art"
+				class="position-absolute bottom-0 end-0 p-0" />
+			<img src="{{ URL::to('/assets/imgs/logo.png') }}" id="main-logo"
+				class="position-absolute top-0 start-0 p-0" />
 
-			<img src="{{ URL::to('/assets/imgs/logo.png') }}" id="main-logo" class="position-absolute top-0 start-0 p-0"/>
-			<img src="{{ URL::to('/assets/imgs/a.png') }}" class="position-absolute top-0 start-0 p-0" style="opacity: 0.5;"/>
-		</div>
+			<div class="col-8 d-flex flex-column align-items-center mt-5" style="z-index: 1">
+				<p class="title"><span class="fw-normal">Choose</span> Location</p>
+				<p class="subtitle">To freeing the <span class="fw-medium">flow of vital energy</span></p>
+				<p class="subtitle">in your body with</p>
+
+				<div class="location-selector d-inline-flex rounded mt-5 active">
+					<div class="logo">
+						<img src="{{ URL::to('/assets/imgs/logo.png') }}"
+							style='height: 100%; width: 100%; object-fit: contain' />
+					</div>
+					<div class="location-container">
+						<p class="name mb-0">Thai Hands</p>
+						<p class="name mb-0">Massge Therapy</p>
+						<span class="locate">Located on </span>
+						<span class="location">Pearland, TX</span>
+					</div>
+				</div>
+				<div class="location-selector d-inline-flex rounded mt-4">
+					<div class="logo">
+						<img src="{{ URL::to('/assets/imgs/logo2.png') }}"
+							style='height: 100%; width: 100%; object-fit: contain' />
+					</div>
+					<div class="location-container">
+						<p class="name mb-0">Diamond Thai</p>
+						<p class="name mb-0">Massage Therapy</p>
+						<span class="locate">Located on </span>
+						<span class="location">Seabrook, TX</span>
+					</div>
+				</div>
+			</div>
+			{{-- <img src="{{ URL::to('/assets/imgs/a.png') }}" class="position-absolute top-0 start-0 p-0"
+				style="opacity: 0.5;" /> --}}
+		</section>
 	</div>
-	<footer class="text-right">&copy 2015 Thai Hands Massage Therapy. All rights reserved.</footer>
+	<footer class="text-right" style="height: 100vh;">&copy 2015 Thai Hands Massage Therapy. All rights reserved.
+	</footer>
 
 	<div class="modal fade" id="resultModal" tabindex="-1" role="dialog">
 		<div class="modal-dialog">

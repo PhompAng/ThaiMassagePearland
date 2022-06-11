@@ -1,14 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+/* 
+400 -> regular
+500 -> medium
+600 -> semi bold
+700 -> bold
+ */
+
+.fw-medium {
+    font-weight: 500 !important;
+}
+
 
 body {
     font-family: 'Montserrat', sans-serif;
 }
+
 #main {
-    height: 100vh;
     background-color: #1a1310;
     background-image: url('/assets/imgs/main_bg.png');
     background-size: cover;
 }
+
 @media (max-width: 991.98px) {
     #main {
         background-color: #1a1310;
@@ -16,6 +28,24 @@ body {
         background-repeat: no-repeat;
         background-size: 200vw;
     }
+}
+
+
+#main .title {
+    font-size: 4.125rem;
+    background-image: linear-gradient(116.16deg, #FFFAE5 33.54%, #D7A210 68.6%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    font-weight: 600;
+    text-shadow: 0px 7px 20px rgba(0, 0, 0, 0.31);
+}
+
+#main .subtitle {
+    font-size: 3.125rem;
+    font-weight: 400;
+    color: #FFFFFF;
 }
 
 #main-logo {
@@ -28,13 +58,14 @@ body {
     width: 30%;
 }
 
-.navbar {
-    margin-top: 70px;
+.navbar-floating {
+    position: absolute;
+    top: 75px;
+    right: 85px;
+    width: 100%;
 }
-#main-nav {
-    margin-right: 75px;
-}
-.nav-link {
+
+.navbar-expand-lg .navbar-nav .nav-link {
     font-size: 1.25rem;
     color: #FFFFFF;
     text-transform: uppercase;
@@ -44,9 +75,53 @@ body {
     padding-right: 15px;
     letter-spacing: 0.05em;
 }
-.nav-link.active {
+
+.navbar-nav .nav-link:hover {
+    color: #FBBE48;
+}
+
+.navbar-nav .nav-link.active {
     font-size: 1.75rem;
     text-decoration: underline;
     text-underline-offset: 4px;
     color: #FBBE48 !important;
+}
+
+.location-selector {
+    background-color: #120D11;
+    padding: 1.5rem;
+    opacity: 0.75;
+}
+
+.location-selector.active {
+    border: #FBBE48 solid 4px;
+    padding: 1.75rem 3rem 1.75rem 3rem;
+}
+
+.location-selector>.logo {
+    width: 170px;
+    height: 140px;
+}
+
+.location-selector .name {
+    font-size: 2.375rem;
+    font-weight: 600;
+    color: #FBBE48;
+    text-transform: uppercase;
+}
+
+.location-container {
+    margin-left: 2.375rem;
+}
+
+.location-container .locate {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #FFFFFF;
+}
+
+.location-container .location {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #FFFFFF;
 }
