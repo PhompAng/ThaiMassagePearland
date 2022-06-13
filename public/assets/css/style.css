@@ -16,14 +16,14 @@ body {
 }
 
 #main {
-    background-color: #1a1310;
+    background-color: #1d1410;
     background-image: url('/assets/imgs/main_bg.png');
     background-size: cover;
 }
 
 @media (max-width: 991.98px) {
     #main {
-        background-color: #1a1310;
+        background-color: #1d1410;
         background-position: bottom left;
         background-repeat: no-repeat;
         background-size: 200vw;
