@@ -24,34 +24,35 @@
 
 <body>
 	<div class="container-fluid">
-		<header>
-			<nav class="navbar navbar-expand-lg navbar-floating">
-				<div class="container-fluid">
-					<!-- Brand and toggle get grouped for better mobile display -->
-					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav"
-						aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
-						<span class="navbar-toggler-icon"></span>
-					</button>
-					<div class="collapse navbar-collapse flex-row-reverse" id="main-nav">
-						<ul class="navbar-nav align-items-center">
-							<li class="nav-item"><a class="nav-link active" href="#">Thai Traditional Massage</a></li>
-							<li class="nav-item"><a class="nav-link" href="#treatments">Treatments</a></li>
-							<li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
-							<li class="nav-item"><a class="nav-link" href="#reservation">Booking</a></li>
-							<li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
-						</ul>
-					</div><!-- /.navbar-collapse -->
-				</div><!-- /.container-fluid -->
-			</nav>
-		</header>
-		<section class="row justify-content-end min-vh-100 align-items-center" id="main">
+		<section class="row justify-content-end vh-100 align-items-center" id="main">
 			<img src="{{ URL::to('/assets/imgs/main_bg_art.png') }}" id="main-bg-art"
 				class="position-absolute bottom-0 end-0 p-0" />
 			<img src="{{ URL::to('/assets/imgs/logo.png') }}" id="main-logo"
 				class="position-absolute top-0 start-0 p-0" />
 
-			<div class="col-8 d-flex flex-column align-items-center mt-5" style="z-index: 1">
-				<p class="title"><span class="fw-normal">Choose</span> Location</p>
+			<div class="col-8 d-flex flex-column align-items-center" style="z-index: 1">
+				<nav class="navbar navbar-expand-lg mt-5">
+					<div class="container-fluid">
+						<!-- Brand and toggle get grouped for better mobile display -->
+						<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+							data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false"
+							aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+						<div class="collapse navbar-collapse flex-row-reverse" id="main-nav">
+							<ul class="navbar-nav align-items-center">
+								<li class="nav-item"><a class="nav-link active" href="#">Thai Traditional Massage</a>
+								</li>
+								<li class="nav-item"><a class="nav-link" href="#treatments">Treatments</a></li>
+								<li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+								<li class="nav-item"><a class="nav-link" href="#reservation">Booking</a></li>
+								<li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
+							</ul>
+						</div><!-- /.navbar-collapse -->
+					</div><!-- /.container-fluid -->
+				</nav>
+
+				<p class="title mt-5"><span class="fw-normal">Choose</span> Location</p>
 				<p class="subtitle">To freeing the <span class="fw-medium">flow of vital energy</span></p>
 				<p class="subtitle">in your body with</p>
 
@@ -83,9 +84,51 @@
 			{{-- <img src="{{ URL::to('/assets/imgs/a.png') }}" class="position-absolute top-0 start-0 p-0"
 				style="opacity: 0.5;" /> --}}
 		</section>
+
+		<section class="row align-items-center" id="massage">
+			<div class="col-12" style="margin-bottom: 110px;">
+				<h1 class="text-center">Thai Traditional Massage</h1>
+			</div>
+			<div
+				class="col-xxl-3 offset-xxl-3 col-xl-4 offset-xl-2 col-lg-5 offset-lg-1 col-md-6 d-flex flex-column justify-content-center align-items-end position-relative">
+				<img src="{{ URL::to('/assets/imgs/massage_art.png') }}" id="massage-art" class="position-absolute" />
+				<div id="massage-carousel" class="carousel slide carousel-fade" style="z-index: 2; margin-top: 10rem;" data-bs-ride="carousel">
+					<div class="carousel-inner">
+						<div class="carousel-item active content d-flex align-items-center" data-bs-interval="2000">
+							<span class="fs-5"><span class="title">Thai Traditional Massage</span> is a very
+								holistic therapy where the human being
+								is seen and treated as an ever-changing
+								network of physical, mental, emotional
+								and spiritual aspects that all influence
+								each other.</span>
+						</div>
+						<div class="carousel-item content d-flex align-items-center" data-bs-interval="2000">
+							<span class="fs-5"><span class="title">The practitioner</span> uses his or her thumbs, palms, elbows, knees and feet to apply a combination of acupressure, gentle rocking and twisting, joint and spine mobilizations and assisted yoga
+								stretches. With the therapist using bodyweight instead of strength and a steady and meditative rhythm.</span>
+						</div>
+						<div class="carousel-item content d-flex align-items-center" data-bs-interval="2000">
+							<span class="fs-5"><span class="title">The benefits of Thai Traditional Massage</span> are countless. By freeing the flow of vital energy in the body, Thai Massage can improve posture, breathing, flexibility, digestion and circulation. Muscles are stretched, inner organs toned and emotional and nervous tension is reduced. Often a deep sense of peace can be experienced during and
+								after a treatment.</span>
+						</div>
+					</div>
+				</div>
+				<div id="massage-carousel-indicator" class="ms-4 mt-3 align-self-start">
+					<div class="massage-carousel-item active" data-bs-slide-to="0"></div>
+					<div class="massage-carousel-item ms-1" data-bs-slide-to="1"></div>
+					<div class="massage-carousel-item ms-1" data-bs-slide-to="2"></div>
+				</div>
+				<div class="footnote ms-4 align-self-start">
+					<p class="mt-4 mb-0">*** We must inform you that</p>
+					<p class="mb-0">we are not providing any erotic massage.</p>
+				</div>
+			</div>
+			<div class="col-md-6 col-lg-6 col-xl-5 col-xxl-4" style="margin-left: -4rem; z-index: 1">
+				<img src="{{ URL::to('/assets/imgs/massage_img.png') }}" alt="" class="img-fluid">
+			</div>
+		</section>
+		<footer class="text-right" style="height: 100vh;">&copy 2015 Thai Hands Massage Therapy. All rights reserved.
+		</footer>
 	</div>
-	<footer class="text-right" style="height: 100vh;">&copy 2015 Thai Hands Massage Therapy. All rights reserved.
-	</footer>
 
 	<div class="modal fade" id="resultModal" tabindex="-1" role="dialog">
 		<div class="modal-dialog">
@@ -158,6 +201,13 @@
 	</script>
 
 	<script>
+		const massageCarousel = document.getElementById('massage-carousel');
+		const massageCarouselIndicators = $('#massage-carousel-indicator').children();
+		massageCarousel.addEventListener('slide.bs.carousel', event => {
+			massageCarouselIndicators.removeClass('active');
+			massageCarouselIndicators.eq(event.to).addClass('active');
+		});
+
 		$('.owl-carousel').owlCarousel({
 			margin: 10,
 			loop: true,

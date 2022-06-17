@@ -15,6 +15,39 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+h1 {
+    font-size: 3.75rem;
+    background-image: linear-gradient(116.16deg, #FFFAE5 33.54%, #D7A210 68.6%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    font-weight: 700;
+    text-shadow: 0px 7px 20px rgba(0, 0, 0, 0.31);
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    font-size: 1.25rem;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height: 1.25rem;
+    padding-left: 15px;
+    padding-right: 15px;
+    letter-spacing: 0.05em;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #FBBE48;
+}
+
+.navbar-nav .nav-link.active {
+    font-size: 1.75rem;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    color: #FBBE48 !important;
+}
+
 #main {
     background-color: #1d1410;
     background-image: url('/assets/imgs/main_bg.png');
@@ -29,7 +62,6 @@ body {
         background-size: 200vw;
     }
 }
-
 
 #main .title {
     font-size: 4.125rem;
@@ -56,35 +88,6 @@ body {
 
 #main-bg-art {
     width: 30%;
-}
-
-.navbar-floating {
-    position: absolute;
-    top: 75px;
-    right: 85px;
-    width: 100%;
-}
-
-.navbar-expand-lg .navbar-nav .nav-link {
-    font-size: 1.25rem;
-    color: #FFFFFF;
-    text-transform: uppercase;
-    font-weight: 600;
-    line-height: 1.25rem;
-    padding-left: 15px;
-    padding-right: 15px;
-    letter-spacing: 0.05em;
-}
-
-.navbar-nav .nav-link:hover {
-    color: #FBBE48;
-}
-
-.navbar-nav .nav-link.active {
-    font-size: 1.75rem;
-    text-decoration: underline;
-    text-underline-offset: 4px;
-    color: #FBBE48 !important;
 }
 
 .location-selector {
@@ -124,4 +127,67 @@ body {
     font-size: 1.5rem;
     font-weight: 600;
     color: #FFFFFF;
+}
+
+#massage {
+    background-image: url('/assets/imgs/massage_bg.png');
+    background-size: cover;
+    padding-top: 64px;
+    padding-bottom: 64px;
+}
+
+#massage .content {
+    background-image: url('/assets/imgs/massage_content_bg.png');
+    background-size: cover;
+    border-radius: 16px;
+    padding: 0 3vw 0 3vw;
+    aspect-ratio: 1/1;
+}
+
+@supports not (aspect-ratio: 1 / 1) {
+    #massage .content {
+        float: left;
+        padding-top: 100%;
+        content: "";
+    }
+
+    #massage .content {
+        display: block;
+        content: "";
+        clear: both;
+    }
+}
+
+#massage .content span {
+    font-weight: 300;
+    color: #3A1B03;
+}
+#massage .content span.title {
+    font-weight: 600;
+}
+
+#massage .footnote>p {
+    color: #FFFFFF;
+}
+
+#massage-carousel-indicator>.massage-carousel-item {
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    border-radius: 50%;
+    border: rgba(255, 255, 255, 0.6) solid 2px;
+}
+
+#massage-carousel-indicator>.massage-carousel-item.active {
+    background-color: #FFFFFF;
+    border: #FFFFFF solid 2px;
+}
+
+#massage .cover {
+    /* width: 38vw; */
+}
+
+#massage-art {
+    width: 45vw;
+    transform: translate(22%, -28%);
 }
