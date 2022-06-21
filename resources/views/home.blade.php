@@ -327,6 +327,29 @@
 			</div>
 		</section>
 
+		<section class="row position-relative" id="banner">
+			<img src="{{ URL::to('/assets/imgs/banner_bg_art.png') }}" id="banner-bg-art"
+				class="position-absolute end-0 p-0" />
+
+			<div class="col-md-6 content">
+				<h1>Special Price</h1>
+				<h1>for couples massage</h1>
+
+				<div class="price d-flex mt-5">
+					<div class="one">
+						<span class="fs-4">2 people</span>
+						<h1 class="mt-2">$140</h1>
+						<span class="fs-4 fw-bold">$150/ 60 mins</span>
+					</div>
+					<div class="two">
+						<span class="fs-4">2 people</span>
+						<h1 class="mt-2">$200</h1>
+						<span class="fs-4 fw-bold">$220/ 90 mins</span>
+					</div>
+				</div>
+			</div>
+		</section>
+
 		<footer class="text-right" style="height: 100vh;">&copy 2015 Thai Hands Massage Therapy. All rights reserved.
 		</footer>
 	</div>
