@@ -10,7 +10,6 @@
     font-weight: 500 !important;
 }
 
-
 body {
     font-family: 'Montserrat', sans-serif;
 }
@@ -24,6 +23,16 @@ h1 {
     color: transparent;
     font-weight: 700;
     text-shadow: 0px 7px 20px rgba(0, 0, 0, 0.31);
+}
+h2 {
+    font-size: 2.875rem;
+    font-weight: 600;
+    color: #2E1104;
+}
+h3 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #2E1104;
 }
 
 .navbar-expand-lg .navbar-nav .nav-link {
@@ -132,8 +141,8 @@ h1 {
 #massage {
     background-image: url('/assets/imgs/massage_bg.png');
     background-size: cover;
-    padding-top: 64px;
-    padding-bottom: 64px;
+    padding-top: 80px;
+    padding-bottom: 80px;
 }
 
 #massage .content {
@@ -191,3 +200,121 @@ h1 {
     width: 45vw;
     transform: translate(22%, -28%);
 }
+
+
+#treatments {
+    background-image: url('/assets/imgs/treatments_bg.png');
+    background-size: cover;
+    padding-bottom: 80px;
+    margin-top: -150px;
+}
+#treatments h1 {
+    color: #2E1104;
+    border: #B0631E solid 2px;
+    padding: 12px 24px 12px 24px;
+    text-shadow: none;
+    background-image: none;
+    -webkit-background-clip: unset;
+    -webkit-text-fill-color: unset;
+    background-clip: unset;
+}
+#treatments .treatment-bg-art {
+    width: 275px;
+}
+
+#treatments .card {
+    --bs-card-border-width: 0px;
+    --bs-card-border-radius: 16px;
+    background: linear-gradient(180deg, #381B07 0.09%, #1A120C 100%);
+    height: 750px;
+}
+#treatments .card-img, .card-img-bottom {
+    --bs-card-inner-border-radius: 16px;
+}
+#treatments .card > .card-body {
+    padding: 64px 24px 200px 24px;
+    z-index: 1;
+}
+#treatments .card > .card-body > h4 {
+    background-image: linear-gradient(165.4deg, #FFFAE5 39.92%, #D7A210 90.33%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    font-weight: 700;
+}
+#treatments .card > .card-body > .card-text {
+    color: #FFFFFF;
+}
+#treatments .card > .card-body > .price {
+    padding-left: 24px;
+    padding-right: 24px;
+}
+#treatments .card > .card-body > .price > .one {
+    width: 50%;
+    background-color: #B0631E;
+    color: #FFFFFF;
+    padding: 22px 0px 22px 0px;
+}
+#treatments .card > .card-body > .price > .two {
+    width: 50%;
+    background-color: #B1862C;
+    color: #FFFFFF;
+    padding: 22px 0px 22px 0px;
+}
+
+#treatmentCarousel .carousel-control-prev,
+#treatmentCarousel .carousel-control-next {
+  background-color: #b66526;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  top: 50%;
+  opacity: 1;
+}
+#treatmentCarousel .carousel-control-next {
+    transform: translate(60%, -50%);
+}
+#treatmentCarousel .carousel-control-prev {
+    transform: translate(-60%, -50%);
+}
+
+#treatmentCarousel .carousel-item > * {
+    padding: 0 0.5rem;
+}
+
+@media (max-width: 991px) {
+    #treatmentCarousel .carousel-inner .carousel-item > div {
+        display: none;
+    }
+    #treatmentCarousel .carousel-inner .carousel-item > div:first-child {
+        display: block;
+    }
+}
+
+#treatmentCarousel .carousel-inner .carousel-item.active,
+#treatmentCarousel .carousel-inner .carousel-item-next,
+#treatmentCarousel .carousel-inner .carousel-item-prev {
+    display: flex;
+    transition-duration: 1.5s;
+}
+
+/* medium and up screens */
+@media (min-width: 992px) {
+    
+    #treatmentCarousel .carousel-inner .carousel-item-end.active,
+    #treatmentCarousel .carousel-inner .carousel-item-next {
+      transform: translateX(33.333%);
+    }
+    
+    #treatmentCarousel .carousel-inner .carousel-item-start.active, 
+    #treatmentCarousel .carousel-inner .carousel-item-prev {
+      transform: translateX(-33.333%);
+    }
+}
+
+#treatmentCarousel .carousel-inner .carousel-item-end,
+#treatmentCarousel .carousel-inner .carousel-item-start { 
+  transform: translateX(0);
+}
+

@@ -90,42 +90,243 @@
 				<h1 class="text-center">Thai Traditional Massage</h1>
 			</div>
 			<div
-				class="col-xxl-3 offset-xxl-3 col-xl-4 offset-xl-2 col-lg-5 offset-lg-1 col-md-6 d-flex flex-column justify-content-center align-items-end position-relative">
+				class="col-xxl-4 offset-xxl-2 col-xl-4 offset-xl-2 col-lg-5 offset-lg-1 col-md-6 d-flex flex-column justify-content-center align-items-end position-relative">
 				<img src="{{ URL::to('/assets/imgs/massage_art.png') }}" id="massage-art" class="position-absolute" />
-				<div id="massage-carousel" class="carousel slide carousel-fade" style="z-index: 2; margin-top: 10rem;" data-bs-ride="carousel">
-					<div class="carousel-inner">
-						<div class="carousel-item active content d-flex align-items-center" data-bs-interval="2000">
-							<span class="fs-5"><span class="title">Thai Traditional Massage</span> is a very
-								holistic therapy where the human being
-								is seen and treated as an ever-changing
-								network of physical, mental, emotional
-								and spiritual aspects that all influence
-								each other.</span>
+				<div class="row">
+					<div class="col-xxl-10 offset-xxl-2 col-xl-12">
+						<div id="massage-carousel" class="carousel slide carousel-fade"
+							style="z-index: 2; margin-top: 4rem;" data-bs-ride="carousel">
+							<div class="carousel-inner">
+								<div class="carousel-item active content d-flex align-items-center"
+									data-bs-interval="2000">
+									<span class="fs-5"><span class="title">Thai Traditional Massage</span> is a very
+										holistic therapy where the human being
+										is seen and treated as an ever-changing
+										network of physical, mental, emotional
+										and spiritual aspects that all influence
+										each other.</span>
+								</div>
+								<div class="carousel-item content d-flex align-items-center" data-bs-interval="2000">
+									<span class="fs-5"><span class="title">The practitioner</span> uses his or her
+										thumbs,
+										palms, elbows, knees and feet to apply a combination of acupressure, gentle
+										rocking and
+										twisting, joint and spine mobilizations and assisted yoga
+										stretches. With the therapist using bodyweight instead of strength and a steady
+										and
+										meditative rhythm.</span>
+								</div>
+								<div class="carousel-item content d-flex align-items-center" data-bs-interval="2000">
+									<span class="fs-5"><span class="title">The benefits of Thai Traditional
+											Massage</span> are
+										countless. By freeing the flow of vital energy in the body, Thai Massage can
+										improve
+										posture, breathing, flexibility, digestion and circulation. Muscles are
+										stretched, inner
+										organs toned and emotional and nervous tension is reduced. Often a deep sense of
+										peace
+										can be experienced during and
+										after a treatment.</span>
+								</div>
+							</div>
 						</div>
-						<div class="carousel-item content d-flex align-items-center" data-bs-interval="2000">
-							<span class="fs-5"><span class="title">The practitioner</span> uses his or her thumbs, palms, elbows, knees and feet to apply a combination of acupressure, gentle rocking and twisting, joint and spine mobilizations and assisted yoga
-								stretches. With the therapist using bodyweight instead of strength and a steady and meditative rhythm.</span>
+						<div id="massage-carousel-indicator" class="ms-4 mt-3 align-self-start">
+							<div class="massage-carousel-item active" data-bs-slide-to="0"></div>
+							<div class="massage-carousel-item ms-1" data-bs-slide-to="1"></div>
+							<div class="massage-carousel-item ms-1" data-bs-slide-to="2"></div>
 						</div>
-						<div class="carousel-item content d-flex align-items-center" data-bs-interval="2000">
-							<span class="fs-5"><span class="title">The benefits of Thai Traditional Massage</span> are countless. By freeing the flow of vital energy in the body, Thai Massage can improve posture, breathing, flexibility, digestion and circulation. Muscles are stretched, inner organs toned and emotional and nervous tension is reduced. Often a deep sense of peace can be experienced during and
-								after a treatment.</span>
+						<div class="footnote ms-4 align-self-start">
+							<p class="mt-4 mb-0">*** We must inform you that</p>
+							<p class="mb-0">we are not providing any erotic massage.</p>
 						</div>
 					</div>
-				</div>
-				<div id="massage-carousel-indicator" class="ms-4 mt-3 align-self-start">
-					<div class="massage-carousel-item active" data-bs-slide-to="0"></div>
-					<div class="massage-carousel-item ms-1" data-bs-slide-to="1"></div>
-					<div class="massage-carousel-item ms-1" data-bs-slide-to="2"></div>
-				</div>
-				<div class="footnote ms-4 align-self-start">
-					<p class="mt-4 mb-0">*** We must inform you that</p>
-					<p class="mb-0">we are not providing any erotic massage.</p>
 				</div>
 			</div>
 			<div class="col-md-6 col-lg-6 col-xl-5 col-xxl-4" style="margin-left: -4rem; z-index: 1">
 				<img src="{{ URL::to('/assets/imgs/massage_img.png') }}" alt="" class="img-fluid">
 			</div>
 		</section>
+
+		<section class="row justify-content-center" id="treatments">
+			<img src="{{ URL::to('/assets/imgs/treatments_bg_art.png')}}"
+				class="treatment-bg-art position-absolute start-0 p-0" style="margin-top: 60px">
+			<img src="{{ URL::to('/assets/imgs/treatments_bg_art2.png')}}"
+				class="treatment-bg-art position-absolute end-0 p-0">
+
+			<div class="col-12 d-flex flex-column align-items-center" style="padding-top: 150px;">
+				<h1 class="text-center" style="margin-bottom: 60px;">Treatments</h1>
+				<h2 class="text-center">More than 6 massage styles</h2>
+				<h3 class="text-center">specially selected for you by practitioner.</h3>
+			</div>
+
+			<div class="col-xxl-11 col-xl-12" style="margin-top: 90px; padding-left: 24px; padding-right: 24px;">
+				<div id="treatmentCarousel" class="carousel slide" data-bs-interval="false">
+					<div class="carousel-inner" role="listbox">
+						<div class="carousel-item active">
+							<div class="col-lg-4">
+								<div class="card">
+									<div class="card-body">
+										<h4 class="fs-2 card-title text-center">Deep Tissue Massage</h4>
+										<div class="price d-flex mt-5">
+											<span class="one fs-4 fw-semibold text-center">$75/ 60 mins</span>
+											<span class="two fs-4 fw-semibold text-center">$110/ 90 mins</span>
+										</div>
+										<p class="fs-4 card-text text-center mt-5">Deep tissue massage is a type of
+											therapy similar to Swedish massage,
+											but the deeper pressure focuses on
+											realigning deeper layers of muscles
+											and connective tissue. It is especially
+											helpful for chronic aches and pains
+											and contracted areas such as stiff neck
+											and upper back, low back pain, leg
+											muscle tightness, and sore shoulders.</p>
+									</div>
+									<img src="{{ URL::to('/assets/imgs/treatments_card_art.png')}}"
+										class="card-img img-fluid position-absolute top-0">
+									<img src="{{ URL::to('/assets/imgs/treatments_card_art2.png')}}"
+										class="card-img-bottom img-fluid position-absolute bottom-0">
+									<img class="card-img-bottom img-fluid position-absolute bottom-0"
+										src="{{ URL::to('/assets/imgs/treatment_deep_tissue.png') }}">
+								</div>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<div class="col-lg-4">
+								<div class="card">
+									<div class="card-body">
+										<h4 class="fs-2 card-title text-center">Thai Traditional Massage</h4>
+										<div class="price d-flex mt-5">
+											<span class="one fs-4 fw-semibold text-center">$75/ 60 mins</span>
+											<span class="two fs-4 fw-semibold text-center">$110/ 90 mins</span>
+										</div>
+										<p class="fs-4 card-text text-center mt-5">Thai massage uses passive stretching
+											and gentle pressure along the body’s
+											energy lines to increase flexibility, relieve
+											muscle and joint tension and balance
+											the body’s energy systems. Thai massage
+											is both deeply relaxing and energizing.</p>
+									</div>
+									<img src="{{ URL::to('/assets/imgs/treatments_card_art.png')}}"
+										class="card-img img-fluid position-absolute top-0">
+									<img src="{{ URL::to('/assets/imgs/treatments_card_art2.png')}}"
+										class="card-img-bottom img-fluid position-absolute bottom-0">
+									<img class="card-img-bottom img-fluid position-absolute bottom-0"
+										src="{{ URL::to('/assets/imgs/treatment_thai_traditional.png') }}">
+								</div>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<div class="col-lg-4">
+								<div class="card">
+									<div class="card-body">
+										<h4 class="fs-2 card-title text-center">Reflexology</h4>
+										<div class="price d-flex mt-5">
+											<span class="one fs-4 fw-semibold text-center">$75/ 60 mins</span>
+											<span class="two fs-4 fw-semibold text-center">$110/ 90 mins</span>
+										</div>
+										<p class="fs-4 card-text text-center mt-5">Reflexology, although it's often
+											combined
+											with massage, is technically not
+											a form of massage. It's a separate
+											practice that applies pressure
+											to reflex zones on your feet, hands or
+											outer ears to affect your entire body.</p>
+									</div>
+									<img src="{{ URL::to('/assets/imgs/treatments_card_art.png')}}"
+										class="card-img img-fluid position-absolute top-0">
+									<img src="{{ URL::to('/assets/imgs/treatments_card_art2.png')}}"
+										class="card-img-bottom img-fluid position-absolute bottom-0">
+									<img class="card-img-bottom img-fluid position-absolute bottom-0"
+										src="{{ URL::to('/assets/imgs/treatment_reflexology.png') }}">
+								</div>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<div class="col-lg-4">
+								<div class="card">
+									<div class="card-body">
+										<h4 class="fs-2 card-title text-center">Sports Massage</h4>
+										<div class="price d-flex mt-5">
+											<span class="one fs-4 fw-semibold text-center">$75/ 60 mins</span>
+											<span class="two fs-4 fw-semibold text-center">$110/ 90 mins</span>
+										</div>
+										<p class="fs-4 card-text text-center mt-5">Sports massage emphasizes prevention
+											and healing of injuries to the muscles
+											and tendons. But you don't have to be
+											an athlete to benefit from sports massage.
+											Sports massage is also good for people
+											with injuries, chronic pain or restricted
+											range of motion.</p>
+									</div>
+									<img src="{{ URL::to('/assets/imgs/treatments_card_art.png')}}"
+										class="card-img img-fluid position-absolute top-0">
+									<img src="{{ URL::to('/assets/imgs/treatments_card_art2.png')}}"
+										class="card-img-bottom img-fluid position-absolute bottom-0">
+									<img class="card-img-bottom img-fluid position-absolute bottom-0"
+										src="{{ URL::to('/assets/imgs/treatment_sports.png') }}">
+								</div>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<div class="col-lg-4">
+								<div class="card">
+									<div class="card-body">
+										<h4 class="fs-2 card-title text-center">Hot Stone Therapy</h4>
+										<div class="price d-flex mt-5">
+											<span class="one fs-4 fw-semibold text-center">$75/ 60 mins</span>
+											<span class="two fs-4 fw-semibold text-center">$110/ 90 mins</span>
+										</div>
+										<p class="fs-4 card-text text-center mt-5">Hot stone massage therapy session
+											promotes deeper muscle
+											relaxation through the placement of smooth,
+											water-heated stones at key points on the body.</p>
+									</div>
+									<img src="{{ URL::to('/assets/imgs/treatments_card_art.png')}}"
+										class="card-img img-fluid position-absolute top-0">
+									<img src="{{ URL::to('/assets/imgs/treatments_card_art2.png')}}"
+										class="card-img-bottom img-fluid position-absolute bottom-0">
+									<img class="card-img-bottom img-fluid position-absolute bottom-0"
+										src="{{ URL::to('/assets/imgs/treatment_hot_stone.png') }}">
+								</div>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<div class="col-lg-4">
+								<div class="card">
+									<div class="card-body">
+										<h4 class="fs-2 card-title text-center">Swedish Massage</h4>
+										<div class="price d-flex mt-5">
+											<span class="one fs-4 fw-semibold text-center">$75/ 60 mins</span>
+											<span class="two fs-4 fw-semibold text-center">$110/ 90 mins</span>
+										</div>
+										<p class="fs-4 card-text text-center mt-5">The term "Swedish Massage" refers to
+											a
+											variety of techniques specifically designed
+											to relax muscles by applying pressure to
+											them against deeper muscles and bones,
+											and rubbing in the same direction as
+											the flow of blood returning to the heart.</p>
+									</div>
+									<img src="{{ URL::to('/assets/imgs/treatments_card_art.png')}}"
+										class="card-img img-fluid position-absolute top-0">
+									<img src="{{ URL::to('/assets/imgs/treatments_card_art2.png')}}"
+										class="card-img-bottom img-fluid position-absolute bottom-0">
+									<img class="card-img-bottom img-fluid position-absolute bottom-0"
+										src="{{ URL::to('/assets/imgs/treatment_swedish.png') }}">
+								</div>
+							</div>
+						</div>
+					</div>
+					<button class="carousel-control-prev" data-bs-target="#treatmentCarousel" data-bs-slide="prev">
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					</button>
+					<button class="carousel-control-next" data-bs-target="#treatmentCarousel" data-bs-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					</button>
+				</div>
+			</div>
+		</section>
+
 		<footer class="text-right" style="height: 100vh;">&copy 2015 Thai Hands Massage Therapy. All rights reserved.
 		</footer>
 	</div>
@@ -207,6 +408,25 @@
 			massageCarouselIndicators.removeClass('active');
 			massageCarouselIndicators.eq(event.to).addClass('active');
 		});
+
+		let items = document.querySelectorAll('#treatmentCarousel .carousel-item')
+		items.forEach((el) => {
+			const minPerSlide = 3
+			let next = el.nextElementSibling
+			for (var i=1; i<minPerSlide; i++) {
+				if (!next) {
+					// wrap carousel by using first child
+					next = items[0]
+				}
+				let cloneChild = next.cloneNode(true)
+				el.appendChild(cloneChild.children[0])
+				next = next.nextElementSibling
+			}
+		})
+
+
+
+
 
 		$('.owl-carousel').owlCarousel({
 			margin: 10,
