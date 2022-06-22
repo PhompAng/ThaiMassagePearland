@@ -369,3 +369,9 @@ h3 {
 #banner .price>div {
     padding: 24px;
 }
+
+
+#gallery {
+    background-image: url('/assets/imgs/gallery_bg.png');
+    background-size: cover;
+}

@@ -11,7 +11,8 @@
 	<meta name="keywords" content="massage pearland, thai massage pearland" />
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
 		integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+	<!--[if (lt IE 9)]><script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.helper.ie8.js"></script><![endif]-->
 	{!! HTML::style('/assets/css/style.css') !!}
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -350,6 +351,192 @@
 			</div>
 		</section>
 
+		<section class="row" id="gallery">
+			<div class="col-12" style="margin-bottom: 110px;">
+				<h1 class="text-center">Gallery</h1>
+			</div>
+
+			<div class="col-8">
+				<div class="tns-outer" id="customize-ow">
+					<div id="customize-mw" class="tns-ovh">
+						<div class="tns-inner" id="customize-iw">
+							<div class="customize  tns-slider tns-carousel tns-subpixel tns-calc tns-horizontal"
+								id="gallery-container" style="transform: translate3d(-66.6667%, 0px, 0px);">
+								<div class="tns-item tns-slide-cloned" aria-hidden="true" tabindex="-1">
+									<div>
+										<img src="https://source.unsplash.com/collection/993239/600x400" alt=""
+											width="600" height="400">
+									</div>
+									<p>
+										Sunt dignissimos distinctio, veniam, tenetur aspernatur nulla!
+									</p>
+								</div>
+								<div class="tns-item tns-slide-cloned" aria-hidden="true" tabindex="-1">
+									<div>
+										<img src="https://source.unsplash.com/collection/1673600/600x400" alt=""
+											width="600" height="400">
+									</div>
+									<p>
+										Corrupti, libero minima nihil expedita officiis? Quo.
+									</p>
+								</div>
+								<div class="tns-item tns-slide-cloned" aria-hidden="true" tabindex="-1">
+									<div>
+										<img src="https://source.unsplash.com/collection/1513994/600x400" alt=""
+											width="600" height="400">
+									</div>
+									<p>
+										Alias rem, ab impedit recusandae repellat tempore.
+									</p>
+								</div>
+								<div class="tns-item tns-slide-cloned" aria-hidden="true" tabindex="-1">
+									<div>
+										<img src="https://source.unsplash.com/collection/502925/600x400" alt=""
+											width="600" height="400">
+									</div>
+									<p>
+										Nisi inventore quo delectus perspiciatis voluptatibus, quae.
+									</p>
+								</div>
+								<div class="tns-item tns-slide-cloned" aria-hidden="true" tabindex="-1">
+									<div>
+										<img src="https://source.unsplash.com/collection/1891993/600x400" alt=""
+											width="600" height="400">
+									</div>
+									<p>
+										Nisi harum earum consectetur laudantium iusto, laboriosam.
+									</p>
+								</div>
+								<div class="tns-item" id="customize-item0" aria-hidden="true" tabindex="-1">
+									<div>
+										<img src="https://source.unsplash.com/collection/993239/600x400" alt=""
+											width="600" height="400">
+									</div>
+									<p>
+										Sunt dignissimos distinctio, veniam, tenetur aspernatur nulla!
+									</p>
+								</div>
+								<div class="tns-item" id="customize-item1" aria-hidden="true" tabindex="-1">
+									<div>
+										<img src="https://source.unsplash.com/collection/1673600/600x400" alt=""
+											width="600" height="400">
+									</div>
+									<p>
+										Corrupti, libero minima nihil expedita officiis? Quo.
+									</p>
+								</div>
+								<div class="tns-item" id="customize-item2" aria-hidden="true" tabindex="-1">
+									<div>
+										<img src="https://source.unsplash.com/collection/1513994/600x400" alt=""
+											width="600" height="400">
+									</div>
+									<p>
+										Alias rem, ab impedit recusandae repellat tempore.
+									</p>
+								</div>
+								<div class="tns-item" id="customize-item3" aria-hidden="true" tabindex="-1">
+									<div>
+										<img src="https://source.unsplash.com/collection/502925/600x400" alt=""
+											width="600" height="400">
+									</div>
+									<p>
+										Nisi inventore quo delectus perspiciatis voluptatibus, quae.
+									</p>
+								</div>
+								<div class="tns-item" id="customize-item4" aria-hidden="true" tabindex="-1">
+									<div>
+										<img src="https://source.unsplash.com/collection/1891993/600x400" alt=""
+											width="600" height="400">
+									</div>
+									<p>
+										Nisi harum earum consectetur laudantium iusto, laboriosam.
+									</p>
+								</div>
+								<div class="tns-item tns-slide-cloned tns-slide-active">
+									<div>
+										<img src="https://source.unsplash.com/collection/993239/600x400" alt=""
+											width="600" height="400">
+									</div>
+									<p>
+										Sunt dignissimos distinctio, veniam, tenetur aspernatur nulla!
+									</p>
+								</div>
+								<div class="tns-item tns-slide-cloned tns-slide-active">
+									<div>
+										<img src="https://source.unsplash.com/collection/1673600/600x400" alt=""
+											width="600" height="400">
+									</div>
+									<p>
+										Corrupti, libero minima nihil expedita officiis? Quo.
+									</p>
+								</div>
+								<div class="tns-item tns-slide-cloned tns-slide-active">
+									<div>
+										<img src="https://source.unsplash.com/collection/1513994/600x400" alt=""
+											width="600" height="400">
+									</div>
+									<p>
+										Alias rem, ab impedit recusandae repellat tempore.
+									</p>
+								</div>
+								<div class="tns-item tns-slide-cloned" aria-hidden="true" tabindex="-1">
+									<div>
+										<img src="https://source.unsplash.com/collection/502925/600x400" alt=""
+											width="600" height="400">
+									</div>
+									<p>
+										Nisi inventore quo delectus perspiciatis voluptatibus, quae.
+									</p>
+								</div>
+								<div class="tns-item tns-slide-cloned" aria-hidden="true" tabindex="-1">
+									<div>
+										<img src="https://source.unsplash.com/collection/1891993/600x400" alt=""
+											width="600" height="400">
+									</div>
+									<p>
+										Nisi harum earum consectetur laudantium iusto, laboriosam.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="customize-tools">
+					<ul class="thumbnails" id="gallery-thumbnails" aria-label="Carousel Pagination">
+						<li data-nav="0" aria-label="Carousel Page 1 (Current Slide)" aria-controls="customize"
+							class="tns-nav-active">
+							<img src="https://source.unsplash.com/collection/993239/600x400" alt="" width="600"
+								height="400">
+						</li>
+						<li data-nav="1" aria-label="Carousel Page 2" aria-controls="customize" class="" tabindex="-1">
+							<img src="https://source.unsplash.com/collection/1673600/600x400" alt="" width="600"
+								height="400">
+						</li>
+						<li data-nav="2" aria-label="Carousel Page 3" aria-controls="customize" class="" tabindex="-1">
+							<img src="https://source.unsplash.com/collection/1513994/600x400" alt="" width="600"
+								height="400">
+						</li>
+						<li data-nav="3" aria-label="Carousel Page 4" aria-controls="customize" class="" tabindex="-1">
+							<img src="https://source.unsplash.com/collection/502925/600x400" alt="" width="600"
+								height="400">
+						</li>
+						<li data-nav="4" aria-label="Carousel Page 5" aria-controls="customize" class="" tabindex="-1">
+							<img src="https://source.unsplash.com/collection/1891993/600x400" alt="" width="600"
+								height="400">
+						</li>
+					</ul>
+					<ul class="controls" id="gallery-controls" aria-label="Carousel Navigation" tabindex="0">
+						<li class="prev" aria-controls="customize" tabindex="-1" data-controls="prev">
+							<img src="images/angle-left.png" alt="">
+						</li>
+						<li class="next" aria-controls="customize" tabindex="-1" data-controls="next">
+							<img src="images/angle-right.png" alt="">
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
 		<footer class="text-right" style="height: 100vh;">&copy 2015 Thai Hands Massage Therapy. All rights reserved.
 		</footer>
 	</div>
@@ -423,6 +610,7 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
 	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
 
 	<script>
 		const massageCarousel = document.getElementById('massage-carousel');
@@ -447,19 +635,15 @@
 			}
 		})
 
-
-
-
-
-		$('.owl-carousel').owlCarousel({
-			margin: 10,
-			loop: true,
-			items: 3,
-			responsive: false,
-			autoplay: true,
-			autoplayTimeout: 2000,
-			autoplayHoverPause: false,
-			nav: true
+		var slider = tns({
+			"container": "#gallery-container",
+			"items": 1,
+			"controlsContainer": "#gallery-controls",
+			"navContainer": "#gallery-thumbnails",
+			"navAsThumbnails": true,
+			"autoplay": false,
+			"swipeAngle": false,
+			"speed": 400
 		});
 
 		function newCoupon() {
