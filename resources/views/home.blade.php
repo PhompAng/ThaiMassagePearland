@@ -319,10 +319,10 @@
 						</div>
 					</div>
 					<button class="carousel-control-prev" data-bs-target="#treatmentCarousel" data-bs-slide="prev">
-						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="carousel-control-prev-icon"></span>
 					</button>
 					<button class="carousel-control-next" data-bs-target="#treatmentCarousel" data-bs-slide="next">
-						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="carousel-control-next-icon"></span>
 					</button>
 				</div>
 			</div>
@@ -351,7 +351,7 @@
 			</div>
 		</section>
 
-		<section class="row" id="gallery">
+		<section class="row justify-content-center" id="gallery">
 			<div class="col-12" style="margin-bottom: 110px;">
 				<h1 class="text-center">Gallery</h1>
 			</div>
@@ -360,180 +360,64 @@
 				<div class="tns-outer" id="customize-ow">
 					<div id="customize-mw" class="tns-ovh">
 						<div class="tns-inner" id="customize-iw">
-							<div class="customize  tns-slider tns-carousel tns-subpixel tns-calc tns-horizontal"
+							<div class="tns-slider tns-carousel tns-subpixel tns-calc tns-horizontal"
 								id="gallery-container" style="transform: translate3d(-66.6667%, 0px, 0px);">
-								<div class="tns-item tns-slide-cloned" aria-hidden="true" tabindex="-1">
-									<div>
-										<img src="https://source.unsplash.com/collection/993239/600x400" alt=""
-											width="600" height="400">
+								<div class="tns-item tns-slide-cloned">
+									<div class="d-flex">
+										<img src="https://source.unsplash.com/collection/993239/600x400" />
 									</div>
-									<p>
-										Sunt dignissimos distinctio, veniam, tenetur aspernatur nulla!
-									</p>
 								</div>
-								<div class="tns-item tns-slide-cloned" aria-hidden="true" tabindex="-1">
-									<div>
-										<img src="https://source.unsplash.com/collection/1673600/600x400" alt=""
-											width="600" height="400">
+								<div class="tns-item tns-slide-cloned">
+									<div class="d-flex">
+										<img src="https://source.unsplash.com/collection/1673600/600x400" />
 									</div>
-									<p>
-										Corrupti, libero minima nihil expedita officiis? Quo.
-									</p>
 								</div>
-								<div class="tns-item tns-slide-cloned" aria-hidden="true" tabindex="-1">
-									<div>
-										<img src="https://source.unsplash.com/collection/1513994/600x400" alt=""
-											width="600" height="400">
+								<div class="tns-item tns-slide-cloned">
+									<div class="d-flex">
+										<img src="https://source.unsplash.com/collection/1513994/600x400" />
 									</div>
-									<p>
-										Alias rem, ab impedit recusandae repellat tempore.
-									</p>
 								</div>
-								<div class="tns-item tns-slide-cloned" aria-hidden="true" tabindex="-1">
-									<div>
-										<img src="https://source.unsplash.com/collection/502925/600x400" alt=""
-											width="600" height="400">
+								<div class="tns-item tns-slide-cloned">
+									<div class="d-flex">
+										<img src="https://source.unsplash.com/collection/502925/600x400" />
 									</div>
-									<p>
-										Nisi inventore quo delectus perspiciatis voluptatibus, quae.
-									</p>
-								</div>
-								<div class="tns-item tns-slide-cloned" aria-hidden="true" tabindex="-1">
-									<div>
-										<img src="https://source.unsplash.com/collection/1891993/600x400" alt=""
-											width="600" height="400">
-									</div>
-									<p>
-										Nisi harum earum consectetur laudantium iusto, laboriosam.
-									</p>
-								</div>
-								<div class="tns-item" id="customize-item0" aria-hidden="true" tabindex="-1">
-									<div>
-										<img src="https://source.unsplash.com/collection/993239/600x400" alt=""
-											width="600" height="400">
-									</div>
-									<p>
-										Sunt dignissimos distinctio, veniam, tenetur aspernatur nulla!
-									</p>
-								</div>
-								<div class="tns-item" id="customize-item1" aria-hidden="true" tabindex="-1">
-									<div>
-										<img src="https://source.unsplash.com/collection/1673600/600x400" alt=""
-											width="600" height="400">
-									</div>
-									<p>
-										Corrupti, libero minima nihil expedita officiis? Quo.
-									</p>
-								</div>
-								<div class="tns-item" id="customize-item2" aria-hidden="true" tabindex="-1">
-									<div>
-										<img src="https://source.unsplash.com/collection/1513994/600x400" alt=""
-											width="600" height="400">
-									</div>
-									<p>
-										Alias rem, ab impedit recusandae repellat tempore.
-									</p>
-								</div>
-								<div class="tns-item" id="customize-item3" aria-hidden="true" tabindex="-1">
-									<div>
-										<img src="https://source.unsplash.com/collection/502925/600x400" alt=""
-											width="600" height="400">
-									</div>
-									<p>
-										Nisi inventore quo delectus perspiciatis voluptatibus, quae.
-									</p>
-								</div>
-								<div class="tns-item" id="customize-item4" aria-hidden="true" tabindex="-1">
-									<div>
-										<img src="https://source.unsplash.com/collection/1891993/600x400" alt=""
-											width="600" height="400">
-									</div>
-									<p>
-										Nisi harum earum consectetur laudantium iusto, laboriosam.
-									</p>
-								</div>
-								<div class="tns-item tns-slide-cloned tns-slide-active">
-									<div>
-										<img src="https://source.unsplash.com/collection/993239/600x400" alt=""
-											width="600" height="400">
-									</div>
-									<p>
-										Sunt dignissimos distinctio, veniam, tenetur aspernatur nulla!
-									</p>
-								</div>
-								<div class="tns-item tns-slide-cloned tns-slide-active">
-									<div>
-										<img src="https://source.unsplash.com/collection/1673600/600x400" alt=""
-											width="600" height="400">
-									</div>
-									<p>
-										Corrupti, libero minima nihil expedita officiis? Quo.
-									</p>
-								</div>
-								<div class="tns-item tns-slide-cloned tns-slide-active">
-									<div>
-										<img src="https://source.unsplash.com/collection/1513994/600x400" alt=""
-											width="600" height="400">
-									</div>
-									<p>
-										Alias rem, ab impedit recusandae repellat tempore.
-									</p>
-								</div>
-								<div class="tns-item tns-slide-cloned" aria-hidden="true" tabindex="-1">
-									<div>
-										<img src="https://source.unsplash.com/collection/502925/600x400" alt=""
-											width="600" height="400">
-									</div>
-									<p>
-										Nisi inventore quo delectus perspiciatis voluptatibus, quae.
-									</p>
-								</div>
-								<div class="tns-item tns-slide-cloned" aria-hidden="true" tabindex="-1">
-									<div>
-										<img src="https://source.unsplash.com/collection/1891993/600x400" alt=""
-											width="600" height="400">
-									</div>
-									<p>
-										Nisi harum earum consectetur laudantium iusto, laboriosam.
-									</p>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
+			</div>
+
+			<div class="col-7">
 				<div class="customize-tools">
-					<ul class="thumbnails" id="gallery-thumbnails" aria-label="Carousel Pagination">
-						<li data-nav="0" aria-label="Carousel Page 1 (Current Slide)" aria-controls="customize"
-							class="tns-nav-active">
-							<img src="https://source.unsplash.com/collection/993239/600x400" alt="" width="600"
-								height="400">
+					<ul class="thumbnails" id="gallery-thumbnails">
+						<li data-nav="0" class="tns-nav-active">
+							<img src="https://source.unsplash.com/collection/993239/600x400" />
 						</li>
-						<li data-nav="1" aria-label="Carousel Page 2" aria-controls="customize" class="" tabindex="-1">
-							<img src="https://source.unsplash.com/collection/1673600/600x400" alt="" width="600"
-								height="400">
+						<li data-nav="1" class="">
+							<img src="https://source.unsplash.com/collection/1673600/600x400" />
 						</li>
-						<li data-nav="2" aria-label="Carousel Page 3" aria-controls="customize" class="" tabindex="-1">
-							<img src="https://source.unsplash.com/collection/1513994/600x400" alt="" width="600"
-								height="400">
+						<li data-nav="2" class="">
+							<img src="https://source.unsplash.com/collection/1513994/600x400" />
 						</li>
-						<li data-nav="3" aria-label="Carousel Page 4" aria-controls="customize" class="" tabindex="-1">
-							<img src="https://source.unsplash.com/collection/502925/600x400" alt="" width="600"
-								height="400">
-						</li>
-						<li data-nav="4" aria-label="Carousel Page 5" aria-controls="customize" class="" tabindex="-1">
-							<img src="https://source.unsplash.com/collection/1891993/600x400" alt="" width="600"
-								height="400">
-						</li>
-					</ul>
-					<ul class="controls" id="gallery-controls" aria-label="Carousel Navigation" tabindex="0">
-						<li class="prev" aria-controls="customize" tabindex="-1" data-controls="prev">
-							<img src="images/angle-left.png" alt="">
-						</li>
-						<li class="next" aria-controls="customize" tabindex="-1" data-controls="next">
-							<img src="images/angle-right.png" alt="">
+						<li data-nav="3" class="">
+							<img src="https://source.unsplash.com/collection/502925/600x400" />
 						</li>
 					</ul>
 				</div>
+			</div>
+
+			<div class="w-100"></div>
+
+			<div class="col">
+				<ul class="controls" id="gallery-controls" aria-label="Carousel Navigation" tabindex="0">
+					<li class="prev" aria-controls="customize" data-controls="prev">
+						<img src="images/angle-left.png" alt="">
+					</li>
+					<li class="next" aria-controls="customize" data-controls="next">
+						<img src="images/angle-right.png" alt="">
+					</li>
+				</ul>
 			</div>
 		</section>
 
@@ -541,7 +425,7 @@
 		</footer>
 	</div>
 
-	<div class="modal fade" id="resultModal" tabindex="-1" role="dialog">
+	<div class="modal fade" id="resultModal" role="dialog">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -559,7 +443,7 @@
 	</div>
 
 	@if(session('booking'))
-	<div class="modal fade" id="bookingSuccessModal" tabindex="-1" role="dialog">
+	<div class="modal fade" id="bookingSuccessModal" role="dialog">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -584,7 +468,7 @@
 	</div>
 	@endif
 
-	<div class="modal fade" id="bookingFailModal" tabindex="-1" role="dialog">
+	<div class="modal fade" id="bookingFailModal" role="dialog">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -641,6 +525,9 @@
 			"controlsContainer": "#gallery-controls",
 			"navContainer": "#gallery-thumbnails",
 			"navAsThumbnails": true,
+			"center": true,
+			"autoHeight": true,
+			"loop": true,
 			"autoplay": false,
 			"swipeAngle": false,
 			"speed": 400

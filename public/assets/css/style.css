@@ -375,3 +375,60 @@ h3 {
     background-image: url('/assets/imgs/gallery_bg.png');
     background-size: cover;
 }
+
+#gallery .tns-item img {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.customize-tools {
+    position: relative;
+}
+
+.thumbnails {
+    margin: 20px 0;
+    text-align: center;
+    display: flex;
+}
+
+.thumbnails li {
+    cursor: pointer;
+    flex: 1;
+}
+
+.thumbnails img {
+    max-width: 100%;
+}
+
+.controls {
+    text-align: center;
+}
+
+.controls li {
+    display: block;
+    position: absolute;
+    top: 50%;
+    height: 60px;
+    line-height: 60px;
+    margin-top: -30px;
+    padding: 0 15px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.controls li img {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.controls .prev {
+    left: 0;
+}
+
+.controls .next {
+    right: 0;
+}
+
+.controls li:hover {
+    background: #f2f2f2;
+}
