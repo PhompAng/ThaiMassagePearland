@@ -352,38 +352,53 @@
 		</section>
 
 		<section class="row justify-content-center" id="gallery">
-			<div class="col-12" style="margin-bottom: 110px;">
+			<div class="col-12" style="margin-bottom: 72px;">
 				<h1 class="text-center">Gallery</h1>
 			</div>
 
 			<div class="col-8">
-				<div class="tns-outer" id="customize-ow">
+				<div class="tns-outer position-relative" id="customize-ow">
 					<div id="customize-mw" class="tns-ovh">
 						<div class="tns-inner" id="customize-iw">
 							<div class="tns-slider tns-carousel tns-subpixel tns-calc tns-horizontal"
 								id="gallery-container" style="transform: translate3d(-66.6667%, 0px, 0px);">
 								<div class="tns-item tns-slide-cloned">
 									<div class="d-flex">
-										<img src="https://source.unsplash.com/collection/993239/600x400" />
+										<img src="{{ URL::to('assets/gallery/img1.png') }}" />
 									</div>
 								</div>
 								<div class="tns-item tns-slide-cloned">
 									<div class="d-flex">
-										<img src="https://source.unsplash.com/collection/1673600/600x400" />
+										<img src="{{ URL::to('assets/gallery/img2.png') }}" />
 									</div>
 								</div>
 								<div class="tns-item tns-slide-cloned">
 									<div class="d-flex">
-										<img src="https://source.unsplash.com/collection/1513994/600x400" />
+										<img src="{{ URL::to('assets/gallery/img3.png') }}" />
 									</div>
 								</div>
 								<div class="tns-item tns-slide-cloned">
 									<div class="d-flex">
-										<img src="https://source.unsplash.com/collection/502925/600x400" />
+										<img src="{{ URL::to('assets/gallery/img4.png') }}" />
+									</div>
+								</div>
+								<div class="tns-item tns-slide-cloned">
+									<div class="d-flex">
+										<img src="{{ URL::to('assets/gallery/img5.png') }}" />
 									</div>
 								</div>
 							</div>
 						</div>
+					</div>
+
+
+					<div class="constrols" id="gallery-controls">
+						<button class="carousel-control-prev prev" data-controls="prev">
+							<span class="carousel-control-prev-icon"></span>
+						</button>
+						<button class="carousel-control-next next" data-controls="next">
+							<span class="carousel-control-next-icon"></span>
+						</button>
 					</div>
 				</div>
 			</div>
@@ -392,32 +407,22 @@
 				<div class="customize-tools">
 					<ul class="thumbnails" id="gallery-thumbnails">
 						<li data-nav="0" class="tns-nav-active">
-							<img src="https://source.unsplash.com/collection/993239/600x400" />
+							<img src="{{ URL::to('assets/gallery/img1.png') }}" />
 						</li>
 						<li data-nav="1" class="">
-							<img src="https://source.unsplash.com/collection/1673600/600x400" />
+							<img src="{{ URL::to('assets/gallery/img2.png') }}" />
 						</li>
 						<li data-nav="2" class="">
-							<img src="https://source.unsplash.com/collection/1513994/600x400" />
+							<img src="{{ URL::to('assets/gallery/img3.png') }}" />
 						</li>
 						<li data-nav="3" class="">
-							<img src="https://source.unsplash.com/collection/502925/600x400" />
+							<img src="{{ URL::to('assets/gallery/img4.png') }}" />
+						</li>
+						<li data-nav="4" class="">
+							<img src="{{ URL::to('assets/gallery/img5.png') }}" />
 						</li>
 					</ul>
 				</div>
-			</div>
-
-			<div class="w-100"></div>
-
-			<div class="col">
-				<ul class="controls" id="gallery-controls" aria-label="Carousel Navigation" tabindex="0">
-					<li class="prev" aria-controls="customize" data-controls="prev">
-						<img src="images/angle-left.png" alt="">
-					</li>
-					<li class="next" aria-controls="customize" data-controls="next">
-						<img src="images/angle-right.png" alt="">
-					</li>
-				</ul>
 			</div>
 		</section>
 
