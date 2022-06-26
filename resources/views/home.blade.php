@@ -6,11 +6,9 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Thai Hands Massage Therapy - Thai Massage in Pearland</title>
-	<meta name="description"
-		content="Thai message is an ancient practice of healing of Thai society. It combines the acupressure, assisted yoga postures, and the Indian Ayurvedic approach to heal." />
+	<meta name="description" content="Thai message is an ancient practice of healing of Thai society. It combines the acupressure, assisted yoga postures, and the Indian Ayurvedic approach to heal." />
 	<meta name="keywords" content="massage pearland, thai massage pearland" />
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-		integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
 	<!--[if (lt IE 9)]><script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.helper.ie8.js"></script><![endif]-->
 	{!! HTML::style('/assets/css/style.css') !!}
@@ -26,18 +24,14 @@
 <body>
 	<div class="container-fluid">
 		<section class="row justify-content-end vh-100 align-items-center" id="main">
-			<img src="{{ URL::to('/assets/imgs/main_bg_art.png') }}" id="main-bg-art"
-				class="position-absolute bottom-0 end-0 p-0" />
-			<img src="{{ URL::to('/assets/imgs/logo.png') }}" id="main-logo"
-				class="position-absolute top-0 start-0 p-0" />
+			<img src="{{ URL::to('/assets/imgs/main_bg_art.png') }}" id="main-bg-art" class="position-absolute bottom-0 end-0 p-0" />
+			<img src="{{ URL::to('/assets/imgs/logo.png') }}" id="main-logo" class="position-absolute top-0 start-0 p-0" />
 
 			<div class="col-8 d-flex flex-column align-items-center" style="z-index: 1">
 				<nav class="navbar navbar-expand-lg mt-5">
 					<div class="container-fluid">
 						<!-- Brand and toggle get grouped for better mobile display -->
-						<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-							data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false"
-							aria-label="Toggle navigation">
+						<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
 							<span class="navbar-toggler-icon"></span>
 						</button>
 						<div class="collapse navbar-collapse flex-row-reverse" id="main-nav">
@@ -59,8 +53,7 @@
 
 				<div class="location-selector d-inline-flex rounded mt-5 active">
 					<div class="logo">
-						<img src="{{ URL::to('/assets/imgs/logo.png') }}"
-							style='height: 100%; width: 100%; object-fit: contain' />
+						<img src="{{ URL::to('/assets/imgs/logo.png') }}" style='height: 100%; width: 100%; object-fit: contain' />
 					</div>
 					<div class="location-container">
 						<p class="name mb-0">Thai Hands</p>
@@ -71,8 +64,7 @@
 				</div>
 				<div class="location-selector d-inline-flex rounded mt-4">
 					<div class="logo">
-						<img src="{{ URL::to('/assets/imgs/logo2.png') }}"
-							style='height: 100%; width: 100%; object-fit: contain' />
+						<img src="{{ URL::to('/assets/imgs/logo2.png') }}" style='height: 100%; width: 100%; object-fit: contain' />
 					</div>
 					<div class="location-container">
 						<p class="name mb-0">Diamond Thai</p>
@@ -83,23 +75,20 @@
 				</div>
 			</div>
 			{{-- <img src="{{ URL::to('/assets/imgs/a.png') }}" class="position-absolute top-0 start-0 p-0"
-				style="opacity: 0.5;" /> --}}
+			style="opacity: 0.5;" /> --}}
 		</section>
 
 		<section class="row align-items-center" id="massage">
 			<div class="col-12" style="margin-bottom: 110px;">
 				<h1 class="text-center">Thai Traditional Massage</h1>
 			</div>
-			<div
-				class="col-xxl-4 offset-xxl-2 col-xl-4 offset-xl-2 col-lg-5 offset-lg-1 col-md-6 d-flex flex-column justify-content-center align-items-end position-relative">
+			<div class="col-xxl-4 offset-xxl-2 col-xl-4 offset-xl-2 col-lg-5 offset-lg-1 col-md-6 d-flex flex-column justify-content-center align-items-end position-relative">
 				<img src="{{ URL::to('/assets/imgs/massage_art.png') }}" id="massage-art" class="position-absolute" />
 				<div class="row">
 					<div class="col-xxl-10 offset-xxl-2 col-xl-12">
-						<div id="massage-carousel" class="carousel slide carousel-fade"
-							style="z-index: 2; margin-top: 4rem;" data-bs-ride="carousel">
+						<div id="massage-carousel" class="carousel slide carousel-fade" style="z-index: 2; margin-top: 4rem;" data-bs-ride="carousel">
 							<div class="carousel-inner">
-								<div class="carousel-item active content d-flex align-items-center"
-									data-bs-interval="2000">
+								<div class="carousel-item active content d-flex align-items-center" data-bs-interval="2000">
 									<span class="fs-5"><span class="title">Thai Traditional Massage</span> is a very
 										holistic therapy where the human being
 										is seen and treated as an ever-changing
@@ -149,10 +138,8 @@
 		</section>
 
 		<section class="row justify-content-center" id="treatments">
-			<img src="{{ URL::to('/assets/imgs/treatments_bg_art.png')}}"
-				class="treatment-bg-art position-absolute start-0 p-0" style="margin-top: 60px">
-			<img src="{{ URL::to('/assets/imgs/treatments_bg_art2.png')}}"
-				class="treatment-bg-art position-absolute end-0 p-0">
+			<img src="{{ URL::to('/assets/imgs/treatments_bg_art.png')}}" class="treatment-bg-art position-absolute start-0 p-0" style="margin-top: 60px">
+			<img src="{{ URL::to('/assets/imgs/treatments_bg_art2.png')}}" class="treatment-bg-art position-absolute end-0 p-0">
 
 			<div class="col-12 d-flex flex-column align-items-center" style="padding-top: 150px;">
 				<h1 class="text-center" style="margin-bottom: 60px;">Treatments</h1>
@@ -182,12 +169,9 @@
 											and upper back, low back pain, leg
 											muscle tightness, and sore shoulders.</p>
 									</div>
-									<img src="{{ URL::to('/assets/imgs/treatments_card_art.png')}}"
-										class="card-img img-fluid position-absolute top-0">
-									<img src="{{ URL::to('/assets/imgs/treatments_card_art2.png')}}"
-										class="card-img-bottom img-fluid position-absolute bottom-0">
-									<img class="card-img-bottom img-fluid position-absolute bottom-0"
-										src="{{ URL::to('/assets/imgs/treatment_deep_tissue.png') }}">
+									<img src="{{ URL::to('/assets/imgs/treatments_card_art.png')}}" class="card-img img-fluid position-absolute top-0">
+									<img src="{{ URL::to('/assets/imgs/treatments_card_art2.png')}}" class="card-img-bottom img-fluid position-absolute bottom-0">
+									<img class="card-img-bottom img-fluid position-absolute bottom-0" src="{{ URL::to('/assets/imgs/treatment_deep_tissue.png') }}">
 								</div>
 							</div>
 						</div>
@@ -207,12 +191,9 @@
 											the body’s energy systems. Thai massage
 											is both deeply relaxing and energizing.</p>
 									</div>
-									<img src="{{ URL::to('/assets/imgs/treatments_card_art.png')}}"
-										class="card-img img-fluid position-absolute top-0">
-									<img src="{{ URL::to('/assets/imgs/treatments_card_art2.png')}}"
-										class="card-img-bottom img-fluid position-absolute bottom-0">
-									<img class="card-img-bottom img-fluid position-absolute bottom-0"
-										src="{{ URL::to('/assets/imgs/treatment_thai_traditional.png') }}">
+									<img src="{{ URL::to('/assets/imgs/treatments_card_art.png')}}" class="card-img img-fluid position-absolute top-0">
+									<img src="{{ URL::to('/assets/imgs/treatments_card_art2.png')}}" class="card-img-bottom img-fluid position-absolute bottom-0">
+									<img class="card-img-bottom img-fluid position-absolute bottom-0" src="{{ URL::to('/assets/imgs/treatment_thai_traditional.png') }}">
 								</div>
 							</div>
 						</div>
@@ -233,12 +214,9 @@
 											to reflex zones on your feet, hands or
 											outer ears to affect your entire body.</p>
 									</div>
-									<img src="{{ URL::to('/assets/imgs/treatments_card_art.png')}}"
-										class="card-img img-fluid position-absolute top-0">
-									<img src="{{ URL::to('/assets/imgs/treatments_card_art2.png')}}"
-										class="card-img-bottom img-fluid position-absolute bottom-0">
-									<img class="card-img-bottom img-fluid position-absolute bottom-0"
-										src="{{ URL::to('/assets/imgs/treatment_reflexology.png') }}">
+									<img src="{{ URL::to('/assets/imgs/treatments_card_art.png')}}" class="card-img img-fluid position-absolute top-0">
+									<img src="{{ URL::to('/assets/imgs/treatments_card_art2.png')}}" class="card-img-bottom img-fluid position-absolute bottom-0">
+									<img class="card-img-bottom img-fluid position-absolute bottom-0" src="{{ URL::to('/assets/imgs/treatment_reflexology.png') }}">
 								</div>
 							</div>
 						</div>
@@ -259,12 +237,9 @@
 											with injuries, chronic pain or restricted
 											range of motion.</p>
 									</div>
-									<img src="{{ URL::to('/assets/imgs/treatments_card_art.png')}}"
-										class="card-img img-fluid position-absolute top-0">
-									<img src="{{ URL::to('/assets/imgs/treatments_card_art2.png')}}"
-										class="card-img-bottom img-fluid position-absolute bottom-0">
-									<img class="card-img-bottom img-fluid position-absolute bottom-0"
-										src="{{ URL::to('/assets/imgs/treatment_sports.png') }}">
+									<img src="{{ URL::to('/assets/imgs/treatments_card_art.png')}}" class="card-img img-fluid position-absolute top-0">
+									<img src="{{ URL::to('/assets/imgs/treatments_card_art2.png')}}" class="card-img-bottom img-fluid position-absolute bottom-0">
+									<img class="card-img-bottom img-fluid position-absolute bottom-0" src="{{ URL::to('/assets/imgs/treatment_sports.png') }}">
 								</div>
 							</div>
 						</div>
@@ -282,12 +257,9 @@
 											relaxation through the placement of smooth,
 											water-heated stones at key points on the body.</p>
 									</div>
-									<img src="{{ URL::to('/assets/imgs/treatments_card_art.png')}}"
-										class="card-img img-fluid position-absolute top-0">
-									<img src="{{ URL::to('/assets/imgs/treatments_card_art2.png')}}"
-										class="card-img-bottom img-fluid position-absolute bottom-0">
-									<img class="card-img-bottom img-fluid position-absolute bottom-0"
-										src="{{ URL::to('/assets/imgs/treatment_hot_stone.png') }}">
+									<img src="{{ URL::to('/assets/imgs/treatments_card_art.png')}}" class="card-img img-fluid position-absolute top-0">
+									<img src="{{ URL::to('/assets/imgs/treatments_card_art2.png')}}" class="card-img-bottom img-fluid position-absolute bottom-0">
+									<img class="card-img-bottom img-fluid position-absolute bottom-0" src="{{ URL::to('/assets/imgs/treatment_hot_stone.png') }}">
 								</div>
 							</div>
 						</div>
@@ -308,12 +280,9 @@
 											and rubbing in the same direction as
 											the flow of blood returning to the heart.</p>
 									</div>
-									<img src="{{ URL::to('/assets/imgs/treatments_card_art.png')}}"
-										class="card-img img-fluid position-absolute top-0">
-									<img src="{{ URL::to('/assets/imgs/treatments_card_art2.png')}}"
-										class="card-img-bottom img-fluid position-absolute bottom-0">
-									<img class="card-img-bottom img-fluid position-absolute bottom-0"
-										src="{{ URL::to('/assets/imgs/treatment_swedish.png') }}">
+									<img src="{{ URL::to('/assets/imgs/treatments_card_art.png')}}" class="card-img img-fluid position-absolute top-0">
+									<img src="{{ URL::to('/assets/imgs/treatments_card_art2.png')}}" class="card-img-bottom img-fluid position-absolute bottom-0">
+									<img class="card-img-bottom img-fluid position-absolute bottom-0" src="{{ URL::to('/assets/imgs/treatment_swedish.png') }}">
 								</div>
 							</div>
 						</div>
@@ -329,8 +298,7 @@
 		</section>
 
 		<section class="row position-relative" id="banner">
-			<img src="{{ URL::to('/assets/imgs/banner_bg_art.png') }}" id="banner-bg-art"
-				class="position-absolute end-0 p-0" />
+			<img src="{{ URL::to('/assets/imgs/banner_bg_art.png') }}" id="banner-bg-art" class="position-absolute end-0 p-0" />
 
 			<div class="col-md-6 content">
 				<h1>Special Price</h1>
@@ -360,8 +328,7 @@
 				<div class="tns-outer position-relative" id="customize-ow">
 					<div id="customize-mw" class="tns-ovh">
 						<div class="tns-inner" id="customize-iw">
-							<div class="tns-slider tns-carousel tns-subpixel tns-calc tns-horizontal"
-								id="gallery-container" style="transform: translate3d(-66.6667%, 0px, 0px);">
+							<div class="tns-slider tns-carousel tns-subpixel tns-calc tns-horizontal" id="gallery-container" style="transform: translate3d(-66.6667%, 0px, 0px);">
 								<div class="tns-item tns-slide-cloned">
 									<div class="d-flex">
 										<img src="{{ URL::to('assets/gallery/img1.png') }}" />
@@ -426,6 +393,124 @@
 			</div>
 		</section>
 
+		<section class="row justify-content-center" id="booking">
+			<div class="col-12" style="margin-bottom: 72px;">
+				<h1 class="text-center">Booking</h1>
+			</div>
+
+			<div class="col-10">
+				<div class="row justify-content-center">
+					<div class="col-8">
+						<nav class="nav nav-pills nav-fill align-items-center" id="booking-tab">
+							<li class="nav-item">
+								<button class="nav-link active" id="booking-reservation-tab" data-bs-toggle="pill" data-bs-target="#booking-reservation">Reservation</button>
+							</li>
+							<li class="nav-item">
+								<button class="nav-link" id="booking-gift-tab" data-bs-toggle="pill" data-bs-target="#booking-gift">Gift Certificate</button>
+							</li>
+						</nav>
+					</div>
+				</div>
+				<div class="tab-content" id="booking-tab-content">
+					<div class="tab-pane fade show active" id="booking-reservation">
+						<form class="form-horizontal position-relative" method="POST" action="{{ route('booking.process') }}#booking-reservation">
+							<input type="hidden" name="_token" value="{{ csrf_token() }}">
+							<div class="row justify-content-between form-content">
+								@if($errors->count())
+								<div class="alert alert-danger">
+									<ul>
+										@foreach($errors->all() as $error)
+										<li>{{ $error }}</li>
+										@endforeach
+									</ul>
+								</div>
+								@endif
+								<div class="col-5">
+									<label for="reservation-date" class="form-label">Date</label>
+									<select name="booking[date]" class="form-select form-select-lg mb-5" id="reservation-date">
+										<option value="0">-- Select Date --</option>
+										<?php $date = \Carbon\Carbon::today()->addDay(); ?>
+										@for($i = 0; $i < 30; $i++) <option value="{{ $date->toDateString() }}">{{
+											$date->format('D, M d, Y') }}</option>
+											<?php $date->addDay(); ?>
+										@endfor
+									</select>
+
+									<label for="reservation-time" class="form-label">Time</label>
+									<select name="booking[time]" class="form-select form-select-lg mb-5" id="reservation-time" disabled="disabled">
+										<option value="0">-- Select Time --</option>
+										<option value="10">10:00 AM</option>
+										<option value="11">11:00 AM</option>
+										<option value="12">12:00 PM</option>
+										<option value="13">01:00 PM</option>
+										<option value="14">02:00 PM</option>
+										<option value="15">03:00 PM</option>
+										<option value="16">04:00 PM</option>
+										<option value="17">05:00 PM</option>
+										<option value="18">06:00 PM</option>
+									</select>
+
+									<label for="reservation-treatment" class="form-label">Treatment</label>
+									<select name="booking[treatment]" class="form-select form-select-lg mb-5" id="reservation-treatment">
+										@foreach($treatments as $treatment)
+										<option value="{{ $treatment->id }}">{{ $treatment->title }}</option>
+										@endforeach
+									</select>
+
+									<label class="form-label">Choose Minutes and Guest</label>
+									<div class="row align-items-stretch select-box">
+										<div class="col">
+											<input type="radio" class="btn-check" name="booking[duration]" value="60" id="duration60" autocomplete="off" checked>
+											<label class="btn btn-primary w-100 h-100 p-3" id="duration60-label" for="duration60">60 Minutes</label>
+										</div>
+										<div class="col">
+											<input type="radio" class="btn-check" name="booking[duration]" value="90" id="duration90" autocomplete="off">
+											<label class="btn btn-primary w-100 h-100 p-3" id="duration90-label" for="duration90">90 Minutes</label>
+										</div>
+									</div>
+									<div class="row align-items-stretch select-box mt-3">
+										<div class="col">
+											<input type="radio" class="btn-check" name="booking[guests]" value="1" id="guests-single" autocomplete="off" checked>
+											<label class="btn btn-primary w-100 h-100 p-3" id="guests-single-label" for="guests-single">Single Guest</label>
+										</div>
+										<div class="col">
+											<input type="radio" class="btn-check" name="booking[guests]" value="2" id="guests-couple" autocomplete="off">
+											<label class="btn btn-primary w-100 h-100 p-3" id="guests-couple-label" for="guests-couple">Couple Guest</label>
+										</div>
+									</div>
+								</div>
+								<div class="col-5">
+									<div class="mb-5">
+										<label class="form-label">First Name</label>
+										<input type="text" name="client[firstname]" class="form-control form-control-lg">
+									</div>
+
+									<div class="mb-5">
+										<label class="form-label">Last Name</label>
+										<input type="text" name="client[lastname]" class="form-control form-control-lg">
+									</div>
+
+									<div class="mb-5">
+										<label class="form-label">Phone</label>
+										<input type="text" name="client[phone]" class="form-control form-control-lg">
+									</div>
+
+									<div class="mb-5">
+										<label class="form-label">Email</label>
+										<input type="text" name="client[email]" class="form-control form-control-lg">
+									</div>
+								</div>
+							</div>
+
+							<button type="submit" class="btn btn-primary" id="bookingButton">Book & Pay Now</button>
+						</form>
+					</div>
+					<div class="tab-pane fade" id="booking-gift">
+						<h1>gift</h1>
+					</div>
+				</div>
+			</div>
+		</section>
 		<footer class="text-right" style="height: 100vh;">&copy 2015 Thai Hands Massage Therapy. All rights reserved.
 		</footer>
 	</div>
@@ -496,8 +581,7 @@
 	</div>
 
 	{!! HTML::script('https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js') !!}
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-		integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
 	</script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
 
@@ -513,7 +597,7 @@
 		items.forEach((el) => {
 			const minPerSlide = 3
 			let next = el.nextElementSibling
-			for (var i=1; i<minPerSlide; i++) {
+			for (var i = 1; i < minPerSlide; i++) {
 				if (!next) {
 					// wrap carousel by using first child
 					next = items[0]
@@ -566,7 +650,7 @@
 				var booking_date = $(this).val();
 				$.get("{{ route('booking.ajax.timeslot') }}", {
 					date: booking_date
-				}).success(function(result) {
+				}, function(result) {
 					console.log(result);
 					$('select[name="booking[time]"]').val(0);
 					$.each(result, function(hour, value) {
@@ -580,7 +664,8 @@
 							option_text = hour + ":00 AM";
 						};
 
-						if (value >= {{ \THM\Setting::get('booking_capacity') }}) {
+						var capacity = {{ \THM\Setting::get('booking_capacity') }}
+						if (value >= capacity) {
 							console.log($('select[name="booking[time]"]').find('option[value=' + hour + ']'));
 							$('select[name="booking[time]"]').find('option[value=' + hour + ']').attr('disabled', 'disabled').text(option_text + " (FULL)");
 						} else {
@@ -598,12 +683,31 @@
 		});
 
 		$('select[name="booking[treatment]"]').change(getTreatmentPrice);
-		$('select[name="booking[duration]"]').change(getTreatmentPrice);
-		$('input[name="booking[guests]"]').change(getTreatmentPrice);
+
+		$('#duration60-label').click(function() {
+			$('#duration90').attr('checked', false);
+			$('#duration60').attr('checked', true);
+			getTreatmentPrice();
+		})
+		$('#duration90-label').click(function() {
+			$('#duration60').attr('checked', false);
+			$('#duration90').attr('checked', true);
+			getTreatmentPrice();
+		})
+		$('#guests-single-label').click(function() {
+			$('#guests-couple').attr('checked', false);
+			$('#guests-single').attr('checked', true);
+			getTreatmentPrice();
+		})
+		$('#guests-couple-label').click(function() {
+			$('#guests-single').attr('checked', false);
+			$('#guests-couple').attr('checked', true);
+			getTreatmentPrice();
+		})
 
 		function getTreatmentPrice() {
 			if ($('input[name="booking[guests]"]:checked').val() == 2) {
-				if ($('select[name="booking[duration]"]').val() == 60) {
+				if ($('input[name="booking[duration]"]:checked').val() == 60) {
 					$('#bookingButton').html("Book & Pay Now for $140");
 				} else {
 					$('#bookingButton').html("Book & Pay Now for $190");
@@ -611,8 +715,8 @@
 			} else {
 				$.get("{{ route('booking.ajax.getTreatmentPrice') }}", {
 					id: $('select[name="booking[treatment]"]').val(),
-					duration: $('select[name="booking[duration]"]').val()
-				}).success(function(data) {
+					duration: $('input[name="booking[duration]"]:checked').val()
+				}, function(data) {
 					$('#bookingButton').html("Book & Pay Now for $" + data);
 				}).fail(function() {
 					alert("An error occurred, please try again later.");

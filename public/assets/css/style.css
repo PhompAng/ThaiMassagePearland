@@ -409,3 +409,80 @@ h3 {
 #gallery .controls .next {
     right: 0;
 }
+
+#booking {
+    background-image: url('/assets/imgs/booking_bg.png');
+    background-size: cover;
+    padding: 72px 0 112px 0;
+}
+
+#booking .nav-pills {
+    --bs-nav-pills-link-active-color: #FFFFFF;
+    --bs-nav-pills-link-active-bg: #11080E;
+    --bs-nav-link-color: #FFFFFF;
+    --bs-nav-link-padding-y: 36px;
+    --bs-nav-link-hover-color: #FBBE48;
+    --bs-nav-link-font-size: 28px;
+    --bs-nav-link-font-weight: 500;
+}
+#booking .nav-item {
+    margin: 0px 8px;
+}
+#booking .nav-pills .nav-link {
+    background-color: #11080E;
+}
+#booking .nav-pills .nav-link.active {
+    border: #B1862C solid 5px;
+    --bs-nav-link-padding-y: 48px;
+    --bs-nav-link-font-size: 36px;
+    --bs-nav-link-font-weight: 700;
+}
+#booking-tab-content {
+    background-color: #30211D;
+    border: #DFC19F solid 2px;
+    border-radius: 30px;
+    margin-top: -75px;
+}
+#booking-tab-content .form-content {
+    padding: 144px 176px;
+}
+
+#booking-tab-content .form-label {
+    margin-bottom: 1rem;
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 28px;
+}
+#booking-tab-content .form-control-lg,
+#booking-tab-content .form-select-lg {
+    border-radius: 0;
+}
+#booking-tab-content .select-box {
+    --bs-gutter-x: 0.5rem;
+}
+#booking-tab-content .btn {
+    --bs-btn-active-color: #FFFFFF;
+    --bs-btn-active-bg: #B1862C;
+    --bs-btn-active-border-color: #FFFFFF;
+    --bs-btn-bg: rgba(177, 134, 44, 0.63);
+    --bs-btn-hover-bg: #B1862C;
+    --bs-btn-border-color: unset;
+    --bs-btn-font-size: 1.75rem;
+    --bs-btn-font-weight: 500;
+}
+
+#booking-tab-content .btn-check:active+.btn, .btn-check:checked+.btn {
+    border: #FFFFFF solid 2px;
+    --bs-btn-font-weight: 700 !important;
+}
+#bookingButton {
+    --bs-btn-bg: #B1862C !important;
+    --bs-btn-font-weight: 700 !important;
+    --bs-btn-font-size: 2.5rem;
+    border: #FFFFFF solid 5px;
+    border-radius: 16px;
+    padding: 24px 72px;
+    position: absolute;
+    margin-top: -50px;
+    right: 15%;
+}
