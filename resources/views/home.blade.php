@@ -416,7 +416,7 @@
 						<form class="form-horizontal position-relative" method="POST" action="{{ route('booking.process') }}#booking-reservation">
 							<input type="hidden" name="_token" value="{{ csrf_token() }}">
 							<div class="row justify-content-between form-content">
-								@if($errors->count())
+								@if($errors->count() && session('booking-tab') == 'reservation')
 								<div class="alert alert-danger">
 									<ul>
 										@foreach($errors->all() as $error)
@@ -430,51 +430,53 @@
 									<select name="booking[date]" class="form-select form-select-lg mb-5" id="reservation-date">
 										<option value="0">-- Select Date --</option>
 										<?php $date = \Carbon\Carbon::today()->addDay(); ?>
-										@for($i = 0; $i < 30; $i++) <option value="{{ $date->toDateString() }}">{{
-											$date->format('D, M d, Y') }}</option>
+										@for($i = 0; $i < 30; $i++)
+											<option value="{{ $date->toDateString() }}" @if((old('booking')['date'] ?? null) == $date->toDateString()) selected @endif>
+												{{ $date->format('D, M d, Y') }}
+											</option>
 											<?php $date->addDay(); ?>
 										@endfor
 									</select>
 
 									<label for="reservation-time" class="form-label">Time</label>
-									<select name="booking[time]" class="form-select form-select-lg mb-5" id="reservation-time" disabled="disabled">
+									<select name="booking[time]" class="form-select form-select-lg mb-5" id="reservation-time" @if((old('booking')['time'] ?? null) == null) disabled @endif>
 										<option value="0">-- Select Time --</option>
-										<option value="10">10:00 AM</option>
-										<option value="11">11:00 AM</option>
-										<option value="12">12:00 PM</option>
-										<option value="13">01:00 PM</option>
-										<option value="14">02:00 PM</option>
-										<option value="15">03:00 PM</option>
-										<option value="16">04:00 PM</option>
-										<option value="17">05:00 PM</option>
-										<option value="18">06:00 PM</option>
+										<option value="10" @if((old('booking')['time'] ?? null) == 10) selected @endif>10:00 AM</option>
+										<option value="11" @if((old('booking')['time'] ?? null) == 11) selected @endif>11:00 AM</option>
+										<option value="12" @if((old('booking')['time'] ?? null) == 12) selected @endif>12:00 PM</option>
+										<option value="13" @if((old('booking')['time'] ?? null) == 13) selected @endif>01:00 PM</option>
+										<option value="14" @if((old('booking')['time'] ?? null) == 14) selected @endif>02:00 PM</option>
+										<option value="15" @if((old('booking')['time'] ?? null) == 15) selected @endif>03:00 PM</option>
+										<option value="16" @if((old('booking')['time'] ?? null) == 16) selected @endif>04:00 PM</option>
+										<option value="17" @if((old('booking')['time'] ?? null) == 17) selected @endif>05:00 PM</option>
+										<option value="18" @if((old('booking')['time'] ?? null) == 18) selected @endif>06:00 PM</option>
 									</select>
 
 									<label for="reservation-treatment" class="form-label">Treatment</label>
 									<select name="booking[treatment]" class="form-select form-select-lg mb-5" id="reservation-treatment">
 										@foreach($treatments as $treatment)
-										<option value="{{ $treatment->id }}">{{ $treatment->title }}</option>
+											<option value="{{ $treatment->id }}" @if((old('booking')['treatment'] ?? null) == $treatment->id) selected @endif>{{ $treatment->title }}</option>
 										@endforeach
 									</select>
 
 									<label class="form-label">Choose Minutes and Guest</label>
 									<div class="row align-items-stretch select-box">
 										<div class="col">
-											<input type="radio" class="btn-check" name="booking[duration]" value="60" id="duration60" autocomplete="off" checked>
+											<input type="radio" class="btn-check" name="booking[duration]" value="60" id="duration60" autocomplete="off" @if((old('booking')['duration'] ?? 60) == 60) checked @endif>
 											<label class="btn btn-primary w-100 h-100 p-3" id="duration60-label" for="duration60">60 Minutes</label>
 										</div>
 										<div class="col">
-											<input type="radio" class="btn-check" name="booking[duration]" value="90" id="duration90" autocomplete="off">
+											<input type="radio" class="btn-check" name="booking[duration]" value="90" id="duration90" autocomplete="off" @if((old('booking')['duration'] ?? null) == 90) checked @endif>
 											<label class="btn btn-primary w-100 h-100 p-3" id="duration90-label" for="duration90">90 Minutes</label>
 										</div>
 									</div>
 									<div class="row align-items-stretch select-box mt-3">
 										<div class="col">
-											<input type="radio" class="btn-check" name="booking[guests]" value="1" id="guests-single" autocomplete="off" checked>
+											<input type="radio" class="btn-check" name="booking[guests]" value="1" id="guests-single" autocomplete="off" @if((old('booking')['guests'] ?? null) == 1) checked @endif>
 											<label class="btn btn-primary w-100 h-100 p-3" id="guests-single-label" for="guests-single">Single Guest</label>
 										</div>
 										<div class="col">
-											<input type="radio" class="btn-check" name="booking[guests]" value="2" id="guests-couple" autocomplete="off">
+											<input type="radio" class="btn-check" name="booking[guests]" value="2" id="guests-couple" autocomplete="off" @if((old('booking')['guests'] ?? 2) == 2) checked @endif>
 											<label class="btn btn-primary w-100 h-100 p-3" id="guests-couple-label" for="guests-couple">Couple Guest</label>
 										</div>
 									</div>
@@ -482,22 +484,22 @@
 								<div class="col-5">
 									<div class="mb-5">
 										<label class="form-label">First Name</label>
-										<input type="text" name="client[firstname]" class="form-control form-control-lg">
+										<input type="text" name="client[firstname]" value="{{ old('client')['firstname'] ?? '' }}" class="form-control form-control-lg">
 									</div>
 
 									<div class="mb-5">
 										<label class="form-label">Last Name</label>
-										<input type="text" name="client[lastname]" class="form-control form-control-lg">
+										<input type="text" name="client[lastname]" value="{{ old('client')['lastname'] ?? '' }}" class="form-control form-control-lg">
 									</div>
 
 									<div class="mb-5">
 										<label class="form-label">Phone</label>
-										<input type="text" name="client[phone]" class="form-control form-control-lg">
+										<input type="text" name="client[phone]" value="{{ old('client')['phone'] ?? '' }}" class="form-control form-control-lg">
 									</div>
 
 									<div class="mb-5">
 										<label class="form-label">Email</label>
-										<input type="text" name="client[email]" class="form-control form-control-lg">
+										<input type="text" name="client[email]" value="{{ old('client')['email'] ?? '' }}" class="form-control form-control-lg">
 									</div>
 								</div>
 							</div>
@@ -506,7 +508,54 @@
 						</form>
 					</div>
 					<div class="tab-pane fade" id="booking-gift">
-						<h1>gift</h1>
+						<form class="form-horizontal position-relative" method="POST" action="{{ route('booking.process') }}#booking-gift">
+							<input type="hidden" name="_token" value="{{ csrf_token() }}">
+							<div class="row justify-content-between form-content">
+								@if($errors->count() && session('booking-tab') == 'gift')
+								<div class="alert alert-danger">
+									<ul>
+										@foreach($errors->all() as $error)
+										<li>{{ $error }}</li>
+										@endforeach
+									</ul>
+								</div>
+								@endif
+								<div class="col-5">
+									<p class="fs-3 fw-medium text-white">Available with paper gift card or E-Gift Certificate with an E-mail/PDF.</p>
+									<br>
+									<p class="fs-3 fw-medium text-white"><span class="fw-bold">Please note that: These are valid</span> for 6 months from date of issuance.</p>
+									
+									<label for="gift-value" class="form-label">Gift Value</label>
+									<div class="input-group">
+										<input type="text" name="gift[value]" class="form-control form-control-lg" id="gift-value" placeholder="Amount">
+										<span class="input-group-text">$</span>
+									</div>
+								</div>
+								<div class="col-5">
+									<div class="mb-5">
+										<label class="form-label">First Name</label>
+										<input type="text" name="gift[firstname]" class="form-control form-control-lg">
+									</div>
+
+									<div class="mb-5">
+										<label class="form-label">Last Name</label>
+										<input type="text" name="gift[lastname]" class="form-control form-control-lg">
+									</div>
+
+									<div class="mb-5">
+										<label class="form-label">Phone</label>
+										<input type="text" name="gift[phone]" class="form-control form-control-lg">
+									</div>
+
+									<div class="mb-5">
+										<label class="form-label">Email</label>
+										<input type="text" name="gift[email]" class="form-control form-control-lg">
+									</div>
+								</div>
+							</div>
+
+							<button type="submit" class="btn btn-primary" id="giftButton">Pay Now</button>
+						</form>
 					</div>
 				</div>
 			</div>
@@ -519,14 +568,14 @@
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
 					<h4 class="modal-title result-title">Success!</h4>
+					<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
 				</div>
 				<div class="modal-body">
 					<div class="alert result-alert">We have sent an email with coupon code to you!</div>
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
 				</div>
 			</div>
 		</div>
@@ -537,8 +586,8 @@
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
 					<h4 class="modal-title result-title">Booking confirmed</h4>
+					<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
 				</div>
 				<div class="modal-body">
 					<p>Your booking with the following details has been confirmed sent to your email.</p>
@@ -551,7 +600,7 @@
 					<strong>Guests: </strong>{{ session('booking')->guests }}
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
 				</div>
 			</div>
 		</div>
@@ -562,8 +611,8 @@
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
 					<h4 class="modal-title result-title">Booking Failed</h4>
+					<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
 				</div>
 				<div class="modal-body">
 					<div class="alert alert-danger">
@@ -574,7 +623,7 @@
 					</div>
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
 				</div>
 			</div>
 		</div>
@@ -586,6 +635,14 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
 
 	<script>
+		$(document).ready(function() {
+			var hash = location.hash.replace(/^#/, '');
+			if (hash) {
+				var triggerTab = document.querySelector('#booking-tab button[data-bs-target="#' + hash + '"]');
+				new bootstrap.Tab(triggerTab).show();
+			}
+		});
+
 		const massageCarousel = document.getElementById('massage-carousel');
 		const massageCarouselIndicators = $('#massage-carousel-indicator').children();
 		massageCarousel.addEventListener('slide.bs.carousel', event => {
@@ -622,28 +679,30 @@
 			"speed": 400
 		});
 
-		function newCoupon() {
-			owner = $('input[name=newCouponOwner]').val();
+		var resultModal = new bootstrap.Modal('#resultModal');
+		function newCoupon(e) {
+			e.preventDefault();
+			owner = $('input[name="gift[email]').val();
 			$.post('{!! URL::to("/coupon") !!}', {
 				'owner': owner,
 				'code': "XXXXXX",
 				'_token': '{{ csrf_token() }}'
-			}).success(function(result) {
+			}, function(result) {
 				$('.result-title').html('Success!');
 				$('.result-alert').removeClass('alert-danger');
 				$('.result-alert').addClass('alert-success')
 					.html('We have sent an email with coupon code to you!');
-				$('#resultModal').modal();
+				resultModal.show();
 			}).fail(function(data) {
 				$('.result-title').html('Failed!');
 				$('.result-alert').addClass('alert-danger');
 				$('.result-alert').removeClass('alert-success')
 					.html('Please check your email format or your email may already used.');
-				$('#resultModal').modal();
+				resultModal.show();
 			});
 		}
 
-		$('button[class=get_coupon]').click(newCoupon);
+		$('#giftButton').click(newCoupon);
 
 		$('select[name="booking[date]"]').change(function() {
 			if ($(this).val() != 0) {
@@ -725,11 +784,13 @@
 		}
 
 		@if(Request::input('action') == 'booking_success' && session('booking'))
-		$('#bookingSuccessModal').modal();
+		var bookingSuccessModal = new bootstrap.Modal('#bookingSuccessModal');
+		bookingSuccessModal.show();
 		@endif
 
 		@if(Request::input('action') == 'booking_cancel')
-		$('#bookingFailModal').modal();
+		var bookingFailModal = new bootstrap.Modal('#bookingFailModal');
+		bookingFailModal.show();
 		@endif
 	</script>
 </body>

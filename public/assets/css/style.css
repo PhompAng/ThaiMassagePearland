@@ -475,7 +475,18 @@ h3 {
     border: #FFFFFF solid 2px;
     --bs-btn-font-weight: 700 !important;
 }
-#bookingButton {
+
+#booking-tab-content .input-group>.form-control {
+    border-right: unset;
+}
+#booking-tab-content .input-group-text {
+    border-radius: 0;
+    color: #B1862C;
+    font-weight: 700;
+    font-size: 1.75rem;
+    background-color: #FFFFFF;
+}
+#bookingButton, #giftButton {
     --bs-btn-bg: #B1862C !important;
     --bs-btn-font-weight: 700 !important;
     --bs-btn-font-size: 2.5rem;

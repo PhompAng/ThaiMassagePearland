@@ -28,6 +28,8 @@ class BookingController extends Controller {
 
 	public function process(Request $requests)
 	{
+		session()->put('test', ['test1' => 'aaa']);
+		session()->save();
 		$validator = Validator::make($requests->all(), [
 			'booking.date'      => 'required|not_in:0',
 			'booking.time'      => 'required|integer|not_in:0|min:10|max:18',
@@ -54,7 +56,7 @@ class BookingController extends Controller {
 
 		$validator->setAttributeNames($attributes_name);
 		if ($validator->fails()) {
-			return redirect('/')->withErrors($validator)->withInput();
+			return redirect('/')->withErrors($validator)->withInput()->with('booking-tab', 'reservation');
 		}
 
 		$timeslots = Booking::generateTimeslot(\Carbon\Carbon::createFromFormat('Y-m-d', $requests->booking['date']));
